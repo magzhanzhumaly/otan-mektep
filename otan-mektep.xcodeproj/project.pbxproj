@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56B16A632B2B19DE00D3F4F7 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A622B2B19DE00D3F4F7 /* AppEnums.swift */; };
+		56B16A652B2B19F300D3F4F7 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A642B2B19F300D3F4F7 /* AppUtility.swift */; };
+		56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A662B2B1A0600D3F4F7 /* UIView+Add.swift */; };
+		56B16A6F2B2B1ABE00D3F4F7 /* PupilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A6E2B2B1ABE00D3F4F7 /* PupilModel.swift */; };
+		56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */; };
+		56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */; };
+		56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */; };
 		56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E52B2B13A400644F75 /* AppDelegate.swift */; };
 		56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E72B2B13A400644F75 /* SceneDelegate.swift */; };
 		56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E92B2B13A400644F75 /* ViewController.swift */; };
@@ -36,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56B16A622B2B19DE00D3F4F7 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
+		56B16A642B2B19F300D3F4F7 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		56B16A662B2B1A0600D3F4F7 /* UIView+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Add.swift"; sourceTree = "<group>"; };
+		56B16A6E2B2B1ABE00D3F4F7 /* PupilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilModel.swift; sourceTree = "<group>"; };
+		56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherModel.swift; sourceTree = "<group>"; };
+		56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaWorkerModel.swift; sourceTree = "<group>"; };
+		56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModel.swift; sourceTree = "<group>"; };
 		56FA62E22B2B13A400644F75 /* otan-mektep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "otan-mektep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FA62E52B2B13A400644F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56FA62E72B2B13A400644F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +90,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B16A682B2B1A1D00D3F4F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56B16A6E2B2B1ABE00D3F4F7 /* PupilModel.swift */,
+				56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */,
+				56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */,
+				56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56B16A6A2B2B1A2800D3F4F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56FA62F02B2B13A500644F75 /* LaunchScreen.storyboard */,
+				56FA62EB2B2B13A400644F75 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56B16A6B2B2B1A2D00D3F4F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56FA62E92B2B13A400644F75 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56B16A6C2B2B1A4D00D3F4F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56B16A662B2B1A0600D3F4F7 /* UIView+Add.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		56B16A6D2B2B1A5F00D3F4F7 /* App Files */ = {
+			isa = PBXGroup;
+			children = (
+				56FA62E52B2B13A400644F75 /* AppDelegate.swift */,
+				56B16A622B2B19DE00D3F4F7 /* AppEnums.swift */,
+				56B16A642B2B19F300D3F4F7 /* AppUtility.swift */,
+				56FA62EE2B2B13A500644F75 /* Assets.xcassets */,
+				56FA62E72B2B13A400644F75 /* SceneDelegate.swift */,
+			);
+			path = "App Files";
+			sourceTree = "<group>";
+		};
 		56FA62D92B2B13A400644F75 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +161,11 @@
 		56FA62E42B2B13A400644F75 /* otan-mektep */ = {
 			isa = PBXGroup;
 			children = (
-				56FA62E52B2B13A400644F75 /* AppDelegate.swift */,
-				56FA62E72B2B13A400644F75 /* SceneDelegate.swift */,
-				56FA62E92B2B13A400644F75 /* ViewController.swift */,
-				56FA62EB2B2B13A400644F75 /* Main.storyboard */,
-				56FA62EE2B2B13A500644F75 /* Assets.xcassets */,
-				56FA62F02B2B13A500644F75 /* LaunchScreen.storyboard */,
+				56B16A6D2B2B1A5F00D3F4F7 /* App Files */,
+				56B16A6C2B2B1A4D00D3F4F7 /* Extensions */,
+				56B16A682B2B1A1D00D3F4F7 /* Models */,
+				56B16A6A2B2B1A2800D3F4F7 /* Views */,
+				56B16A6B2B2B1A2D00D3F4F7 /* Controllers */,
 				56FA62F32B2B13A500644F75 /* Info.plist */,
 			);
 			path = "otan-mektep";
@@ -259,7 +320,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */,
+				56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */,
+				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
 				56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */,
+				56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */,
+				56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */,
+				56B16A6F2B2B1ABE00D3F4F7 /* PupilModel.swift in Sources */,
+				56B16A652B2B19F300D3F4F7 /* AppUtility.swift in Sources */,
+				56B16A632B2B19DE00D3F4F7 /* AppEnums.swift in Sources */,
 				56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
