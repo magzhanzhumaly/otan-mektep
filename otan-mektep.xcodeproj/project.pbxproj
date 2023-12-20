@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DDA0CEF517E76D4D3400DC7 /* Pods_otan_mektep_otan_mektepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730C2D2CF7B12FAD73F92866 /* Pods_otan_mektep_otan_mektepUITests.framework */; };
+		5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622F4132B2C5DF3006836BB /* MyButton.swift */; };
+		562FC29D2B2C47C500F81907 /* InputBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FC29C2B2C47C500F81907 /* InputBoxView.swift */; };
+		562FC29F2B2C4A0400F81907 /* OtanMektepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FC29E2B2C4A0400F81907 /* OtanMektepButton.swift */; };
 		56B16A632B2B19DE00D3F4F7 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A622B2B19DE00D3F4F7 /* AppEnums.swift */; };
 		56B16A652B2B19F300D3F4F7 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A642B2B19F300D3F4F7 /* AppUtility.swift */; };
 		56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A662B2B1A0600D3F4F7 /* UIView+Add.swift */; };
@@ -14,6 +18,18 @@
 		56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */; };
 		56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */; };
 		56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */; };
+		56B9CBFA2B32E206007219BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CBFC2B32E206007219BC /* Localizable.strings */; };
+		56B9CC042B3304A3007219BC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC032B3304A3007219BC /* RegistrationViewController.swift */; };
+		56D06E8E2B31B3A400D9B2BF /* Parent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */; };
+		56D06E902B31B3B200D9B2BF /* Pupil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */; };
+		56D06E922B31B3B900D9B2BF /* Teacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E912B31B3B900D9B2BF /* Teacher.storyboard */; };
+		56D06E942B31B3DC00D9B2BF /* CafeteriaWorker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E932B31B3DC00D9B2BF /* CafeteriaWorker.storyboard */; };
+		56F4D1A82B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
+		56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
+		56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
+		56F4D1AB2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */; };
+		56F4D1AC2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */; };
+		56F4D1AD2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */; };
 		56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E52B2B13A400644F75 /* AppDelegate.swift */; };
 		56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E72B2B13A400644F75 /* SceneDelegate.swift */; };
 		56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E92B2B13A400644F75 /* ViewController.swift */; };
@@ -23,6 +39,8 @@
 		56FA62FD2B2B13A500644F75 /* otan_mektepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62FC2B2B13A500644F75 /* otan_mektepTests.swift */; };
 		56FA63072B2B13A500644F75 /* otan_mektepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA63062B2B13A500644F75 /* otan_mektepUITests.swift */; };
 		56FA63092B2B13A500644F75 /* otan_mektepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA63082B2B13A500644F75 /* otan_mektepUITestsLaunchTests.swift */; };
+		7E9136452CBD09A933F075BA /* Pods_otan_mektepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C81A4E190265EFA7BC04DE /* Pods_otan_mektepTests.framework */; };
+		EB579798414D16C059F6FAC4 /* Pods_otan_mektep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFBBA53FC1AFB00CFB20BB3 /* Pods_otan_mektep.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +61,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0115E7A1EEDB9384FECDD51E /* Pods-otan-mektep-otan-mektepUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otan-mektep-otan-mektepUITests.release.xcconfig"; path = "Target Support Files/Pods-otan-mektep-otan-mektepUITests/Pods-otan-mektep-otan-mektepUITests.release.xcconfig"; sourceTree = "<group>"; };
+		13C81A4E190265EFA7BC04DE /* Pods_otan_mektepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otan_mektepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234350570AFADF5B5E379834 /* Pods-otan-mektep-otan-mektepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otan-mektep-otan-mektepUITests.debug.xcconfig"; path = "Target Support Files/Pods-otan-mektep-otan-mektepUITests/Pods-otan-mektep-otan-mektepUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		287214024F5EC8DBDF305B1F /* Pods-otan-mektepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otan-mektepTests.debug.xcconfig"; path = "Target Support Files/Pods-otan-mektepTests/Pods-otan-mektepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5622F4132B2C5DF3006836BB /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		562FC29C2B2C47C500F81907 /* InputBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBoxView.swift; sourceTree = "<group>"; };
+		562FC29E2B2C4A0400F81907 /* OtanMektepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtanMektepButton.swift; sourceTree = "<group>"; };
 		56B16A622B2B19DE00D3F4F7 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		56B16A642B2B19F300D3F4F7 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		56B16A662B2B1A0600D3F4F7 /* UIView+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Add.swift"; sourceTree = "<group>"; };
@@ -50,6 +75,14 @@
 		56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherModel.swift; sourceTree = "<group>"; };
 		56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaWorkerModel.swift; sourceTree = "<group>"; };
 		56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModel.swift; sourceTree = "<group>"; };
+		56B9CBFB2B32E206007219BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56B9CC032B3304A3007219BC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parent.storyboard; sourceTree = "<group>"; };
+		56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pupil.storyboard; sourceTree = "<group>"; };
+		56D06E912B31B3B900D9B2BF /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
+		56D06E932B31B3DC00D9B2BF /* CafeteriaWorker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaWorker.storyboard; sourceTree = "<group>"; };
+		56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		56FA62E22B2B13A400644F75 /* otan-mektep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "otan-mektep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FA62E52B2B13A400644F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56FA62E72B2B13A400644F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +96,11 @@
 		56FA63022B2B13A500644F75 /* otan-mektepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "otan-mektepUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FA63062B2B13A500644F75 /* otan_mektepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otan_mektepUITests.swift; sourceTree = "<group>"; };
 		56FA63082B2B13A500644F75 /* otan_mektepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otan_mektepUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		730C2D2CF7B12FAD73F92866 /* Pods_otan_mektep_otan_mektepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otan_mektep_otan_mektepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8BB358B661C8A9A9A407033 /* Pods-otan-mektep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otan-mektep.release.xcconfig"; path = "Target Support Files/Pods-otan-mektep/Pods-otan-mektep.release.xcconfig"; sourceTree = "<group>"; };
+		C2800EC196D89C6C329D4E30 /* Pods-otan-mektepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otan-mektepTests.release.xcconfig"; path = "Target Support Files/Pods-otan-mektepTests/Pods-otan-mektepTests.release.xcconfig"; sourceTree = "<group>"; };
+		DDFBBA53FC1AFB00CFB20BB3 /* Pods_otan_mektep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_otan_mektep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF720B594D86BD63922DA5D3 /* Pods-otan-mektep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-otan-mektep.debug.xcconfig"; path = "Target Support Files/Pods-otan-mektep/Pods-otan-mektep.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB579798414D16C059F6FAC4 /* Pods_otan_mektep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9136452CBD09A933F075BA /* Pods_otan_mektepTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDA0CEF517E76D4D3400DC7 /* Pods_otan_mektep_otan_mektepUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +147,13 @@
 			children = (
 				56FA62F02B2B13A500644F75 /* LaunchScreen.storyboard */,
 				56FA62EB2B2B13A400644F75 /* Main.storyboard */,
+				562FC29C2B2C47C500F81907 /* InputBoxView.swift */,
+				562FC29E2B2C4A0400F81907 /* OtanMektepButton.swift */,
+				5622F4132B2C5DF3006836BB /* MyButton.swift */,
+				56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */,
+				56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */,
+				56D06E912B31B3B900D9B2BF /* Teacher.storyboard */,
+				56D06E932B31B3DC00D9B2BF /* CafeteriaWorker.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,7 +161,9 @@
 		56B16A6B2B2B1A2D00D3F4F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				56FA62E92B2B13A400644F75 /* ViewController.swift */,
+				56B9CC002B33045F007219BC /* New Group */,
+				56B9CBFF2B33044C007219BC /* Pupil */,
+				56B9CBFD2B33041E007219BC /* Main */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,17 +184,53 @@
 				56B16A642B2B19F300D3F4F7 /* AppUtility.swift */,
 				56FA62EE2B2B13A500644F75 /* Assets.xcassets */,
 				56FA62E72B2B13A400644F75 /* SceneDelegate.swift */,
+				56B9CBFC2B32E206007219BC /* Localizable.strings */,
 			);
 			path = "App Files";
+			sourceTree = "<group>";
+		};
+		56B627702B2C2D9100B30E07 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */,
+				56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		56B9CBFD2B33041E007219BC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				56FA62E92B2B13A400644F75 /* ViewController.swift */,
+				56B9CC032B3304A3007219BC /* RegistrationViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		56B9CBFF2B33044C007219BC /* Pupil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pupil;
+			sourceTree = "<group>";
+		};
+		56B9CC002B33045F007219BC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		56FA62D92B2B13A400644F75 = {
 			isa = PBXGroup;
 			children = (
 				56FA62E42B2B13A400644F75 /* otan-mektep */,
+				56FA62F32B2B13A500644F75 /* Info.plist */,
 				56FA62FB2B2B13A500644F75 /* otan-mektepTests */,
 				56FA63052B2B13A500644F75 /* otan-mektepUITests */,
 				56FA62E32B2B13A400644F75 /* Products */,
+				6B2367FF2CE7486528268AC1 /* Pods */,
+				DE2C24CAAF778862036C61EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,12 +247,12 @@
 		56FA62E42B2B13A400644F75 /* otan-mektep */ = {
 			isa = PBXGroup;
 			children = (
+				56B627702B2C2D9100B30E07 /* Fonts */,
 				56B16A6D2B2B1A5F00D3F4F7 /* App Files */,
 				56B16A6C2B2B1A4D00D3F4F7 /* Extensions */,
 				56B16A682B2B1A1D00D3F4F7 /* Models */,
 				56B16A6A2B2B1A2800D3F4F7 /* Views */,
 				56B16A6B2B2B1A2D00D3F4F7 /* Controllers */,
-				56FA62F32B2B13A500644F75 /* Info.plist */,
 			);
 			path = "otan-mektep";
 			sourceTree = "<group>";
@@ -188,6 +274,29 @@
 			path = "otan-mektepUITests";
 			sourceTree = "<group>";
 		};
+		6B2367FF2CE7486528268AC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF720B594D86BD63922DA5D3 /* Pods-otan-mektep.debug.xcconfig */,
+				B8BB358B661C8A9A9A407033 /* Pods-otan-mektep.release.xcconfig */,
+				234350570AFADF5B5E379834 /* Pods-otan-mektep-otan-mektepUITests.debug.xcconfig */,
+				0115E7A1EEDB9384FECDD51E /* Pods-otan-mektep-otan-mektepUITests.release.xcconfig */,
+				287214024F5EC8DBDF305B1F /* Pods-otan-mektepTests.debug.xcconfig */,
+				C2800EC196D89C6C329D4E30 /* Pods-otan-mektepTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE2C24CAAF778862036C61EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDFBBA53FC1AFB00CFB20BB3 /* Pods_otan_mektep.framework */,
+				730C2D2CF7B12FAD73F92866 /* Pods_otan_mektep_otan_mektepUITests.framework */,
+				13C81A4E190265EFA7BC04DE /* Pods_otan_mektepTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56FA630C2B2B13A500644F75 /* Build configuration list for PBXNativeTarget "otan-mektep" */;
 			buildPhases = (
+				17F89B348C565B3DD7B61491 /* [CP] Check Pods Manifest.lock */,
 				56FA62DE2B2B13A400644F75 /* Sources */,
 				56FA62DF2B2B13A400644F75 /* Frameworks */,
 				56FA62E02B2B13A400644F75 /* Resources */,
+				E8C32AD8937A5640A531FFE1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56FA630F2B2B13A500644F75 /* Build configuration list for PBXNativeTarget "otan-mektepTests" */;
 			buildPhases = (
+				0B74AA989CBF0AAF6775EEDF /* [CP] Check Pods Manifest.lock */,
 				56FA62F42B2B13A500644F75 /* Sources */,
 				56FA62F52B2B13A500644F75 /* Frameworks */,
 				56FA62F62B2B13A500644F75 /* Resources */,
@@ -230,9 +342,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56FA63122B2B13A500644F75 /* Build configuration list for PBXNativeTarget "otan-mektepUITests" */;
 			buildPhases = (
+				687C52AA3600ACDC632775AE /* [CP] Check Pods Manifest.lock */,
 				56FA62FE2B2B13A500644F75 /* Sources */,
 				56FA62FF2B2B13A500644F75 /* Frameworks */,
 				56FA63002B2B13A500644F75 /* Resources */,
+				0A07F4C38363FAA91F3DBFF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,8 +406,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D06E8E2B31B3A400D9B2BF /* Parent.storyboard in Resources */,
+				56F4D1A82B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
+				56F4D1AB2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
 				56FA62F22B2B13A500644F75 /* LaunchScreen.storyboard in Resources */,
+				56D06E902B31B3B200D9B2BF /* Pupil.storyboard in Resources */,
+				56B9CBFA2B32E206007219BC /* Localizable.strings in Resources */,
+				56D06E922B31B3B900D9B2BF /* Teacher.storyboard in Resources */,
 				56FA62EF2B2B13A500644F75 /* Assets.xcassets in Resources */,
+				56D06E942B31B3DC00D9B2BF /* CafeteriaWorker.storyboard in Resources */,
 				56FA62ED2B2B13A400644F75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +423,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F4D1AC2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
+				56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +432,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F4D1AD2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
+				56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A07F4C38363FAA91F3DBFF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otan-mektep-otan-mektepUITests/Pods-otan-mektep-otan-mektepUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otan-mektep-otan-mektepUITests/Pods-otan-mektep-otan-mektepUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otan-mektep-otan-mektepUITests/Pods-otan-mektep-otan-mektepUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B74AA989CBF0AAF6775EEDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otan-mektepTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17F89B348C565B3DD7B61491 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otan-mektep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		687C52AA3600ACDC632775AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-otan-mektep-otan-mektepUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8C32AD8937A5640A531FFE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otan-mektep/Pods-otan-mektep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-otan-mektep/Pods-otan-mektep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-otan-mektep/Pods-otan-mektep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56FA62DE2B2B13A400644F75 /* Sources */ = {
@@ -322,7 +550,11 @@
 				56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */,
 				56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
+				5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */,
+				56B9CC042B3304A3007219BC /* RegistrationViewController.swift in Sources */,
+				562FC29D2B2C47C500F81907 /* InputBoxView.swift in Sources */,
 				56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */,
+				562FC29F2B2C4A0400F81907 /* OtanMektepButton.swift in Sources */,
 				56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */,
 				56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */,
 				56B16A6F2B2B1ABE00D3F4F7 /* PupilModel.swift in Sources */,
@@ -365,6 +597,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		56B9CBFC2B32E206007219BC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56B9CBFB2B32E206007219BC /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		56FA62EB2B2B13A400644F75 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -505,19 +745,23 @@
 		};
 		56FA630D2B2B13A500644F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF720B594D86BD63922DA5D3 /* Pods-otan-mektep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D3C4YVDR4G;
+				DEVELOPMENT_TEAM = L3QR5M94K5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "otan-mektep/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,19 +777,23 @@
 		};
 		56FA630E2B2B13A500644F75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8BB358B661C8A9A9A407033 /* Pods-otan-mektep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D3C4YVDR4G;
+				DEVELOPMENT_TEAM = L3QR5M94K5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "otan-mektep/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,6 +809,7 @@
 		};
 		56FA63102B2B13A500644F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 287214024F5EC8DBDF305B1F /* Pods-otan-mektepTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -568,7 +817,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D3C4YVDR4G;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "magzhanzhumaly.otan-mektepTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,6 +830,7 @@
 		};
 		56FA63112B2B13A500644F75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2800EC196D89C6C329D4E30 /* Pods-otan-mektepTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,7 +838,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D3C4YVDR4G;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "magzhanzhumaly.otan-mektepTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,12 +851,14 @@
 		};
 		56FA63132B2B13A500644F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 234350570AFADF5B5E379834 /* Pods-otan-mektep-otan-mektepUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D3C4YVDR4G;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "magzhanzhumaly.otan-mektepUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -619,12 +871,14 @@
 		};
 		56FA63142B2B13A500644F75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0115E7A1EEDB9384FECDD51E /* Pods-otan-mektep-otan-mektepUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D3C4YVDR4G;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "magzhanzhumaly.otan-mektepUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

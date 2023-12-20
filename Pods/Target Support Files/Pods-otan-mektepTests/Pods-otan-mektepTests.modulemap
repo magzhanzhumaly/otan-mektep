@@ -1,0 +1,6 @@
+framework module Pods_otan_mektepTests {
+  umbrella header "Pods-otan-mektepTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
