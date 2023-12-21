@@ -78,9 +78,12 @@
 		56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherModel.swift; sourceTree = "<group>"; };
 		56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaWorkerModel.swift; sourceTree = "<group>"; };
 		56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModel.swift; sourceTree = "<group>"; };
-		56B9CBFB2B32E206007219BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56B9CC032B3304A3007219BC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		56B9CC092B33E810007219BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56B9CC0F2B3406C8007219BC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56B9CC162B34071D007219BC /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		56B9CC172B34071D007219BC /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Main.strings; sourceTree = "<group>"; };
+		56B9CC182B34071D007219BC /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parent.storyboard; sourceTree = "<group>"; };
 		56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pupil.storyboard; sourceTree = "<group>"; };
 		56D06E912B31B3B900D9B2BF /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
@@ -388,11 +391,12 @@
 			};
 			buildConfigurationList = 56FA62DD2B2B13A400644F75 /* Build configuration list for PBXProject "otan-mektep" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
+				kk,
 			);
 			mainGroup = 56FA62D92B2B13A400644F75;
 			productRefGroup = 56FA62E32B2B13A400644F75 /* Products */;
@@ -608,7 +612,8 @@
 		56B9CBFC2B32E206007219BC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				56B9CBFB2B32E206007219BC /* en */,
+				56B9CC0F2B3406C8007219BC /* ru */,
+				56B9CC182B34071D007219BC /* kk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56FA62EC2B2B13A400644F75 /* Base */,
+				56B9CC172B34071D007219BC /* kk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -625,6 +631,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56FA62F12B2B13A500644F75 /* Base */,
+				56B9CC162B34071D007219BC /* kk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -637,6 +644,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -700,6 +708,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

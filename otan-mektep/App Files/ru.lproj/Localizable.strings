@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  otan-mektep
+
+  Created by Magzhan Zhumaly on 20.12.2023.
+  
+*/
+
+"welcome-string %a" = "Добро пожаловать,\n%a";
+"heyhiehey" = "здрасьте";

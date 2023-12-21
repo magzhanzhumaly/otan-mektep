@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         let noAccountLabel = UILabel()
         let registerButton = UIButton()
         
-        noAccountLabel.text = "Нету аккаунта?"
+        noAccountLabel.text = "Нет аккаунта?"
         registerButton.setTitle("Зарегистрируйтесь".localizedCapitalized, for: .normal)
         
         noAccountLabel.widthAnchor.constraint(equalToConstant: noAccountLabel.intrinsicContentSize.width).isActive = true
@@ -275,6 +275,10 @@ class ViewController: UIViewController {
     }
 }
 
+
+
+
+// MARK: Extension of InputBoxViewDelegate
 extension ViewController: InputBoxViewDelegate {
     func onFieldReturn(_ input: InputBoxView) {
         
