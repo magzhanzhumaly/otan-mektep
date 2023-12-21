@@ -118,9 +118,3 @@ fastlane/test_output
 iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos
-
-
-Info.plist
-GoogleService-Info.plist
-Pods/
-Podfile.lock
