@@ -20,6 +20,9 @@
 		56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */; };
 		56B9CBFA2B32E206007219BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CBFC2B32E206007219BC /* Localizable.strings */; };
 		56B9CC042B3304A3007219BC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC032B3304A3007219BC /* RegistrationViewController.swift */; };
+		56B9CC0A2B33E810007219BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CC092B33E810007219BC /* GoogleService-Info.plist */; };
+		56B9CC0B2B33E810007219BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CC092B33E810007219BC /* GoogleService-Info.plist */; };
+		56B9CC0C2B33E810007219BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CC092B33E810007219BC /* GoogleService-Info.plist */; };
 		56D06E8E2B31B3A400D9B2BF /* Parent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */; };
 		56D06E902B31B3B200D9B2BF /* Pupil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */; };
 		56D06E922B31B3B900D9B2BF /* Teacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E912B31B3B900D9B2BF /* Teacher.storyboard */; };
@@ -77,6 +80,7 @@
 		56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModel.swift; sourceTree = "<group>"; };
 		56B9CBFB2B32E206007219BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		56B9CC032B3304A3007219BC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		56B9CC092B33E810007219BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parent.storyboard; sourceTree = "<group>"; };
 		56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pupil.storyboard; sourceTree = "<group>"; };
 		56D06E912B31B3B900D9B2BF /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			children = (
 				56FA62E42B2B13A400644F75 /* otan-mektep */,
 				56FA62F32B2B13A500644F75 /* Info.plist */,
+				56B9CC092B33E810007219BC /* GoogleService-Info.plist */,
 				56FA62FB2B2B13A500644F75 /* otan-mektepTests */,
 				56FA63052B2B13A500644F75 /* otan-mektepUITests */,
 				56FA62E32B2B13A400644F75 /* Products */,
@@ -414,6 +419,7 @@
 				56B9CBFA2B32E206007219BC /* Localizable.strings in Resources */,
 				56D06E922B31B3B900D9B2BF /* Teacher.storyboard in Resources */,
 				56FA62EF2B2B13A500644F75 /* Assets.xcassets in Resources */,
+				56B9CC0A2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 				56D06E942B31B3DC00D9B2BF /* CafeteriaWorker.storyboard in Resources */,
 				56FA62ED2B2B13A400644F75 /* Main.storyboard in Resources */,
 			);
@@ -425,6 +431,7 @@
 			files = (
 				56F4D1AC2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
 				56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
+				56B9CC0B2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +441,7 @@
 			files = (
 				56F4D1AD2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
 				56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
+				56B9CC0C2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +763,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -787,6 +796,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

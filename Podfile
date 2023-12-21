@@ -8,7 +8,8 @@ target 'otan-mektep' do
 #  pod 'Alamofire', '4.7.3'
 #  pod 'Firebase/Messaging', '6.31.1'
   pod 'DropDown'
-
+  pod 'FirebaseAuth'
+  
   target 'otan-mektepTests' do
     inherit! :search_paths
     # Pods for testing

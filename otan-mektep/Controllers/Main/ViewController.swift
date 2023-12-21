@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                                                              time: nil,
                                                              label: "Введите пароль",
                                                              placeholder: "Пароль",
-                                                             caption: InputBoxView.Caption(text: "Логин введите",
+                                                             caption: InputBoxView.Caption(text: "Нажмите на иконку глаза, чтобы скрыть/раскрыть пароль",
                                                                                            icon: nil,
                                                                                            action: nil), 
                                                              dropdownOptions: nil,
