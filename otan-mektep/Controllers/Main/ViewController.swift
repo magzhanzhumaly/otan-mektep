@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -25,9 +26,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var orLabelContainer: UIView!
     
-    
-    
-    
+    var user: User?
     
     private var loginInputBox = InputBoxView(input: .init(isLarge: true,
                                                           isRequired: true,
@@ -58,10 +57,23 @@ class ViewController: UIViewController {
     private var loginButton = MyButton(input: .init(isLarge: true, isFilled: true, icon: nil, label: "Войти"))
 
     
+    @objc func tapAction() {
+        view.endEditing(true)
+    }
     
     // MARK: VIEW CONTROLLER LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let tapGesture = UITapGestureRecognizer (target: self, action: #selector(tapAction))
+        view.addGestureRecognizer(tapGesture)
+
+        
+        loginInputBox.delegate = self
+        passwordInputBox.delegate = self
+        
+        loginInputBox.keyboardType = .emailAddress
         
         let registrationStackView = UIStackView()
         registrationStackView.axis = .horizontal
@@ -219,17 +231,38 @@ class ViewController: UIViewController {
         
     }
     
+    
     @objc func loginButtonTapped() {
         
-        loginInputBox.captionLabel?.text = "heloo"
+        loginInputBox.resignFirstResponder()
+        passwordInputBox.resignFirstResponder()
+        
         let result = checkEntries()
         if result == LoginErrors.successful {
+            Vibration.success.vibrate()
+
             navigate()
         } else {
-            pushAlert(result)
+            
+            if result == .loginEmpty {
+                loginInputBox.recolorForFourSeconds(to: .error, text: "Логин не должен быть пустым", oldText: "hihi")
+                Vibration.error.vibrate()
+
+            } else if result == .bothEmpty {
+                loginInputBox.recolorForFourSeconds(to: .error, text: "Логин не должен быть пустым", oldText: "hihi")
+                passwordInputBox.recolorForFourSeconds(to: .error, text: "Пароль не должен быть пустым", oldText: "hihi")
+
+                Vibration.error.vibrate()
+
+            } else if result == .passwordEmpty {
+                passwordInputBox.recolorForFourSeconds(to: .error, text: "Пароль не должен быть пустым", oldText: "hihi")
+
+                Vibration.error.vibrate()
+            }
         }
     }
-
+    
+        
     enum LoginErrors {
         case successful
         case unsuccessful
@@ -243,9 +276,32 @@ class ViewController: UIViewController {
     }
     
     func checkEntries() -> LoginErrors {
-        if loginInputBox.text == "" {
+        if loginInputBox.text == "" && passwordInputBox.text == "" {
+            return LoginErrors.bothEmpty
+        } else if loginInputBox.text == "" {
             return LoginErrors.loginEmpty
+        } else if passwordInputBox.text == "" {
+            return LoginErrors.passwordEmpty
         }
+
+        email = loginInputBox.text ?? ""
+        password = passwordInputBox.text ?? ""
+        
+        Task {
+            if await signInWithEmailPassword() == true {
+                dismiss(animated: true)
+            }
+            return LoginErrors.successful
+        }
+      
+        
+
+        
+        
+        
+        
+        
+        
         
         let api = apiCall()
         
@@ -271,31 +327,127 @@ class ViewController: UIViewController {
     }
 
     func pushAlert(_ result: LoginErrors) {
+        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("default")
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    enum AuthenticationState {
+        case unauthenticated
+        case authenticating
+        case authenticated
+    }
+    
+    var authenticationState: AuthenticationState = .unauthenticated
+    var email = ""
+    var password = ""
+    var confirmPassword = ""
+    
+    var isValid = false
+    var errorMessage = ""
+    
+    func signInWithEmailPassword() async -> Bool {
+        authenticationState = .authenticating
         
+        do {
+            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            user = authResult.user
+            print("User \(authResult.user.uid) signed in")
+            print("user = \(user)")
+            authenticationState = .authenticated
+
+            
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let registrationViewController = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+//            registrationViewController.modalPresentationStyle = .fullScreen
+//            self.present(registrationViewController, animated: true, completion: nil)
+
+            
+            return true
+        } catch {
+            print(error)
+            errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
+            return false
+        }
+    }
+    
+    
+    func signUpWithEmailPassword() async -> Bool {
+        authenticationState = .authenticating
+        
+        do {
+            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            
+            user = authResult.user
+            authenticationState = .authenticated
+
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let registrationViewController = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+//            registrationViewController.modalPresentationStyle = .fullScreen
+//            self.present(registrationViewController, animated: true, completion: nil)
+
+            print("User \(authResult.user.uid) signed in")
+            return true
+        } catch {
+            print(error)
+            errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
+            return false
+        }
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+        }
+        catch {
+            print(error)
+            errorMessage = error.localizedDescription
+        }
+    }
+    
+    func deleteAccount() async -> Bool {
+        do {
+            try await user?.delete()
+            return true
+        }
+        catch {
+            errorMessage = error.localizedDescription
+            return false
+        }
     }
 }
-
-
 
 
 // MARK: Extension of InputBoxViewDelegate
 extension ViewController: InputBoxViewDelegate {
     func onFieldReturn(_ input: InputBoxView) {
-        
+        if input == loginInputBox {
+            passwordInputBox.becomeFirstResponder()
+        } else {
+            loginButtonTapped()
+        }
     }
     
     func onFieldDidBeginEditing(_ input: InputBoxView) {
-        input.heightAnchor.constraint(equalToConstant: 87).isActive = true
-//        input.
+        //        input.heightAnchor.constraint(equalToConstant: 87).isActive = true
+        //        input.
     }
     
     func onFieldDidEndEditing(_ input: InputBoxView) {
-        let text = input.text ?? ""
-        if text.isEmpty {
-            input.state = .empty
-        } else {
-            input.state = .filled
-        }
     }
     
 //    func input(_ input: InputBoxView, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

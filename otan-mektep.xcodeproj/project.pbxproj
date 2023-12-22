@@ -23,6 +23,15 @@
 		56B9CC0A2B33E810007219BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CC092B33E810007219BC /* GoogleService-Info.plist */; };
 		56B9CC0B2B33E810007219BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CC092B33E810007219BC /* GoogleService-Info.plist */; };
 		56B9CC0C2B33E810007219BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B9CC092B33E810007219BC /* GoogleService-Info.plist */; };
+		56B9CC1A2B354410007219BC /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC192B354410007219BC /* UIViewController+Navigation.swift */; };
+		56B9CC1B2B354410007219BC /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC192B354410007219BC /* UIViewController+Navigation.swift */; };
+		56B9CC1C2B354410007219BC /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC192B354410007219BC /* UIViewController+Navigation.swift */; };
+		56B9CC1E2B354439007219BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC1D2B354439007219BC /* BaseViewController.swift */; };
+		56B9CC1F2B354439007219BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC1D2B354439007219BC /* BaseViewController.swift */; };
+		56B9CC202B354439007219BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC1D2B354439007219BC /* BaseViewController.swift */; };
+		56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */; };
+		56B9CC232B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */; };
+		56B9CC242B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */; };
 		56D06E8E2B31B3A400D9B2BF /* Parent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */; };
 		56D06E902B31B3B200D9B2BF /* Pupil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */; };
 		56D06E922B31B3B900D9B2BF /* Teacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D06E912B31B3B900D9B2BF /* Teacher.storyboard */; };
@@ -84,6 +93,9 @@
 		56B9CC162B34071D007219BC /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		56B9CC172B34071D007219BC /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Main.strings; sourceTree = "<group>"; };
 		56B9CC182B34071D007219BC /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56B9CC192B354410007219BC /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		56B9CC1D2B354439007219BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtanMektepSegmentedControl.swift; sourceTree = "<group>"; };
 		56D06E8D2B31B3A400D9B2BF /* Parent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parent.storyboard; sourceTree = "<group>"; };
 		56D06E8F2B31B3B200D9B2BF /* Pupil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pupil.storyboard; sourceTree = "<group>"; };
 		56D06E912B31B3B900D9B2BF /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
@@ -179,6 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				56B16A662B2B1A0600D3F4F7 /* UIView+Add.swift */,
+				56B9CC192B354410007219BC /* UIViewController+Navigation.swift */,
+				56B9CC1D2B354439007219BC /* BaseViewController.swift */,
+				56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -561,16 +576,19 @@
 			files = (
 				56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */,
 				56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */,
+				56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
 				5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */,
 				56B9CC042B3304A3007219BC /* RegistrationViewController.swift in Sources */,
 				562FC29D2B2C47C500F81907 /* InputBoxView.swift in Sources */,
+				56B9CC1A2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
 				56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */,
 				562FC29F2B2C4A0400F81907 /* OtanMektepButton.swift in Sources */,
 				56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */,
 				56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */,
 				56B16A6F2B2B1ABE00D3F4F7 /* PupilModel.swift in Sources */,
 				56B16A652B2B19F300D3F4F7 /* AppUtility.swift in Sources */,
+				56B9CC1E2B354439007219BC /* BaseViewController.swift in Sources */,
 				56B16A632B2B19DE00D3F4F7 /* AppEnums.swift in Sources */,
 				56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */,
 			);
@@ -580,7 +598,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B9CC232B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
+				56B9CC1B2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
 				56FA62FD2B2B13A500644F75 /* otan_mektepTests.swift in Sources */,
+				56B9CC1F2B354439007219BC /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,8 +609,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B9CC1C2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
+				56B9CC202B354439007219BC /* BaseViewController.swift in Sources */,
 				56FA63092B2B13A500644F75 /* otan_mektepUITestsLaunchTests.swift in Sources */,
 				56FA63072B2B13A500644F75 /* otan_mektepUITests.swift in Sources */,
+				56B9CC242B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

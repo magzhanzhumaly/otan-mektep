@@ -495,6 +495,25 @@ class InputBoxView: UIView {
     func recolorForTwoSeconds(to state: State) {
         recolor(to: state, for: 2)
     }
+    
+    
+    
+    func recolor(to state: State, text: String, oldText: String, for timeInSeconds: Double) {
+        recolor(for: state)
+        
+        let temp = self.captionLabel?.text ?? ""
+        self.captionLabel?.text = text
+        
+        DispatchQueue.main.asyncAfter (deadline: .now () + timeInSeconds) {
+            self.recolor(for: self.state)
+            self.captionLabel?.text = temp
+        }
+        
+    }
+    
+    func recolorForFourSeconds(to state: State, text: String, oldText: String) {
+        recolor(to: state, text: text, oldText: oldText, for: 4)
+    }
 
     private func updateColors() {
         recolor(for: state)
@@ -556,7 +575,12 @@ extension InputBoxView: UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        setState(.empty)
+        let text = textField.text ?? ""
+        if text.isEmpty {
+            setState(.empty)
+        } else {
+            setState(.filled)
+        }
         delegate?.onFieldDidEndEditing(self)
     }
     
