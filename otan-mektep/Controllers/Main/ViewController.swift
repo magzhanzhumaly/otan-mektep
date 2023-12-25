@@ -7,6 +7,9 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseAnalytics
+import GoogleSignIn
+import GoogleSignInSwift
 
 class ViewController: UIViewController {
     
@@ -27,6 +30,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var orLabelContainer: UIView!
     
     var user: User?
+    var authResult: AuthDataResult?
+    var role = "heyhey"
     
     private var loginInputBox = InputBoxView(input: .init(isLarge: true,
                                                           isRequired: true,
@@ -223,6 +228,46 @@ class ViewController: UIViewController {
         appleButton.addTarget(self, action: #selector(appleSignInButtonTapped), for: .touchUpInside)
     }
     
+    func signInWithGoogle() -> Bool {
+        /*
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            fatalError("No client ID found in Firebase configuration")
+        }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first,
+              let rootViewController = window.rootViewController else {
+            print("there is no root view controller")
+            return false
+        }
+
+        do {
+            let userAuthentication = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
+            let user = userAuthentication.user
+            guard let idToken = user.idToken else {
+                throw AuthenticationError.tokenError(message: "ID token missing")
+            }
+            let accessToken = user.accessToken
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
+                                                           accessToken: accessToken.tokenString)
+            
+            let result = try await Auth.auth().signIn(with: credential)
+            
+            let firebaseUser = result.user
+            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            return true
+        } catch {
+            print(error.localizedDescription)
+            errorMessage = error.localizedDescription
+            return false
+        }
+        return false
+         */
+        return false
+    }
+    
     @objc func googleSignInButtonTapped() {
         
     }
@@ -289,25 +334,24 @@ class ViewController: UIViewController {
         
         Task {
             if await signInWithEmailPassword() == true {
-                dismiss(animated: true)
+//                print("User \(authResult?.user.uid) signed in")
+//                print("user = \(user)")
+
+                //TODO: return here
+                role = "pupil"
+                if role == "pupil" {
+                    performSegue(withIdentifier: "pupilTabBar", sender: self)
+                } else if role == "parent" {
+                    performSegue(withIdentifier: "parentTabBar", sender: self)
+                } else if role == "schoolEmployee" {
+                    performSegue(withIdentifier: "schoolEmployeeTabBar", sender: self)
+                } else if role == "cafeteriaEmployee" {
+                    performSegue(withIdentifier: "cafeteriaEmployeeTabBar", sender: self)
+                }
             }
             return LoginErrors.successful
         }
-      
-        
 
-        
-        
-        
-        
-        
-        
-        
-        let api = apiCall()
-        
-        if api == LoginErrors.successful {
-            return LoginErrors.successful
-        }
         return LoginErrors.unsuccessful
     }
     
@@ -362,18 +406,10 @@ class ViewController: UIViewController {
         authenticationState = .authenticating
         
         do {
-            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
-            user = authResult.user
-            print("User \(authResult.user.uid) signed in")
-            print("user = \(user)")
+            let authResultLocal = try await Auth.auth().signIn(withEmail: email, password: password)
+            authResult = authResultLocal
+            user = authResult?.user
             authenticationState = .authenticated
-
-            
-//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//            let registrationViewController = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
-//            registrationViewController.modalPresentationStyle = .fullScreen
-//            self.present(registrationViewController, animated: true, completion: nil)
-
             
             return true
         } catch {
@@ -394,7 +430,8 @@ class ViewController: UIViewController {
             user = authResult.user
             authenticationState = .authenticated
 
-//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            
+            //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 //            let registrationViewController = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
 //            registrationViewController.modalPresentationStyle = .fullScreen
 //            self.present(registrationViewController, animated: true, completion: nil)

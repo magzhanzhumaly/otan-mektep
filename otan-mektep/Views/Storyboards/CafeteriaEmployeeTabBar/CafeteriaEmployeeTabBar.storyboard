@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KdX-Fx-HF6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CafeteriaEmployeeDiningTabBar-->
+        <scene sceneID="fWc-c0-nTq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CafeteriaEmployeeDiningTabBar" id="xOJ-z9-XlS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="TbI-Ib-Avd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j63-cF-Kub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="411"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oxV-cW-hdz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KdX-Fx-HF6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xh8-Gw-ebb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xOJ-z9-XlS" kind="relationship" relationship="viewControllers" id="1GQ-4j-Poi"/>
+                        <segue destination="lxc-hd-OdJ" kind="relationship" relationship="viewControllers" id="6cs-fu-mmW"/>
+                        <segue destination="cup-tq-pyC" kind="relationship" relationship="viewControllers" id="ZSi-ge-bRo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ju-Hr-1kf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="-17.605633802816904"/>
+        </scene>
+        <!--CafeteriaEmployeeAttendanceTabBar-->
+        <scene sceneID="eVi-m6-tB4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CafeteriaEmployeeAttendanceTabBar" id="lxc-hd-OdJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Z03-8A-Fw4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y99-hO-3NE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="411"/>
+        </scene>
+        <!--CafeteriaEmployeeCabinetTabBar-->
+        <scene sceneID="gSZ-IS-uln">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CafeteriaEmployeeCabinetTabBar" id="cup-tq-pyC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="E1b-ph-KDQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEW-jn-ScB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="411"/>
+        </scene>
+    </scenes>
+</document>

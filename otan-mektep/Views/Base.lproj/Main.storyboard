@@ -137,11 +137,49 @@
                         <outlet property="passwordInputBoxContainer" destination="OLY-cO-8Bv" id="eRq-1f-7XK"/>
                         <outlet property="registrationFieldContainer" destination="fdA-U3-ppT" id="vpQ-Um-5Nv"/>
                         <outlet property="welcomeLabel" destination="0JY-hT-mpc" id="YAF-yq-h90"/>
+                        <segue destination="e05-sQ-SJI" kind="presentation" identifier="parentTabBar" modalPresentationStyle="fullScreen" id="voY-eU-hWA"/>
+                        <segue destination="DDh-Qg-AbS" kind="presentation" identifier="schoolEmployeeTabBar" id="GPJ-oD-MoC"/>
+                        <segue destination="aVY-hB-O00" kind="presentation" identifier="cafeteriaEmployeeTabBar" id="LxJ-cy-Vst"/>
+                        <segue destination="SOf-BO-vaz" kind="presentation" identifier="pupilTabBar" modalPresentationStyle="fullScreen" id="NQJ-ba-ODM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57.251908396946561" y="-10.563380281690142"/>
+        </scene>
+        <!--PupilTabBar-->
+        <scene sceneID="SQE-YF-6La">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PupilTabBar" id="SOf-BO-vaz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TxZ-E0-O60"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYy-E8-9An" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="488"/>
+        </scene>
+        <!--ParentTabBar-->
+        <scene sceneID="pOh-0r-4rt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ParentTabBar" id="e05-sQ-SJI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGq-v7-EPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="563"/>
+        </scene>
+        <!--CafeteriaEmployeeTabBar-->
+        <scene sceneID="GRV-jH-s6N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CafeteriaEmployeeTabBar" id="aVY-hB-O00" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4z-69-tNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="813"/>
+        </scene>
+        <!--SchoolEmployeeTabBar-->
+        <scene sceneID="woC-6i-MSI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SchoolEmployeeTabBar" id="DDh-Qg-AbS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8L-R2-mCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="683"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="yjo-4G-7xm">
@@ -318,13 +356,23 @@
                         <outlet property="scrollView" destination="cQE-dK-67B" id="oPf-mF-hFF"/>
                         <outlet property="surnameInputBoxContainer" destination="DWf-dZ-DYf" id="4xX-Bk-9y5"/>
                         <outlet property="topBarContainer" destination="eg0-dZ-SaE" id="znG-AI-WJn"/>
+                        <segue destination="SOf-BO-vaz" kind="presentation" identifier="pupilTabBar" modalPresentationStyle="fullScreen" id="d8E-MZ-ztL"/>
+                        <segue destination="e05-sQ-SJI" kind="presentation" identifier="parentTabBar" id="xhn-6k-Ejx"/>
+                        <segue destination="DDh-Qg-AbS" kind="presentation" identifier="schoolEmployeeTabBar" id="XP7-NO-ZxX"/>
+                        <segue destination="aVY-hB-O00" kind="presentation" identifier="cafeteriaEmployeeTabBar" id="v7b-jd-9J2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSI-kY-CA9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507.6335877862596" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="-57" y="1218"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GPJ-oD-MoC"/>
+        <segue reference="LxJ-cy-Vst"/>
+        <segue reference="voY-eU-hWA"/>
+        <segue reference="NQJ-ba-ODM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="Gray-200">
             <color red="0.88599997758865356" green="0.9100000262260437" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

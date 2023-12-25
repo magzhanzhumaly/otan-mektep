@@ -1,0 +1,90 @@
+VCs
+
+PUPILS
+
+// Dining
+- PupilDiningChooseOptionViewController
+    - PupilDiningAddToCartViewController
+        - PupilDiningCartViewController
+    - PupilDiningLimitsVC
+        - PupilDiningHistoryVC
+            - PupilDiningHistoryDetailsVC
+
+// Attendance
+- PupilAttendanceVC
+    - PupilAttendanceDetailsVC
+
+// Library
+LibraryViewController
+// Personal Cabinet
+PersonalCabinetViewController
+
+Parents
+
+// Dining
+- ParentDiningChooseChildVC
+    - ParentDiningChooseOptionVC
+        - ParentDiningSetFinancialLimitsVC
+        - ParentDiningSetFoodLimitsVC
+// History
+- ParentHistoryChooseChildVC
+    - ParentHistoryChooseOptionVC
+        - PupilAttendanceVC
+            - PupilAttendanceDetailsVC
+        - PupilDiningHistoryVC
+            - PupilDiningHistoryDetailsVC
+// Finances
+- ParentFinancesVC
+    - ParentFinancesChooseChildVC
+        - ParentFinancesLinkCardVC
+    - ParentFinancesRemoveCardVC
+
+// Library
+LibraryViewController
+// Personal Cabinet
+PersonalCabinetViewController
+
+
+School Employee
+
+// Dining
+- SchoolEmployeeDiningChooseOptionVC
+    - EmployeeDiningVC
+        - EmployeeDiningDetailsVC
+            - PupilDiningHistoryDetailsVC // with button to see details
+                - PupilDiningHistoryVC
+// Attendance
+- SchoolEmployeeAttendanceSearchPageVC —> EmployeeAttendanceSearchPageVC
+    - AttendanceVC
+        - AttendanceDetailsVC
+            - PupilAttendanceVC
+            - PupilAttendanceDetailsVC
+
+
+// Library
+LibraryViewController
+// Personal Cabinet
+PersonalCabinetViewController
+
+
+
+Cafeteria Worker
+
+// Dining
+- CafeteriaEmployeeDiningVC  —> EmployeeDiningDetailsVC
+    - EmployeeDiningVC
+        - EmployeeDiningDetailsVC
+            - PupilDiningHistoryDetailsVC // with button to see details
+                - PupilDiningHistoryVC
+
+// Attendance
+- CafeteriaEmployeeAttendanceSearchPageVC —> EmployeeAttendanceSearchPageVC
+    - AttendanceVC
+        - AttendanceDetailsVC
+            - PupilAttendanceVC
+            - PupilAttendanceDetailsVC
+
+
+
+// Personal Cabinet
+PersonalCabinetViewController

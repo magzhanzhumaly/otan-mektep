@@ -9,6 +9,10 @@ target 'otan-mektep' do
 #  pod 'Firebase/Messaging', '6.31.1'
   pod 'DropDown'
   pod 'FirebaseAuth'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseCrashlytics'
+  pod 'FirebasePerformance'
+
   
   target 'otan-mektepTests' do
     inherit! :search_paths

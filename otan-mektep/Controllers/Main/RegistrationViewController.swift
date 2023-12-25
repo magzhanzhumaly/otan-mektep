@@ -29,7 +29,8 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
 
     var user: User?
-    
+    var authResult: AuthDataResult?
+    var role = "heyhey"
     private var surnameInputBox = InputBoxView(input: .init(isLarge: true,
                                                             isRequired: true,
                                                             isSecure: false,
@@ -573,7 +574,23 @@ class RegistrationViewController: UIViewController {
     func navigate() {  // navigate to the next page upon successful entry of the
         Task {
             if await signUpWithEmailPassword() == true {
-                dismiss(animated: true)
+//                dismiss(animated: true)
+                print("User \(authResult?.user.uid) signed in")
+                print("user = \(user)")
+
+                //TODO: return here
+                role = "pupil"
+                if role == "pupil" {
+                    performSegue(withIdentifier: "pupilTabBar", sender: self)
+    //                pupilTabBar
+                } else if role == "parent" {
+                    
+                } else if role == "schoolEmployee" {
+                    
+                } else if role == "cafeteriaEmployee" {
+                    
+                }
+
             }
         }
     }
@@ -651,9 +668,10 @@ class RegistrationViewController: UIViewController {
         authenticationState = .authenticating
         
         do {
-            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            let authResultLocal = try await Auth.auth().createUser(withEmail: email, password: password)
             
-            user = authResult.user
+            authResult = authResultLocal
+//            user = authResult.user
             authenticationState = .authenticated
 //            user.set
 //            user?.phoneNumber = phoneNumber
@@ -664,8 +682,23 @@ class RegistrationViewController: UIViewController {
 //            let registrationViewController = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
 //            registrationViewController.modalPresentationStyle = .fullScreen
 //            self.present(registrationViewController, animated: true, completion: nil)
+            let changeRequest = user?.createProfileChangeRequest()
             
-            print("User \(authResult.user.uid) signed in")
+            // Set the new display name
+            changeRequest?.displayName = displayName
+//            changeRequest?.phone
+            
+            // Commit the changes
+            changeRequest?.commitChanges { error in
+                if let error = error {
+                    print("Error updating display name: \(error.localizedDescription)")
+                } else {
+                    print("Display name updated successfully!")
+                }
+            }
+
+            
+//            print("User \(authResult.user.uid) signed in")
             return true
         } catch {
             print(error)

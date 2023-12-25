@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ACEADBF9-C268-46DE-9C5A-0E5AA9036DF9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "otan-mektep/Controllers/Main/RegistrationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "416"
-            endingLineNumber = "416"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "checkEntries()"
             landmarkType = "7">
             <Locations>
@@ -32,10 +32,10 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "417"
                   endingLineNumber = "417"
-                  offsetFromSymbolStart = "1648">
+                  offsetFromSymbolStart = "368">
                </Location>
                <Location
-                  uuid = "ACEADBF9-C268-46DE-9C5A-0E5AA9036DF9 - 16eb49cee04aa843"
+                  uuid = "ACEADBF9-C268-46DE-9C5A-0E5AA9036DF9 - 16eb49cee04aa9a2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/Controllers/Main/RegistrationViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "416"
-                  endingLineNumber = "416"
+                  startingLineNumber = "417"
+                  endingLineNumber = "417"
                   offsetFromSymbolStart = "160">
                </Location>
             </Locations>
