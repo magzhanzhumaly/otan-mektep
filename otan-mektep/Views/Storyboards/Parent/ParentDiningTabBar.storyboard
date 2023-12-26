@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Parent Dining Choose Child View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ParentDiningChooseChildViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,10 +20,62 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ECo-XA-on7"/>
+                    <connections>
+                        <segue destination="vvr-hv-fdJ" kind="presentation" identifier="parentDiningChooseOptionVCSegue" modalPresentationStyle="fullScreen" id="8to-gk-BfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045.0381679389313" y="-23.239436619718312"/>
+        </scene>
+        <!--Parent Dining Choose Option View Controller-->
+        <scene sceneID="lrH-CD-zsv">
+            <objects>
+                <viewController id="vvr-hv-fdJ" customClass="ParentDiningChooseOptionViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wgs-3P-ZXj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GMS-Pn-FPR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="hCV-25-txA" kind="presentation" identifier="parentDiningSetFinancialLimitsVCSegue" modalPresentationStyle="fullScreen" id="jmA-Ew-exT"/>
+                        <segue destination="yQd-bg-b2y" kind="presentation" id="0er-as-J3S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zx9-VN-lRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="-23"/>
+        </scene>
+        <!--Parent Dining Set Food Limits View Controller-->
+        <scene sceneID="wvu-U4-p9x">
+            <objects>
+                <viewController id="yQd-bg-b2y" customClass="ParentDiningSetFoodLimitsViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Mo-bo-Ny5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tfR-pl-4Uq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pt-6y-K4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920" y="328"/>
+        </scene>
+        <!--Parent Dining Set Financial Limits View Controller-->
+        <scene sceneID="e8b-P2-vH4">
+            <objects>
+                <viewController id="hCV-25-txA" customClass="ParentDiningSetFinancialLimitsViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ix-8x-IkM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="38O-rn-aYU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alU-bD-BzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920" y="-413"/>
         </scene>
         <!--Питание-->
         <scene sceneID="HgN-fU-9xc">

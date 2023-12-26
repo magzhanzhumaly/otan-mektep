@@ -86,6 +86,14 @@
 		56DED23A2B3A993500D757D6 /* AttendanceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2392B3A993500D757D6 /* AttendanceDetailsViewController.swift */; };
 		56DED23F2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED23E2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift */; };
 		56DED2412B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2402B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift */; };
+		56DED2472B3AA8EA00D757D6 /* InitialPupilAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2462B3AA8EA00D757D6 /* InitialPupilAttendanceViewController.swift */; };
+		56DED2492B3AA96700D757D6 /* PupilLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2482B3AA96700D757D6 /* PupilLibraryViewController.swift */; };
+		56DED24B2B3AA97400D757D6 /* PupilCabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED24A2B3AA97400D757D6 /* PupilCabinetViewController.swift */; };
+		56DED24D2B3AA97E00D757D6 /* ParentLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED24C2B3AA97E00D757D6 /* ParentLibraryViewController.swift */; };
+		56DED24F2B3AA98B00D757D6 /* ParentCabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED24E2B3AA98B00D757D6 /* ParentCabinetViewController.swift */; };
+		56DED2512B3AA9A000D757D6 /* SchoolEmployeeLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2502B3AA9A000D757D6 /* SchoolEmployeeLibraryViewController.swift */; };
+		56DED2532B3AA9A900D757D6 /* SchoolEmployeeCabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2522B3AA9A900D757D6 /* SchoolEmployeeCabinetViewController.swift */; };
+		56DED2552B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2542B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift */; };
 		56F4D1A82B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
 		56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
 		56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
@@ -196,6 +204,14 @@
 		56DED2392B3A993500D757D6 /* AttendanceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceDetailsViewController.swift; sourceTree = "<group>"; };
 		56DED23E2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaEmployeeDiningViewController.swift; sourceTree = "<group>"; };
 		56DED2402B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaEmployeeAttendanceSearchPageViewController.swift; sourceTree = "<group>"; };
+		56DED2462B3AA8EA00D757D6 /* InitialPupilAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPupilAttendanceViewController.swift; sourceTree = "<group>"; };
+		56DED2482B3AA96700D757D6 /* PupilLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilLibraryViewController.swift; sourceTree = "<group>"; };
+		56DED24A2B3AA97400D757D6 /* PupilCabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilCabinetViewController.swift; sourceTree = "<group>"; };
+		56DED24C2B3AA97E00D757D6 /* ParentLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentLibraryViewController.swift; sourceTree = "<group>"; };
+		56DED24E2B3AA98B00D757D6 /* ParentCabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCabinetViewController.swift; sourceTree = "<group>"; };
+		56DED2502B3AA9A000D757D6 /* SchoolEmployeeLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEmployeeLibraryViewController.swift; sourceTree = "<group>"; };
+		56DED2522B3AA9A900D757D6 /* SchoolEmployeeCabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEmployeeCabinetViewController.swift; sourceTree = "<group>"; };
+		56DED2542B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaEmployeeCabinetViewController.swift; sourceTree = "<group>"; };
 		56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		56FA62E22B2B13A400644F75 /* otan-mektep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "otan-mektep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +480,7 @@
 		56DED1FD2B3A966E00D757D6 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2462B3AA8EA00D757D6 /* InitialPupilAttendanceViewController.swift */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
@@ -471,6 +488,7 @@
 		56DED1FE2B3A967700D757D6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2482B3AA96700D757D6 /* PupilLibraryViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -478,6 +496,7 @@
 		56DED1FF2B3A968000D757D6 /* Cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				56DED24A2B3AA97400D757D6 /* PupilCabinetViewController.swift */,
 			);
 			path = Cabinet;
 			sourceTree = "<group>";
@@ -519,6 +538,7 @@
 		56DED20C2B3A972900D757D6 /* Cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				56DED24E2B3AA98B00D757D6 /* ParentCabinetViewController.swift */,
 			);
 			path = Cabinet;
 			sourceTree = "<group>";
@@ -557,6 +577,7 @@
 		56DED2102B3A974600D757D6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				56DED24C2B3AA97E00D757D6 /* ParentLibraryViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -564,6 +585,7 @@
 		56DED2252B3A980800D757D6 /* Cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2522B3AA9A900D757D6 /* SchoolEmployeeCabinetViewController.swift */,
 			);
 			path = Cabinet;
 			sourceTree = "<group>";
@@ -571,6 +593,7 @@
 		56DED2262B3A981800D757D6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2502B3AA9A000D757D6 /* SchoolEmployeeLibraryViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -613,6 +636,7 @@
 		56DED23B2B3A994500D757D6 /* Cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2542B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift */,
 			);
 			path = Cabinet;
 			sourceTree = "<group>";
@@ -998,18 +1022,22 @@
 				56DED2362B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift in Sources */,
 				56DED2032B3A96B500D757D6 /* PupilAttendanceDetailsViewController.swift in Sources */,
 				56B9CC272B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */,
+				56DED2552B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift in Sources */,
 				56DED1F42B3A957900D757D6 /* PupilDiningAddToCartViewController.swift in Sources */,
 				56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
 				56DED21A2B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
+				56DED2532B3AA9A900D757D6 /* SchoolEmployeeCabinetViewController.swift in Sources */,
 				56DED2242B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift in Sources */,
 				56DED22A2B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift in Sources */,
 				5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */,
 				56DED2382B3A992C00D757D6 /* AttendanceViewController.swift in Sources */,
 				56B9CC042B3304A3007219BC /* RegistrationViewController.swift in Sources */,
 				562FC29D2B2C47C500F81907 /* InputBoxView.swift in Sources */,
+				56DED2492B3AA96700D757D6 /* PupilLibraryViewController.swift in Sources */,
 				56DED2222B3A97EB00D757D6 /* ParentFinancesLinkCardViewController.swift in Sources */,
 				56DED21C2B3A978600D757D6 /* ParentHistoryChooseOptionViewController.swift in Sources */,
+				56DED24F2B3AA98B00D757D6 /* ParentCabinetViewController.swift in Sources */,
 				56B9CC1A2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
 				56DED1F62B3A95A100D757D6 /* PupilDiningCartViewController.swift in Sources */,
 				56DED2332B3A98C200D757D6 /* SchoolEmployeeAttendanceSearchPageViewController.swift in Sources */,
@@ -1024,8 +1052,11 @@
 				56DED23F2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift in Sources */,
 				56DED1F82B3A965300D757D6 /* PupilDiningLimitsViewController.swift in Sources */,
 				56B16A6F2B2B1ABE00D3F4F7 /* PupilModel.swift in Sources */,
+				56DED2512B3AA9A000D757D6 /* SchoolEmployeeLibraryViewController.swift in Sources */,
 				56B16A652B2B19F300D3F4F7 /* AppUtility.swift in Sources */,
 				56B9CC1E2B354439007219BC /* BaseViewController.swift in Sources */,
+				56DED2472B3AA8EA00D757D6 /* InitialPupilAttendanceViewController.swift in Sources */,
+				56DED24D2B3AA97E00D757D6 /* ParentLibraryViewController.swift in Sources */,
 				56DED20B2B3A972100D757D6 /* PersonalCabinetViewController.swift in Sources */,
 				56DED1FA2B3A965F00D757D6 /* PupilDiningHistoryViewController.swift in Sources */,
 				56DED1FC2B3A966A00D757D6 /* PupilDiningHistoryDetailsViewController.swift in Sources */,
@@ -1035,6 +1066,7 @@
 				56B16A632B2B19DE00D3F4F7 /* AppEnums.swift in Sources */,
 				56DED2012B3A96AC00D757D6 /* PupilAttendanceViewController.swift in Sources */,
 				56DED2142B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift in Sources */,
+				56DED24B2B3AA97400D757D6 /* PupilCabinetViewController.swift in Sources */,
 				56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

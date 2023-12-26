@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pupil Cabinet View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="PupilCabinetViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <scene sceneID="JIO-Wr-swR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DMU-e7-lMi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Личный кабинет" image="personal-cabinet-active-icon" id="YBh-gw-xRG"/>
+                    <tabBarItem key="tabBarItem" title="Личный кабинет" id="YBh-gw-xRG" customClass="Pupil"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Znk-c0-jaZ">
@@ -47,7 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="personal-cabinet-active-icon" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

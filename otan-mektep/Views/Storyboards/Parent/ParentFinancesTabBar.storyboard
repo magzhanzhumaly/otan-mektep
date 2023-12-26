@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Parent Finances View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ParentFinancesViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,10 +20,47 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bpl-Ux-Fzo"/>
+                    <connections>
+                        <segue destination="T28-wK-DMg" kind="presentation" identifier="parentFinancesChooseChildVCSegue" modalPresentationStyle="fullScreen" id="rCc-CR-Ydj"/>
+                        <segue destination="qeO-Kj-Lzw" kind="presentation" id="Jig-ak-avV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045.0381679389313" y="-23.239436619718312"/>
+        </scene>
+        <!--Parent Finances Remove Card View Controller-->
+        <scene sceneID="am0-qp-M3A">
+            <objects>
+                <viewController id="qeO-Kj-Lzw" customClass="ParentFinancesRemoveCardViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kcc-ET-ZxD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ws8-Hr-G4b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvK-4g-Hrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="404"/>
+        </scene>
+        <!--Parent Finances Choose Child View Controller-->
+        <scene sceneID="7Nh-88-hDS">
+            <objects>
+                <viewController id="T28-wK-DMg" customClass="ParentFinancesChooseChildViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bZj-46-qSD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rwA-j3-0dU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="8Yq-zm-DEf" kind="presentation" identifier="parentFinancesLinkCardVCSegue" modalPresentationStyle="fullScreen" id="p01-TR-d64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geb-9z-oyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="-365"/>
         </scene>
         <!--Финансы-->
         <scene sceneID="FLB-gd-5wU">
@@ -44,6 +81,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uN-uj-lFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.32061068702289" y="-23.239436619718312"/>
+        </scene>
+        <!--Parent Finances Link Card View Controller-->
+        <scene sceneID="oKW-Cg-RhR">
+            <objects>
+                <viewController id="8Yq-zm-DEf" customClass="ParentFinancesLinkCardViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="et0-5d-fO0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0dV-8r-kyX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="Sei-NT-dwX" kind="presentation" identifier="parentFinancesChooseChildVCSegue" modalPresentationStyle="fullScreen" id="5kt-v9-OHA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAB-Fd-Aa5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2709" y="-365"/>
+        </scene>
+        <!--Parent Finances Choose Child View Controller-->
+        <scene sceneID="iuQ-Yh-5b6">
+            <objects>
+                <viewController id="Sei-NT-dwX" customClass="ParentFinancesChooseChildViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TnB-xJ-4E0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jog-6V-wIA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZrP-ld-d0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3560" y="-365"/>
         </scene>
     </scenes>
     <resources>

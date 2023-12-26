@@ -20,10 +20,62 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="uzb-4R-Jix"/>
+                    <connections>
+                        <segue destination="4ZG-kD-3sP" kind="presentation" identifier="pupilDiningLimitsVCSegue" modalPresentationStyle="fullScreen" id="DmT-68-zpc"/>
+                        <segue destination="i9t-pP-mVB" kind="presentation" modalPresentationStyle="fullScreen" id="u50-yW-s4Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045.0381679389313" y="-23.239436619718312"/>
+        </scene>
+        <!--Pupil Dining Add To Cart View Controller-->
+        <scene sceneID="VDh-Gz-Byb">
+            <objects>
+                <viewController id="i9t-pP-mVB" customClass="PupilDiningAddToCartViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VjX-7g-s6h">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vXz-oy-DZi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="RMD-Ta-kyw" kind="presentation" identifier="pupilDiningCartVCSegue" modalPresentationStyle="fullScreen" id="JoJ-2g-8zo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBZ-Vb-A30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="-758"/>
+        </scene>
+        <!--Pupil Dining Cart View Controller-->
+        <scene sceneID="6Jj-Wk-QJ5">
+            <objects>
+                <viewController id="RMD-Ta-kyw" customClass="PupilDiningCartViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4SB-SG-6Ne">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DGT-cK-JFJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xuc-sw-1hQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3010" y="-758"/>
+        </scene>
+        <!--Pupil Dining Limits View Controller-->
+        <scene sceneID="UmT-lj-seo">
+            <objects>
+                <viewController id="4ZG-kD-3sP" customClass="PupilDiningLimitsViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lNb-28-3CZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YHQ-Sa-oqE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Tz-x6-Iux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034" y="-23"/>
         </scene>
         <!--Питание-->
         <scene sceneID="i2y-qq-rPp">
@@ -37,9 +89,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="soU-Hh-Bdm"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBQ-AN-ws5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
