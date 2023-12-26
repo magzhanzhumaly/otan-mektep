@@ -29,7 +29,7 @@
         <scene sceneID="71K-ed-0YW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Nk-6y-h8t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Посещение" id="3xX-C1-XOh"/>
+                    <tabBarItem key="tabBarItem" title="Посещение" selectedImage="calendar-active-icon" id="3xX-C1-XOh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="do8-fr-Rx8">
@@ -47,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar-active-icon" width="24.333333969116211" height="24.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

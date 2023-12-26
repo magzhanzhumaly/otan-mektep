@@ -14,8 +14,8 @@
 		56625ACC2B39909100A0D804 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 56625ACB2B39909100A0D804 /* Notes */; };
 		56625ACF2B39974F00A0D804 /* PupilDiningTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625ACE2B39974F00A0D804 /* PupilDiningTabBar.storyboard */; };
 		56625AD12B39975E00A0D804 /* PupilAttendanceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD02B39975E00A0D804 /* PupilAttendanceTabBar.storyboard */; };
-		56625AD32B39976800A0D804 /* PupilLibraryVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD22B39976800A0D804 /* PupilLibraryVC.storyboard */; };
-		56625AD52B39977200A0D804 /* PupilCabinetVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD42B39977200A0D804 /* PupilCabinetVC.storyboard */; };
+		56625AD32B39976800A0D804 /* PupilLibraryTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD22B39976800A0D804 /* PupilLibraryTabBar.storyboard */; };
+		56625AD52B39977200A0D804 /* PupilCabinetTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD42B39977200A0D804 /* PupilCabinetTabBar.storyboard */; };
 		56625AD72B39978A00A0D804 /* ParentDiningTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD62B39978A00A0D804 /* ParentDiningTabBar.storyboard */; };
 		56625AD92B39979200A0D804 /* ParentHistoryTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD82B39979200A0D804 /* ParentHistoryTabBar.storyboard */; };
 		56625ADB2B39979D00A0D804 /* ParentFinancesTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625ADA2B39979D00A0D804 /* ParentFinancesTabBar.storyboard */; };
@@ -55,9 +55,37 @@
 		56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */; };
 		56B9CC232B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */; };
 		56B9CC242B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */; };
-		56B9CC272B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC262B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift */; };
-		56B9CC282B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC262B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift */; };
-		56B9CC292B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC262B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift */; };
+		56B9CC272B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC262B35B36F007219BC /* PupilDiningChooseOptionViewController.swift */; };
+		56B9CC282B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC262B35B36F007219BC /* PupilDiningChooseOptionViewController.swift */; };
+		56B9CC292B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9CC262B35B36F007219BC /* PupilDiningChooseOptionViewController.swift */; };
+		56DED1F42B3A957900D757D6 /* PupilDiningAddToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED1F32B3A957900D757D6 /* PupilDiningAddToCartViewController.swift */; };
+		56DED1F62B3A95A100D757D6 /* PupilDiningCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED1F52B3A95A100D757D6 /* PupilDiningCartViewController.swift */; };
+		56DED1F82B3A965300D757D6 /* PupilDiningLimitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED1F72B3A965300D757D6 /* PupilDiningLimitsViewController.swift */; };
+		56DED1FA2B3A965F00D757D6 /* PupilDiningHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED1F92B3A965F00D757D6 /* PupilDiningHistoryViewController.swift */; };
+		56DED1FC2B3A966A00D757D6 /* PupilDiningHistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED1FB2B3A966A00D757D6 /* PupilDiningHistoryDetailsViewController.swift */; };
+		56DED2012B3A96AC00D757D6 /* PupilAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2002B3A96AC00D757D6 /* PupilAttendanceViewController.swift */; };
+		56DED2032B3A96B500D757D6 /* PupilAttendanceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2022B3A96B500D757D6 /* PupilAttendanceDetailsViewController.swift */; };
+		56DED2092B3A971700D757D6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2082B3A971700D757D6 /* LibraryViewController.swift */; };
+		56DED20B2B3A972100D757D6 /* PersonalCabinetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED20A2B3A972100D757D6 /* PersonalCabinetViewController.swift */; };
+		56DED2122B3A975C00D757D6 /* ParentDiningChooseChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2112B3A975C00D757D6 /* ParentDiningChooseChildViewController.swift */; };
+		56DED2142B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2132B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift */; };
+		56DED2162B3A976D00D757D6 /* ParentDiningSetFinancialLimitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2152B3A976D00D757D6 /* ParentDiningSetFinancialLimitsViewController.swift */; };
+		56DED2182B3A977500D757D6 /* ParentDiningSetFoodLimitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2172B3A977500D757D6 /* ParentDiningSetFoodLimitsViewController.swift */; };
+		56DED21A2B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2192B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift */; };
+		56DED21C2B3A978600D757D6 /* ParentHistoryChooseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED21B2B3A978600D757D6 /* ParentHistoryChooseOptionViewController.swift */; };
+		56DED21E2B3A97D400D757D6 /* ParentFinancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED21D2B3A97D400D757D6 /* ParentFinancesViewController.swift */; };
+		56DED2202B3A97DC00D757D6 /* ParentFinancesChooseChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED21F2B3A97DC00D757D6 /* ParentFinancesChooseChildViewController.swift */; };
+		56DED2222B3A97EB00D757D6 /* ParentFinancesLinkCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2212B3A97EB00D757D6 /* ParentFinancesLinkCardViewController.swift */; };
+		56DED2242B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2232B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift */; };
+		56DED22A2B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2292B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift */; };
+		56DED22F2B3A986B00D757D6 /* EmployeeDiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED22E2B3A986B00D757D6 /* EmployeeDiningViewController.swift */; };
+		56DED2312B3A987900D757D6 /* EmployeeDiningDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2302B3A987900D757D6 /* EmployeeDiningDetailsViewController.swift */; };
+		56DED2332B3A98C200D757D6 /* SchoolEmployeeAttendanceSearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2322B3A98C200D757D6 /* SchoolEmployeeAttendanceSearchPageViewController.swift */; };
+		56DED2362B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2352B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift */; };
+		56DED2382B3A992C00D757D6 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2372B3A992C00D757D6 /* AttendanceViewController.swift */; };
+		56DED23A2B3A993500D757D6 /* AttendanceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2392B3A993500D757D6 /* AttendanceDetailsViewController.swift */; };
+		56DED23F2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED23E2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift */; };
+		56DED2412B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DED2402B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift */; };
 		56F4D1A82B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
 		56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
 		56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
@@ -105,8 +133,8 @@
 		56625ACB2B39909100A0D804 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		56625ACE2B39974F00A0D804 /* PupilDiningTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilDiningTabBar.storyboard; sourceTree = "<group>"; };
 		56625AD02B39975E00A0D804 /* PupilAttendanceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilAttendanceTabBar.storyboard; sourceTree = "<group>"; };
-		56625AD22B39976800A0D804 /* PupilLibraryVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilLibraryVC.storyboard; sourceTree = "<group>"; };
-		56625AD42B39977200A0D804 /* PupilCabinetVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilCabinetVC.storyboard; sourceTree = "<group>"; };
+		56625AD22B39976800A0D804 /* PupilLibraryTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilLibraryTabBar.storyboard; sourceTree = "<group>"; };
+		56625AD42B39977200A0D804 /* PupilCabinetTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilCabinetTabBar.storyboard; sourceTree = "<group>"; };
 		56625AD62B39978A00A0D804 /* ParentDiningTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentDiningTabBar.storyboard; sourceTree = "<group>"; };
 		56625AD82B39979200A0D804 /* ParentHistoryTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentHistoryTabBar.storyboard; sourceTree = "<group>"; };
 		56625ADA2B39979D00A0D804 /* ParentFinancesTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentFinancesTabBar.storyboard; sourceTree = "<group>"; };
@@ -139,7 +167,35 @@
 		56B9CC192B354410007219BC /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		56B9CC1D2B354439007219BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		56B9CC212B354472007219BC /* OtanMektepSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtanMektepSegmentedControl.swift; sourceTree = "<group>"; };
-		56B9CC262B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningInitialChooseOptionController.swift; sourceTree = "<group>"; };
+		56B9CC262B35B36F007219BC /* PupilDiningChooseOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningChooseOptionViewController.swift; sourceTree = "<group>"; };
+		56DED1F32B3A957900D757D6 /* PupilDiningAddToCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningAddToCartViewController.swift; sourceTree = "<group>"; };
+		56DED1F52B3A95A100D757D6 /* PupilDiningCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningCartViewController.swift; sourceTree = "<group>"; };
+		56DED1F72B3A965300D757D6 /* PupilDiningLimitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningLimitsViewController.swift; sourceTree = "<group>"; };
+		56DED1F92B3A965F00D757D6 /* PupilDiningHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningHistoryViewController.swift; sourceTree = "<group>"; };
+		56DED1FB2B3A966A00D757D6 /* PupilDiningHistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilDiningHistoryDetailsViewController.swift; sourceTree = "<group>"; };
+		56DED2002B3A96AC00D757D6 /* PupilAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilAttendanceViewController.swift; sourceTree = "<group>"; };
+		56DED2022B3A96B500D757D6 /* PupilAttendanceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilAttendanceDetailsViewController.swift; sourceTree = "<group>"; };
+		56DED2082B3A971700D757D6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		56DED20A2B3A972100D757D6 /* PersonalCabinetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCabinetViewController.swift; sourceTree = "<group>"; };
+		56DED2112B3A975C00D757D6 /* ParentDiningChooseChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDiningChooseChildViewController.swift; sourceTree = "<group>"; };
+		56DED2132B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDiningChooseOptionViewController.swift; sourceTree = "<group>"; };
+		56DED2152B3A976D00D757D6 /* ParentDiningSetFinancialLimitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDiningSetFinancialLimitsViewController.swift; sourceTree = "<group>"; };
+		56DED2172B3A977500D757D6 /* ParentDiningSetFoodLimitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDiningSetFoodLimitsViewController.swift; sourceTree = "<group>"; };
+		56DED2192B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHistoryChooseChildViewController.swift; sourceTree = "<group>"; };
+		56DED21B2B3A978600D757D6 /* ParentHistoryChooseOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHistoryChooseOptionViewController.swift; sourceTree = "<group>"; };
+		56DED21D2B3A97D400D757D6 /* ParentFinancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentFinancesViewController.swift; sourceTree = "<group>"; };
+		56DED21F2B3A97DC00D757D6 /* ParentFinancesChooseChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentFinancesChooseChildViewController.swift; sourceTree = "<group>"; };
+		56DED2212B3A97EB00D757D6 /* ParentFinancesLinkCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentFinancesLinkCardViewController.swift; sourceTree = "<group>"; };
+		56DED2232B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentFinancesRemoveCardViewController.swift; sourceTree = "<group>"; };
+		56DED2292B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEmployeeDiningChooseOptionViewController.swift; sourceTree = "<group>"; };
+		56DED22E2B3A986B00D757D6 /* EmployeeDiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDiningViewController.swift; sourceTree = "<group>"; };
+		56DED2302B3A987900D757D6 /* EmployeeDiningDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDiningDetailsViewController.swift; sourceTree = "<group>"; };
+		56DED2322B3A98C200D757D6 /* SchoolEmployeeAttendanceSearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolEmployeeAttendanceSearchPageViewController.swift; sourceTree = "<group>"; };
+		56DED2352B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAttendanceSearchPageViewController.swift; sourceTree = "<group>"; };
+		56DED2372B3A992C00D757D6 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		56DED2392B3A993500D757D6 /* AttendanceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceDetailsViewController.swift; sourceTree = "<group>"; };
+		56DED23E2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaEmployeeDiningViewController.swift; sourceTree = "<group>"; };
+		56DED2402B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaEmployeeAttendanceSearchPageViewController.swift; sourceTree = "<group>"; };
 		56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		56FA62E22B2B13A400644F75 /* otan-mektep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "otan-mektep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +251,12 @@
 		56625ACA2B397F6A00A0D804 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2342B3A98CC00D757D6 /* EmployeeAttendance */,
+				56DED22B2B3A984F00D757D6 /* EmployeeDining */,
+				56DED2072B3A970400D757D6 /* Library */,
+				56DED2062B3A970200D757D6 /* Cabinet */,
+				56DED2042B3A96D900D757D6 /* PupilDining */,
+				56DED2052B3A96E700D757D6 /* PupilAttendance */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -229,8 +291,8 @@
 				56A69A7E2B395EEC00C00428 /* PupilTabBar.storyboard */,
 				56625ACE2B39974F00A0D804 /* PupilDiningTabBar.storyboard */,
 				56625AD02B39975E00A0D804 /* PupilAttendanceTabBar.storyboard */,
-				56625AD22B39976800A0D804 /* PupilLibraryVC.storyboard */,
-				56625AD42B39977200A0D804 /* PupilCabinetVC.storyboard */,
+				56625AD22B39976800A0D804 /* PupilLibraryTabBar.storyboard */,
+				56625AD42B39977200A0D804 /* PupilCabinetTabBar.storyboard */,
 			);
 			path = Pupil;
 			sourceTree = "<group>";
@@ -310,7 +372,6 @@
 				56FA62E52B2B13A400644F75 /* AppDelegate.swift */,
 				56B16A622B2B19DE00D3F4F7 /* AppEnums.swift */,
 				56B16A642B2B19F300D3F4F7 /* AppUtility.swift */,
-				56FA62EE2B2B13A500644F75 /* Assets.xcassets */,
 				56FA62E72B2B13A400644F75 /* SceneDelegate.swift */,
 				56B9CBFC2B32E206007219BC /* Localizable.strings */,
 			);
@@ -338,7 +399,10 @@
 		56B9CBFF2B33044C007219BC /* Pupil */ = {
 			isa = PBXGroup;
 			children = (
-				56B9CC262B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift */,
+				56DED1F22B3A952F00D757D6 /* Dining */,
+				56DED1FD2B3A966E00D757D6 /* Attendance */,
+				56DED1FE2B3A967700D757D6 /* Library */,
+				56DED1FF2B3A968000D757D6 /* Cabinet */,
 			);
 			path = Pupil;
 			sourceTree = "<group>";
@@ -356,6 +420,11 @@
 		56CF5AEE2B3977D700490134 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
+				56DED20F2B3A973C00D757D6 /* Dining */,
+				56DED20E2B3A973700D757D6 /* History */,
+				56DED20D2B3A973200D757D6 /* Finances */,
+				56DED2102B3A974600D757D6 /* Library */,
+				56DED20C2B3A972900D757D6 /* Cabinet */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -363,6 +432,10 @@
 		56CF5AEF2B39784D00490134 /* SchoolEmployee */ = {
 			isa = PBXGroup;
 			children = (
+				56DED2282B3A982600D757D6 /* Dining */,
+				56DED2272B3A982000D757D6 /* Attendance */,
+				56DED2262B3A981800D757D6 /* Library */,
+				56DED2252B3A980800D757D6 /* Cabinet */,
 			);
 			path = SchoolEmployee;
 			sourceTree = "<group>";
@@ -370,14 +443,201 @@
 		56CF5AF02B39785500490134 /* CafeteriaEmployee */ = {
 			isa = PBXGroup;
 			children = (
+				56DED23D2B3A995200D757D6 /* Dining */,
+				56DED23C2B3A994B00D757D6 /* Attendance */,
+				56DED23B2B3A994500D757D6 /* Cabinet */,
 			);
 			path = CafeteriaEmployee;
+			sourceTree = "<group>";
+		};
+		56DED1F22B3A952F00D757D6 /* Dining */ = {
+			isa = PBXGroup;
+			children = (
+				56B9CC262B35B36F007219BC /* PupilDiningChooseOptionViewController.swift */,
+				56DED1F32B3A957900D757D6 /* PupilDiningAddToCartViewController.swift */,
+				56DED1F52B3A95A100D757D6 /* PupilDiningCartViewController.swift */,
+				56DED1F72B3A965300D757D6 /* PupilDiningLimitsViewController.swift */,
+			);
+			path = Dining;
+			sourceTree = "<group>";
+		};
+		56DED1FD2B3A966E00D757D6 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		56DED1FE2B3A967700D757D6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		56DED1FF2B3A968000D757D6 /* Cabinet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cabinet;
+			sourceTree = "<group>";
+		};
+		56DED2042B3A96D900D757D6 /* PupilDining */ = {
+			isa = PBXGroup;
+			children = (
+				56DED1F92B3A965F00D757D6 /* PupilDiningHistoryViewController.swift */,
+				56DED1FB2B3A966A00D757D6 /* PupilDiningHistoryDetailsViewController.swift */,
+			);
+			path = PupilDining;
+			sourceTree = "<group>";
+		};
+		56DED2052B3A96E700D757D6 /* PupilAttendance */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2002B3A96AC00D757D6 /* PupilAttendanceViewController.swift */,
+				56DED2022B3A96B500D757D6 /* PupilAttendanceDetailsViewController.swift */,
+			);
+			path = PupilAttendance;
+			sourceTree = "<group>";
+		};
+		56DED2062B3A970200D757D6 /* Cabinet */ = {
+			isa = PBXGroup;
+			children = (
+				56DED20A2B3A972100D757D6 /* PersonalCabinetViewController.swift */,
+			);
+			path = Cabinet;
+			sourceTree = "<group>";
+		};
+		56DED2072B3A970400D757D6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2082B3A971700D757D6 /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		56DED20C2B3A972900D757D6 /* Cabinet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cabinet;
+			sourceTree = "<group>";
+		};
+		56DED20D2B3A973200D757D6 /* Finances */ = {
+			isa = PBXGroup;
+			children = (
+				56DED21D2B3A97D400D757D6 /* ParentFinancesViewController.swift */,
+				56DED21F2B3A97DC00D757D6 /* ParentFinancesChooseChildViewController.swift */,
+				56DED2212B3A97EB00D757D6 /* ParentFinancesLinkCardViewController.swift */,
+				56DED2232B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift */,
+			);
+			path = Finances;
+			sourceTree = "<group>";
+		};
+		56DED20E2B3A973700D757D6 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2192B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift */,
+				56DED21B2B3A978600D757D6 /* ParentHistoryChooseOptionViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		56DED20F2B3A973C00D757D6 /* Dining */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2112B3A975C00D757D6 /* ParentDiningChooseChildViewController.swift */,
+				56DED2132B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift */,
+				56DED2152B3A976D00D757D6 /* ParentDiningSetFinancialLimitsViewController.swift */,
+				56DED2172B3A977500D757D6 /* ParentDiningSetFoodLimitsViewController.swift */,
+			);
+			path = Dining;
+			sourceTree = "<group>";
+		};
+		56DED2102B3A974600D757D6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		56DED2252B3A980800D757D6 /* Cabinet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cabinet;
+			sourceTree = "<group>";
+		};
+		56DED2262B3A981800D757D6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		56DED2272B3A982000D757D6 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2322B3A98C200D757D6 /* SchoolEmployeeAttendanceSearchPageViewController.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		56DED2282B3A982600D757D6 /* Dining */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2292B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift */,
+			);
+			path = Dining;
+			sourceTree = "<group>";
+		};
+		56DED22B2B3A984F00D757D6 /* EmployeeDining */ = {
+			isa = PBXGroup;
+			children = (
+				56DED22E2B3A986B00D757D6 /* EmployeeDiningViewController.swift */,
+				56DED2302B3A987900D757D6 /* EmployeeDiningDetailsViewController.swift */,
+			);
+			path = EmployeeDining;
+			sourceTree = "<group>";
+		};
+		56DED2342B3A98CC00D757D6 /* EmployeeAttendance */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2352B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift */,
+				56DED2372B3A992C00D757D6 /* AttendanceViewController.swift */,
+				56DED2392B3A993500D757D6 /* AttendanceDetailsViewController.swift */,
+			);
+			path = EmployeeAttendance;
+			sourceTree = "<group>";
+		};
+		56DED23B2B3A994500D757D6 /* Cabinet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cabinet;
+			sourceTree = "<group>";
+		};
+		56DED23C2B3A994B00D757D6 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				56DED2402B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		56DED23D2B3A995200D757D6 /* Dining */ = {
+			isa = PBXGroup;
+			children = (
+				56DED23E2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift */,
+			);
+			path = Dining;
 			sourceTree = "<group>";
 		};
 		56FA62D92B2B13A400644F75 = {
 			isa = PBXGroup;
 			children = (
 				56FA62E42B2B13A400644F75 /* otan-mektep */,
+				56FA62EE2B2B13A500644F75 /* Assets.xcassets */,
 				56FA62F32B2B13A500644F75 /* Info.plist */,
 				56B9CC092B33E810007219BC /* GoogleService-Info.plist */,
 				56FA62FB2B2B13A500644F75 /* otan-mektepTests */,
@@ -588,9 +848,9 @@
 				56625ADB2B39979D00A0D804 /* ParentFinancesTabBar.storyboard in Resources */,
 				56A69A822B395F1C00C00428 /* CafeteriaEmployeeTabBar.storyboard in Resources */,
 				56625ACC2B39909100A0D804 /* Notes in Resources */,
-				56625AD52B39977200A0D804 /* PupilCabinetVC.storyboard in Resources */,
+				56625AD52B39977200A0D804 /* PupilCabinetTabBar.storyboard in Resources */,
 				56FA62EF2B2B13A500644F75 /* Assets.xcassets in Resources */,
-				56625AD32B39976800A0D804 /* PupilLibraryVC.storyboard in Resources */,
+				56625AD32B39976800A0D804 /* PupilLibraryTabBar.storyboard in Resources */,
 				56625AD92B39979200A0D804 /* ParentHistoryTabBar.storyboard in Resources */,
 				56B9CC0A2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 				56A69A7D2B395EE200C00428 /* SchoolEmployeeTabBar.storyboard in Resources */,
@@ -730,23 +990,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DED23A2B3A993500D757D6 /* AttendanceDetailsViewController.swift in Sources */,
 				56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */,
+				56DED2122B3A975C00D757D6 /* ParentDiningChooseChildViewController.swift in Sources */,
+				56DED2202B3A97DC00D757D6 /* ParentFinancesChooseChildViewController.swift in Sources */,
 				56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */,
-				56B9CC272B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift in Sources */,
+				56DED2362B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift in Sources */,
+				56DED2032B3A96B500D757D6 /* PupilAttendanceDetailsViewController.swift in Sources */,
+				56B9CC272B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */,
+				56DED1F42B3A957900D757D6 /* PupilDiningAddToCartViewController.swift in Sources */,
 				56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
+				56DED21A2B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
+				56DED2242B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift in Sources */,
+				56DED22A2B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift in Sources */,
 				5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */,
+				56DED2382B3A992C00D757D6 /* AttendanceViewController.swift in Sources */,
 				56B9CC042B3304A3007219BC /* RegistrationViewController.swift in Sources */,
 				562FC29D2B2C47C500F81907 /* InputBoxView.swift in Sources */,
+				56DED2222B3A97EB00D757D6 /* ParentFinancesLinkCardViewController.swift in Sources */,
+				56DED21C2B3A978600D757D6 /* ParentHistoryChooseOptionViewController.swift in Sources */,
 				56B9CC1A2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
+				56DED1F62B3A95A100D757D6 /* PupilDiningCartViewController.swift in Sources */,
+				56DED2332B3A98C200D757D6 /* SchoolEmployeeAttendanceSearchPageViewController.swift in Sources */,
+				56DED2092B3A971700D757D6 /* LibraryViewController.swift in Sources */,
 				56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */,
 				562FC29F2B2C4A0400F81907 /* OtanMektepButton.swift in Sources */,
 				56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */,
 				56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */,
+				56DED2182B3A977500D757D6 /* ParentDiningSetFoodLimitsViewController.swift in Sources */,
+				56DED2162B3A976D00D757D6 /* ParentDiningSetFinancialLimitsViewController.swift in Sources */,
+				56DED2312B3A987900D757D6 /* EmployeeDiningDetailsViewController.swift in Sources */,
+				56DED23F2B3A998C00D757D6 /* CafeteriaEmployeeDiningViewController.swift in Sources */,
+				56DED1F82B3A965300D757D6 /* PupilDiningLimitsViewController.swift in Sources */,
 				56B16A6F2B2B1ABE00D3F4F7 /* PupilModel.swift in Sources */,
 				56B16A652B2B19F300D3F4F7 /* AppUtility.swift in Sources */,
 				56B9CC1E2B354439007219BC /* BaseViewController.swift in Sources */,
+				56DED20B2B3A972100D757D6 /* PersonalCabinetViewController.swift in Sources */,
+				56DED1FA2B3A965F00D757D6 /* PupilDiningHistoryViewController.swift in Sources */,
+				56DED1FC2B3A966A00D757D6 /* PupilDiningHistoryDetailsViewController.swift in Sources */,
+				56DED21E2B3A97D400D757D6 /* ParentFinancesViewController.swift in Sources */,
+				56DED22F2B3A986B00D757D6 /* EmployeeDiningViewController.swift in Sources */,
+				56DED2412B3A999F00D757D6 /* CafeteriaEmployeeAttendanceSearchPageViewController.swift in Sources */,
 				56B16A632B2B19DE00D3F4F7 /* AppEnums.swift in Sources */,
+				56DED2012B3A96AC00D757D6 /* PupilAttendanceViewController.swift in Sources */,
+				56DED2142B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift in Sources */,
 				56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,7 +1044,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B9CC232B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
-				56B9CC282B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift in Sources */,
+				56B9CC282B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */,
 				56B9CC1B2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
 				56FA62FD2B2B13A500644F75 /* otan_mektepTests.swift in Sources */,
 				56B9CC1F2B354439007219BC /* BaseViewController.swift in Sources */,
@@ -769,7 +1057,7 @@
 			files = (
 				56B9CC1C2B354410007219BC /* UIViewController+Navigation.swift in Sources */,
 				56B9CC202B354439007219BC /* BaseViewController.swift in Sources */,
-				56B9CC292B35B36F007219BC /* PupilDiningInitialChooseOptionController.swift in Sources */,
+				56B9CC292B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */,
 				56FA63092B2B13A500644F75 /* otan_mektepUITestsLaunchTests.swift in Sources */,
 				56FA63072B2B13A500644F75 /* otan_mektepUITests.swift in Sources */,
 				56B9CC242B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
