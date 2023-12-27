@@ -16,6 +16,15 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pupil cabinet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-bk-ENd">
+                                <rect key="frame" x="175" y="361" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -29,7 +38,7 @@
         <scene sceneID="JIO-Wr-swR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DMU-e7-lMi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Личный кабинет" id="YBh-gw-xRG" customClass="Pupil"/>
+                    <tabBarItem key="tabBarItem" title="Личный кабинет" image="personal-cabinet-inactive-icon" selectedImage="personal-cabinet-active-icon" id="YBh-gw-xRG" customClass="Pupil"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Znk-c0-jaZ">
@@ -47,6 +56,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="personal-cabinet-active-icon" width="24" height="24"/>
+        <image name="personal-cabinet-inactive-icon" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

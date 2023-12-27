@@ -16,6 +16,15 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pupil library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-wn-BT2">
+                                <rect key="frame" x="118" y="327" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -29,7 +38,7 @@
         <scene sceneID="Emm-z0-Zwd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9g-dI-AK5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Библиотека" selectedImage="books-active-icon 1" id="ERT-KH-huV"/>
+                    <tabBarItem key="tabBarItem" title="Библиотека" image="books-inactive-icon 1" selectedImage="books-active-icon 1" id="ERT-KH-huV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UWN-bj-nMg">
@@ -48,6 +57,7 @@
     </scenes>
     <resources>
         <image name="books-active-icon 1" width="24.333333969116211" height="24.333333969116211"/>
+        <image name="books-inactive-icon 1" width="24.333333969116211" height="24.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

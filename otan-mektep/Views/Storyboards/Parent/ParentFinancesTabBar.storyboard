@@ -22,7 +22,7 @@
                     <navigationItem key="navigationItem" id="Bpl-Ux-Fzo"/>
                     <connections>
                         <segue destination="T28-wK-DMg" kind="presentation" identifier="parentFinancesChooseChildVCSegue" modalPresentationStyle="fullScreen" id="rCc-CR-Ydj"/>
-                        <segue destination="qeO-Kj-Lzw" kind="presentation" id="Jig-ak-avV"/>
+                        <segue destination="qeO-Kj-Lzw" kind="presentation" identifier="parentFinancesRemoveCardVCSegue" id="Jig-ak-avV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

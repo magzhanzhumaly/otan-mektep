@@ -331,8 +331,9 @@ public enum Fonts {
     private var fontName: String {
         switch self {
         case .largeTitleBold34, .title1Bold28, .title2Bold22, .title3Bold20, .headline17, .calloutBold16, .subheadlineBold15, .footnoteBold13, .caption1Bold12, .caption2Bold11:
-            return "Inter-SemiBold"
-            
+//            return "Inter-SemiBold"
+            return "Inter-Bold"
+
         case .largeTitleRegular34, .title1Regular28, .title2Regular22, .title3Regular20, .body17, .calloutRegular16, .subheadlineRegular15, .footnoteRegular13, .caption1Regular12, .caption2Regular11:
             return "Inter-Regular"
         }

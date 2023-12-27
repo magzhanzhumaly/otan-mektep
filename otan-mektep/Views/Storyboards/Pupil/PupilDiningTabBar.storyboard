@@ -16,11 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxX-j7-1lw">
+                                <rect key="frame" x="20" y="114" width="353" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XxX-j7-1lw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="VbG-Jf-LY3"/>
+                            <constraint firstItem="XxX-j7-1lw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="tXz-Da-ZQM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XxX-j7-1lw" secondAttribute="trailing" constant="20" id="vq2-SD-ole"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uzb-4R-Jix"/>
                     <connections>
+                        <outlet property="vieww" destination="XxX-j7-1lw" id="JXG-SW-gVP"/>
                         <segue destination="4ZG-kD-3sP" kind="presentation" identifier="pupilDiningLimitsVCSegue" modalPresentationStyle="fullScreen" id="DmT-68-zpc"/>
                         <segue destination="i9t-pP-mVB" kind="presentation" modalPresentationStyle="fullScreen" id="u50-yW-s4Z"/>
                     </connections>
@@ -72,6 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="YHQ-Sa-oqE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cXy-QT-eIG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tz-x6-Iux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +94,7 @@
         <scene sceneID="i2y-qq-rPp">
             <objects>
                 <navigationController storyboardIdentifier="PupilDiningChooseOptionTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="lyU-fe-yyc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Питание" image="arrow.forward.circle" catalog="system" selectedImage="food-active-icon 1" id="myy-XS-n0e"/>
+                    <tabBarItem key="tabBarItem" title="Питание" image="food-inactive-icon 1" selectedImage="food-active-icon 1" id="myy-XS-n0e"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OkS-by-M0B">
@@ -89,6 +102,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ykh-1x-qaL"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBQ-AN-ws5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,8 +112,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.forward.circle" catalog="system" width="128" height="123"/>
         <image name="food-active-icon 1" width="24" height="24"/>
+        <image name="food-inactive-icon 1" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

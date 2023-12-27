@@ -40,7 +40,7 @@
                     </view>
                     <connections>
                         <segue destination="hCV-25-txA" kind="presentation" identifier="parentDiningSetFinancialLimitsVCSegue" modalPresentationStyle="fullScreen" id="jmA-Ew-exT"/>
-                        <segue destination="yQd-bg-b2y" kind="presentation" id="0er-as-J3S"/>
+                        <segue destination="yQd-bg-b2y" kind="presentation" identifier="parentDiningSetFoodLimitsVC" id="0er-as-J3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zx9-VN-lRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

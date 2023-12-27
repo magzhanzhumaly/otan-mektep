@@ -9,13 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial Pupil Dining History View Controller-->
+        <!--Initial Pupil Attendance View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="InitialPupilDiningHistoryViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="InitialPupilAttendanceViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pupil attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-j6-KhE">
+                                <rect key="frame" x="136" y="374" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -29,7 +38,7 @@
         <scene sceneID="71K-ed-0YW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Nk-6y-h8t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Посещение" selectedImage="calendar-active-icon" id="3xX-C1-XOh"/>
+                    <tabBarItem key="tabBarItem" title="Посещение" image="calendar-inactive-icon 1" selectedImage="calendar-active-icon" id="3xX-C1-XOh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="do8-fr-Rx8">
@@ -48,6 +57,7 @@
     </scenes>
     <resources>
         <image name="calendar-active-icon" width="24.333333969116211" height="24.333333969116211"/>
+        <image name="calendar-inactive-icon 1" width="24.333333969116211" height="24.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
