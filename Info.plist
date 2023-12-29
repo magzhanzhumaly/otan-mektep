@@ -34,5 +34,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>ru</string>
 </dict>
 </plist>

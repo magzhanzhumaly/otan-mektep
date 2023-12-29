@@ -7,13 +7,20 @@
 
 import UIKit
 
+protocol FlexibleCellButtonDelegate: AnyObject {
+    func buttonTapped()
+}
+
 class FlexibleCell: UIView {
     
+    weak var delegate: FlexibleCellButtonDelegate?
+
     struct Input {
         let leftIcon: leftIconInput?
         let title: TextInput
         let components: Components?
         let corners: CornerInput?
+        let closure: (() -> Void)?
     }
     
     struct CornerInput {
@@ -105,9 +112,20 @@ class FlexibleCell: UIView {
         // Initialization code
     }
     
+    private var actionClosure: (() -> Void)?
+
+    @objc func tapAction() {
+        actionClosure?()
+    }
+    
     init(input: Input) {
         super.init(frame: .zero)
 
+        actionClosure = input.closure
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        addGestureRecognizer(tapGesture)
+        
 // Corners
         
         if let corners = input.corners {
@@ -128,17 +146,28 @@ class FlexibleCell: UIView {
         
         self.addSubview(leftStackView)
 // leftIcon
-        
+                
         if let icon = input.leftIcon {
             let leftIcon = UIImageView()
             
             leftIcon.translatesAutoresizingMaskIntoConstraints = false
-            leftIcon.image = icon.icon.image.withTintColor(input.leftIcon?.color ?? .black)
+            
+            if let color = input.leftIcon?.color {
+                leftIcon.image = icon.icon.image.withTintColor(color)
+            }
+            
+            if let color = input.leftIcon?.color {
+                leftIcon.image = icon.icon.image.withTintColor(color)
+            } else {
+                leftIcon.image = icon.icon.image
+            }
             
             NSLayoutConstraint.activate([
                 leftIcon.heightAnchor.constraint(equalToConstant: 30),
                 leftIcon.widthAnchor.constraint(equalToConstant: 30),
             ])
+            
+            leftIcon.contentMode = .scaleAspectFit
             
             leftStackView.addArrangedSubview(leftIcon)
         }
@@ -168,6 +197,19 @@ class FlexibleCell: UIView {
         }
         
         leftStackView.addArrangedSubview(titleLabel)
+        
+        
+        let newlineCount = CGFloat(countNewlines(in: input.title.text)) + 1
+        
+        if input.title.text.contains("\n") {
+            if input.title.isLarge {
+                leftStackView.heightAnchor.constraint(equalToConstant: newlineCount*22).isActive = true
+            } else {
+                leftStackView.heightAnchor.constraint(equalToConstant: newlineCount*18).isActive = true
+            }
+        } else {
+            leftStackView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        }
         
         NSLayoutConstraint.activate([
             leftStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
@@ -229,8 +271,27 @@ class FlexibleCell: UIView {
                 stackView.addArrangedSubview(upperLabel)
                 stackView.addArrangedSubview(lowerLabel)
                 
+//                let deleteButton = UIButton()
+//                deleteButton.translatesAutoresizingMaskIntoConstraints = false
+//                
+//                deleteButton.backgroundColor = .danger500
+//                deleteButton.
+                let removeImgView = UIImageView()
+                removeImgView.image = UIImage(named: "IOS Iconsminus-squareYes")?.withTintColor(.danger500)
+                removeImgView.translatesAutoresizingMaskIntoConstraints = false
+                
+                self.addSubview(removeImgView)
+                
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeAction))
+                removeImgView.addGestureRecognizer(tapGesture)
+                
                 NSLayoutConstraint.activate([
-                    stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
+                    removeImgView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
+                    removeImgView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                    removeImgView.heightAnchor.constraint(equalToConstant: 40),
+                    removeImgView.widthAnchor.constraint(equalToConstant: 40),
+                    
+                    stackView.trailingAnchor.constraint(equalTo: removeImgView.leadingAnchor, constant: -14),
                     stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
                 ])
                 
@@ -305,9 +366,22 @@ class FlexibleCell: UIView {
 
     }
     
+    @objc func removeAction() {
+        delegate?.buttonTapped()
+        print("typed")
+    }
+    
+    func countNewlines(in inputString: String) -> Int {
+        let newlineArray = inputString.components(separatedBy: "\n")
+        return newlineArray.count - 1 // Subtract 1 to get the newline count
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func buttonTapped() {
+        print("buttontapped")
+    }
     
 }

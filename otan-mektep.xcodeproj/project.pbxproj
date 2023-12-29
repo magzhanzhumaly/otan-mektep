@@ -28,6 +28,9 @@
 		56625AE92B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AE82B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard */; };
 		56625AEB2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AEA2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard */; };
 		56625AED2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AEC2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard */; };
+		567E4F612B3D3BF60024FAD1 /* FlexibleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E4F602B3D3BF60024FAD1 /* FlexibleHeader.swift */; };
+		567E4F642B3D3C5B0024FAD1 /* FlexibleFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E4F632B3D3C5B0024FAD1 /* FlexibleFooter.swift */; };
+		567E4F662B3D6C430024FAD1 /* ButtonFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E4F652B3D6C430024FAD1 /* ButtonFooter.swift */; };
 		569148362B3C4A24009623CC /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569148352B3C4A10009623CC /* Inter-Bold.ttf */; };
 		569148382B3C4A25009623CC /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569148352B3C4A10009623CC /* Inter-Bold.ttf */; };
 		569148392B3C4A26009623CC /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569148352B3C4A10009623CC /* Inter-Bold.ttf */; };
@@ -161,6 +164,9 @@
 		56625AE82B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeDiningTabBar.storyboard; sourceTree = "<group>"; };
 		56625AEA2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeAttendanceTabBar.storyboard; sourceTree = "<group>"; };
 		56625AEC2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeCabinetTabBar.storyboard; sourceTree = "<group>"; };
+		567E4F602B3D3BF60024FAD1 /* FlexibleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleHeader.swift; sourceTree = "<group>"; };
+		567E4F632B3D3C5B0024FAD1 /* FlexibleFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleFooter.swift; sourceTree = "<group>"; };
+		567E4F652B3D6C430024FAD1 /* ButtonFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFooter.swift; sourceTree = "<group>"; };
 		569148352B3C4A10009623CC /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		56A69A782B395E7800C00428 /* ParentTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentTabBar.storyboard; sourceTree = "<group>"; };
 		56A69A7C2B395EE200C00428 /* SchoolEmployeeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchoolEmployeeTabBar.storyboard; sourceTree = "<group>"; };
@@ -287,6 +293,23 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		567E4F5F2B3D3BE10024FAD1 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				567E4F602B3D3BF60024FAD1 /* FlexibleHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		567E4F622B3D3C3E0024FAD1 /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				567E4F632B3D3C5B0024FAD1 /* FlexibleFooter.swift */,
+				567E4F652B3D6C430024FAD1 /* ButtonFooter.swift */,
+			);
+			path = Footers;
+			sourceTree = "<group>";
+		};
 		56A69A742B395AEC00C00428 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,7 +384,9 @@
 		56B16A6A2B2B1A2800D3F4F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				567E4F5F2B3D3BE10024FAD1 /* Headers */,
 				56E3E63C2B3BF31900623184 /* Cells */,
+				567E4F622B3D3C3E0024FAD1 /* Footers */,
 				56A69A742B395AEC00C00428 /* Storyboards */,
 				56B9CC252B35B077007219BC /* Components */,
 				56FA62EB2B2B13A400644F75 /* Main.storyboard */,
@@ -1044,6 +1069,7 @@
 				56DED23A2B3A993500D757D6 /* AttendanceDetailsViewController.swift in Sources */,
 				56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */,
 				56DED2122B3A975C00D757D6 /* ParentDiningChooseChildViewController.swift in Sources */,
+				567E4F612B3D3BF60024FAD1 /* FlexibleHeader.swift in Sources */,
 				56DED2202B3A97DC00D757D6 /* ParentFinancesChooseChildViewController.swift in Sources */,
 				56B16A752B2B1AFF00D3F4F7 /* ParentModel.swift in Sources */,
 				56DED2362B3A98DF00D757D6 /* EmployeeAttendanceSearchPageViewController.swift in Sources */,
@@ -1051,6 +1077,7 @@
 				56B9CC272B35B36F007219BC /* PupilDiningChooseOptionViewController.swift in Sources */,
 				56DED2552B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift in Sources */,
 				56DED1F42B3A957900D757D6 /* PupilDiningAddToCartViewController.swift in Sources */,
+				567E4F662B3D6C430024FAD1 /* ButtonFooter.swift in Sources */,
 				56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
 				56DED21A2B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
@@ -1073,6 +1100,7 @@
 				562FC29F2B2C4A0400F81907 /* OtanMektepButton.swift in Sources */,
 				56B16A712B2B1AC800D3F4F7 /* TeacherModel.swift in Sources */,
 				56B16A672B2B1A0600D3F4F7 /* UIView+Add.swift in Sources */,
+				567E4F642B3D3C5B0024FAD1 /* FlexibleFooter.swift in Sources */,
 				56DED2182B3A977500D757D6 /* ParentDiningSetFoodLimitsViewController.swift in Sources */,
 				56DED2162B3A976D00D757D6 /* ParentDiningSetFinancialLimitsViewController.swift in Sources */,
 				56DED2312B3A987900D757D6 /* EmployeeDiningDetailsViewController.swift in Sources */,

@@ -8,9 +8,20 @@
 import UIKit
 
 class PupilDiningCartViewController: UIViewController {
-
+    @IBOutlet weak var topBarContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let nav = Navigation.title("PupilDiningCartViewController",
+                                   large: false,
+                                   leftAction: [.init("Cancel", nil, false, { [weak self] in })],
+                                   rightAction: [.init("Done", nil, false, { [weak self] in })])
+        
+        let topBar = AcadlyNavigation(style: nav, searchInfo: nil)
+        
+        topBarContainer.addFilledSubview(topBar)
+        
 
         // Do any additional setup after loading the view.
     }

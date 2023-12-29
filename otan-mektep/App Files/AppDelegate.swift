@@ -23,6 +23,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UITabBar.appearance().layer.borderColor = Colors.gray200.color.cgColor
         UITabBar.appearance().backgroundColor = .gray100
 
+//        UINavigationBar.appearance().barTintColor = .red
+        UINavigationBar.appearance().tintColor = .accent
+
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.label,
+            NSAttributedString.Key.font: Fonts.headline17.font
+        ]
+//        if let navigationBar = self.navigationController?.navigationBar {
+//            let titleFont = UIFont(name: "YourFontName", size: 17.0) // Replace "YourFontName" with the name of your desired font
+//            
+//            navigationBar.titleTextAttributes = [
+//                NSAttributedString.Key.foregroundColor: UIColor.white,
+//                NSAttributedString.Key.font: titleFont ?? UIFont.boldSystemFont(ofSize: 17.0)
+//            ]
+//        }
+        
 //        Auth.auth().useEmulator(withHost: "localhost", port: 9099)
         return true
     }

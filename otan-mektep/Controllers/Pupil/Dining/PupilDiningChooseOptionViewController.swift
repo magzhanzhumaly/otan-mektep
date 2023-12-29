@@ -10,60 +10,47 @@ import FirebaseAuth
 class PupilDiningChooseOptionViewController: UIViewController {
 
     var user: User?
-
-    @IBOutlet weak var vieww: UIView!
+    @IBOutlet weak var navItem: UINavigationItem!
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var foodChoiceCellView: UIView!
+    @IBOutlet weak var limitsCellView: UIView!
+    @IBOutlet weak var historyCellView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        vieww.backgroundColor = .gray50
-//        let inp = FlexibleCell(input: .init(leftIcon: UIImage(named: "gov-active-icon 1"), title: "gov-active-icon 1", components: "gov-active-icon 1"))
-//        let inp = FlexibleCell(input: .init(leftIcon: nil, title: "gov-active-icon 1", components: "gov-active-icon 1"))
-        
-//        let inp = FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "eye") ?? UIImage.appleLogo), color: .red), title: "hehe", components: .init(mainText: "lasdf", leftText: "asdf", lowerText: "asdf")))
-//        let inp = FlexibleCell(input: .init(leftIcon: .init(icon: .cross, color: .accent), title: "h", components: .init(mainText: "hfd", leftText: "ef", lowerText: "hfasdf")))
-        
-//        let inp = FlexibleCell(input: .init(leftIcon: nil, title: "dhf", components: .init(input: .)))
-        
-//        let inp1 = FlexibleCell(input: .init(leftIcon: .init(icon: .cross, color: .accent), title: .init(text: "TITLE", isBold: true, isLarge: true), components: .init(input: .icon(icon: .next), color: nil), corners: .init(isRounded: true)))
-        
-        let inp2 = FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "eye") ?? UIImage.appleLogo), color: .danger400), title: .init(text: "my textdff\ndf", isBold: true, isLarge: true), components: .init(input: .title(text: .init(text: "dfdfjk", isBold: true, isLarge: true)), color: .danger300), corners: .init(isRounded: false)))
 
-        let inp3 = FlexibleCell(input: .init(leftIcon: nil, title: .init(text: "Желтоқсан", isBold: true, isLarge: false), components: .init(input: 
-                .twoHorizontalLabels(leftText: .init(text: "dshfdhf", isBold: true, isLarge: true), rightText: "dfjksdfj")
-                                                                                                                                                                                                                        , color: .danger300), corners: .init(isRounded: false)))
+//        navItem.title = "fjdksf"
+        let name = "Мағжан Жұмалы"
+//        welcomeLabel.text = "Добро пожаловать,\n\(name)!"
         
-//        let inp4 = FlexibleCell(input: .init(leftIcon: nil, title: .init(text: "Желтоқсан", isBold: , isLarge: true), components: .init(input:
-//                .twoVerticalLabels(upperText: "dfjk", lowerText: "dhsjfhh2o")                                                                                                                                                                                                                        , color: .danger300), corners: .init(isRounded: false)))
-//        
+        let texxt = "Добро пожаловать,\n\(name)!"
+        let label = UILabel()
+        label.text = texxt
+        label.numberOfLines = 0
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            label.heightAnchor.constraint(equalToConstant: 50+20), // fix!!
+            label.widthAnchor.constraint(equalToConstant: 200),
+        ])
+        
+        navItem.titleView?.addSubview(label)
+        foodChoiceCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "food-active-icon") ?? UIImage()), color: nil), title: .init(text: "Выбор еды", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {[weak self] in
+            self?.performSegue(withIdentifier: "pupilDiningAddToCartVCSegue", sender: self)})))
+        
+        limitsCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "limit-active-icon") ?? UIImage()), color: nil), title: .init(text: "Лимиты", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {})))
 
-//        let inp2 = FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "eye") ?? UIImage.appleLogo), color: .danger400), title: .init(text: "my textdff\ndf", isBold: true, isLarge: false), components: .init(input: .title(text: .init(text: "dfdfjk", isBold: true, isLarge: false)), color: .danger300), corners: .init(isRounded: false)))
-
-
-//
-//                                let inp1 = FlexibleCell(input: .init(leftIcon: .init(icon: .cross, color: .accent), title: .init(text: "TITLE", isBold: true, isLarge: true), components: .init(input: .icon(icon: <#T##FlexibleCell.IconType#>), color: <#T##UIColor#>), corners: <#T##FlexibleCell.CornerInput?#>))
-
-//        vieww.addFilledSubview(inp1)
-        vieww.addFilledSubview(inp2)
-//        vieww.addFilledSubview(inp3)
-//        vieww.addFilledSubview(inp4)
-//        vieww.addFilledSubview(inp5)
-
-//        vieww.back
-//        inp1.backgroundColor = .red
-        print("usererr = \(user)")
-        // Do any additional setup after loading the view.
+        historyCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "history-active-icon") ?? UIImage()), color: nil), title: .init(text: "История", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {})))
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }
