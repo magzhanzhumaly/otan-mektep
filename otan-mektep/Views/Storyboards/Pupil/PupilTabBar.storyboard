@@ -37,16 +37,6 @@
             </objects>
             <point key="canvasLocation" x="327" y="398"/>
         </scene>
-        <!--demo-->
-        <scene sceneID="X6a-7Q-0mF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="demo" id="Jad-Jm-Qv4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Rri-FS-FIC"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XSh-NA-QnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="961" y="183"/>
-        </scene>
         <!--PupilCabinetTabBar-->
         <scene sceneID="UYt-IL-sY6">
             <objects>
@@ -57,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="664" y="398"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Pupil Tab Bar Controller-->
         <scene sceneID="PuQ-TN-vLc">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ae2-6C-3tb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="PupilTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="ae2-6C-3tb" customClass="PupilTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kIK-Qx-Laf">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -72,7 +62,6 @@
                         <segue destination="cgc-MF-xRH" kind="relationship" relationship="viewControllers" id="l90-ER-JlK"/>
                         <segue destination="fv9-ZC-nx7" kind="relationship" relationship="viewControllers" id="Mn4-yA-AdU"/>
                         <segue destination="nrS-QA-9co" kind="relationship" relationship="viewControllers" id="yFu-sf-1EA"/>
-                        <segue destination="Jad-Jm-Qv4" kind="relationship" relationship="viewControllers" id="CV3-P1-QLr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aob-Z5-2sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

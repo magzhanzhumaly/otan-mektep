@@ -16,7 +16,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+//        if let user = Auth.auth().currentUser {
+//
+////        Auth.auth().addStateDidChangeListener { (auth, user) in
+//                print("User is signed in with UID: \(user.uid)")
+//                let mainViewController = self.instantiateMainViewController()
+//                self.setRootViewController(mainViewController)
+//            } else {
+//                print("No user is signed in")
+//                let loginViewController = self.instantiateLoginViewController()
+//                self.setRootViewController(loginViewController)
+//            
+//        }
+        /*
+         Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user {
+                // User is signed in
+                // Navigate to the main content of your app
+            } else {
+                // No user is signed in
+                // Present the login/signup view controller
+            }
+        }
         
+        if Auth.auth().currentUser != nil {
+            // User is signed in
+            let mainViewController = instantiateMainViewController()
+
+            // Set the main content view controller
+            setRootViewController(mainViewController)
+//            setRootTabBarController(mainViewController)
+
+        } else {
+            // No user is signed in
+            let loginViewController = instantiateLoginViewController()
+
+            // Set the login/signup view controller
+            setRootViewController(loginViewController)
+
+        }
+        */
 //        UITabBar.appearance().barTintColor = Colors.success500.color
 //        UITabBar.appearance().tintColor = Colors.danger500.color
 //        UITabBar.appearance().layer.borderWidth = 1
@@ -58,5 +97,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func instantiateLoginViewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+    }
+
+    func instantiateMainViewController() -> UIViewController {
+        // Your logic to determine the user's role and instantiate the appropriate main view controller
+        // For example, if the role is a pupil, instantiate the PupilTabBarController from PupilTabBar.storyboard
+
+//
+//        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "PupilTabBarController") as? UITabBarController {
+//            return tabBarController
+//        }
+//        
+//        return UIViewController()
+        
+        let storyboard = UIStoryboard(name: "PupilDiningTabBar", bundle: nil)
+
+//        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "PupilTabBarController") as? UITabBarController {
+//            return tabBarController
+//        } else {
+//            print("Failed to instantiate PupilTabBarController")
+//            return UIViewController()
+//        }
+        
+        
+
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "PupilDiningNavigationController") as? UINavigationController {
+            return navigationController
+        } else {
+            print("Failed to instantiate PupilTabBarController")
+            return UIViewController()
+        }
+
+    }
+
+    func setRootViewController(_ viewController: UIViewController) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+
+        print("Root view controller set to: \(viewController)")
+    }
 }
 

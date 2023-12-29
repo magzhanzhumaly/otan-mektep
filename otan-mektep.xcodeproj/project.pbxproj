@@ -11,6 +11,7 @@
 		5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622F4132B2C5DF3006836BB /* MyButton.swift */; };
 		562FC29D2B2C47C500F81907 /* InputBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FC29C2B2C47C500F81907 /* InputBoxView.swift */; };
 		562FC29F2B2C4A0400F81907 /* OtanMektepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562FC29E2B2C4A0400F81907 /* OtanMektepButton.swift */; };
+		5648C5B62B3EA1CC004F2E02 /* PupilTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5648C5B52B3EA1CC004F2E02 /* PupilTabBarController.swift */; };
 		56625ACC2B39909100A0D804 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 56625ACB2B39909100A0D804 /* Notes */; };
 		56625ACF2B39974F00A0D804 /* PupilDiningTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625ACE2B39974F00A0D804 /* PupilDiningTabBar.storyboard */; };
 		56625AD12B39975E00A0D804 /* PupilAttendanceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AD02B39975E00A0D804 /* PupilAttendanceTabBar.storyboard */; };
@@ -147,6 +148,7 @@
 		5622F4132B2C5DF3006836BB /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		562FC29C2B2C47C500F81907 /* InputBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBoxView.swift; sourceTree = "<group>"; };
 		562FC29E2B2C4A0400F81907 /* OtanMektepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtanMektepButton.swift; sourceTree = "<group>"; };
+		5648C5B52B3EA1CC004F2E02 /* PupilTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilTabBarController.swift; sourceTree = "<group>"; };
 		56625ACB2B39909100A0D804 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		56625ACE2B39974F00A0D804 /* PupilDiningTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilDiningTabBar.storyboard; sourceTree = "<group>"; };
 		56625AD02B39975E00A0D804 /* PupilAttendanceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilAttendanceTabBar.storyboard; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				56DED1FD2B3A966E00D757D6 /* Attendance */,
 				56DED1FE2B3A967700D757D6 /* Library */,
 				56DED1FF2B3A968000D757D6 /* Cabinet */,
+				5648C5B52B3EA1CC004F2E02 /* PupilTabBarController.swift */,
 			);
 			path = Pupil;
 			sourceTree = "<group>";
@@ -1123,6 +1126,7 @@
 				56DED2012B3A96AC00D757D6 /* PupilAttendanceViewController.swift in Sources */,
 				56DED2142B3A976400D757D6 /* ParentDiningChooseOptionViewController.swift in Sources */,
 				56DED24B2B3AA97400D757D6 /* PupilCabinetViewController.swift in Sources */,
+				5648C5B62B3EA1CC004F2E02 /* PupilTabBarController.swift in Sources */,
 				56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

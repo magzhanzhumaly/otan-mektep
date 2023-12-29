@@ -6,17 +6,62 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
+    func instantiateLoginViewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+    }
+    
+    func instantiateMainViewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "PupilTabBar", bundle: nil)
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "PupilTabBarController") as? UIViewController {
+            print("Successfully instantiated PupilTabBarController")
+            return navigationController
+        } else {
+            print("Failed to instantiate PupilTabBarController")
+            return UIViewController()
+        }
+
+    }
+    func setRootViewController(_ viewController: UIViewController) {
+//        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+//        window?.makeKeyAndVisible()
+
+        print("Root view controller set to: \(viewController)")
+    }
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = scene as? UIWindowScene else { return }
+
+        window = UIWindow(windowScene: windowScene)
+
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+                    if let user = user {
+                        // User is signed in
+//                        let mainViewController = self.instantiateLoginViewController()
+
+                        let mainViewController = self.instantiateMainViewController()
+                        self.setRootViewController(mainViewController)
+                    } else {
+                        // No user is signed in
+                        let loginViewController = self.instantiateLoginViewController()
+                        self.setRootViewController(loginViewController)
+                    }
+                }
+
+        window?.makeKeyAndVisible()
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+//        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

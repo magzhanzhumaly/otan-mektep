@@ -37,7 +37,7 @@
         <!--Посещение-->
         <scene sceneID="71K-ed-0YW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Nk-6y-h8t" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Nk-6y-h8t" customClass="PupilAttendanceNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Посещение" image="calendar-inactive-icon 1" selectedImage="calendar-active-icon" id="3xX-C1-XOh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

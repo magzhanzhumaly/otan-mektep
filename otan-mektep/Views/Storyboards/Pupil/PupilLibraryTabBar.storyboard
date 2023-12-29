@@ -37,7 +37,7 @@
         <!--Библиотека-->
         <scene sceneID="Emm-z0-Zwd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9g-dI-AK5" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9g-dI-AK5" customClass="PupilLibraryNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Библиотека" image="books-inactive-icon 1" selectedImage="books-active-icon 1" id="ERT-KH-huV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

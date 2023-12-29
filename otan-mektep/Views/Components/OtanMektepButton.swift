@@ -7,22 +7,42 @@
 
 import UIKit
 
+protocol OtanMektepButtonDelegate: AnyObject {
+    func buttonTapped()
+}
+
 class OtanMektepButton: UIView {
 
     struct Input {
         let isLarge: Bool
         let isFilled: Bool
         let text: String
+        let color: UIColor?
+        let closure: (() -> Void)?
+    }
+    
+    weak var delegate: FlexibleCellButtonDelegate?
+    private var actionClosure: (() -> Void)?
+
+    @objc func tapAction() {
+        actionClosure?()
     }
     
     init(input: Input) {
         super.init(frame: .zero)
         
+        actionClosure = input.closure
+
         let button = UIButton()
         
         self.addFilledSubview(button)
         
-        button.backgroundColor = Colors.accentColor.color
+        if let color = input.color {
+            button.backgroundColor = color
+        } else {
+            button.backgroundColor = Colors.accentColor.color
+        }
+        
         button.layer.cornerRadius = 10
         button.setTitle(input.text, for: .normal)
         button.setTitleColor(.white, for: .normal)

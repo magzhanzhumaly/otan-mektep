@@ -17,18 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pupil cabinet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-bk-ENd">
-                                <rect key="frame" x="175" y="361" width="98" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ff-Pk-2yE">
+                                <rect key="frame" x="20" y="679" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2yU-qT-O0B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5ff-Pk-2yE" secondAttribute="bottom" constant="50" id="1Sz-xY-34j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5ff-Pk-2yE" secondAttribute="trailing" constant="20" id="wzK-bh-1mm"/>
+                            <constraint firstItem="5ff-Pk-2yE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="zJk-SH-BkO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZvO-b2-y1z"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="5ff-Pk-2yE" id="vhh-cu-fqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,7 +48,7 @@
         <!--Личный кабинет-->
         <scene sceneID="JIO-Wr-swR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DMU-e7-lMi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PupilCabinetNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="DMU-e7-lMi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Личный кабинет" image="personal-cabinet-inactive-icon" selectedImage="personal-cabinet-active-icon" id="YBh-gw-xRG" customClass="Pupil"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

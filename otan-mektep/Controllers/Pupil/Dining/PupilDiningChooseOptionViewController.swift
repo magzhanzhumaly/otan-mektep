@@ -21,8 +21,9 @@ class PupilDiningChooseOptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        user = Auth.auth().currentUser
 //        navItem.title = "fjdksf"
-        let name = "Мағжан Жұмалы"
+        let name = user?.email ?? ""
 //        welcomeLabel.text = "Добро пожаловать,\n\(name)!"
         
         let texxt = "Добро пожаловать,\n\(name)!"
@@ -36,7 +37,7 @@ class PupilDiningChooseOptionViewController: UIViewController {
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             label.heightAnchor.constraint(equalToConstant: 50+20), // fix!!
-            label.widthAnchor.constraint(equalToConstant: 200),
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         ])
         
         navItem.titleView?.addSubview(label)

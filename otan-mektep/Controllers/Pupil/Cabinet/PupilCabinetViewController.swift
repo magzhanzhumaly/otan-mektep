@@ -6,13 +6,31 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class PupilCabinetViewController: UIViewController {
+    
+    @IBOutlet weak var logOutButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        logOutButton.backgroundColor = .danger500
+        logOutButton.layer.cornerRadius = 10
+        logOutButton.titleLabel?.font = Fonts.body17.font
+        logOutButton.setTitleColor(.white, for: .normal)
+
+        logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func logOut() {
+        do {
+            try Auth.auth().signOut()
+            // Set the initial view controller to the login/signup view controller
+        } catch let signOutError as NSError {
+            print("Error signing out: \(signOutError)")
+        }
     }
     
 

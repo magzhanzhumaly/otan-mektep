@@ -84,5 +84,242 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D148E66-BC54-4144-8FC2-A83A69FFC9CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "instantiateMainViewController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D148E66-BC54-4144-8FC2-A83A69FFC9CB - c94ee164642b88fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.AppDelegate.instantiateMainViewController() -&gt; __C.UIViewController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "3D148E66-BC54-4144-8FC2-A83A69FFC9CB - c94ee164642b88fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.AppDelegate.instantiateMainViewController() -&gt; __C.UIViewController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "3D148E66-BC54-4144-8FC2-A83A69FFC9CB - c94ee164642b88fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.AppDelegate.instantiateMainViewController() -&gt; __C.UIViewController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "3D148E66-BC54-4144-8FC2-A83A69FFC9CB - db7a0226adcbed92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.AppDelegate.instantiateMainViewController() -&gt; __C.UITabBarController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "3D148E66-BC54-4144-8FC2-A83A69FFC9CB - db7a0226adcbed92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.AppDelegate.instantiateMainViewController() -&gt; __C.UITabBarController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A741491A-EFF5-4256-A0F8-DA9D75B6FA41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "instantiateLoginViewController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09F7D82B-F80F-45B7-B1D2-66E260633EA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C147F46A-6C51-4C4F-B877-99305C1B00C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7FF46D1-3F95-450D-A22A-3DCD93841308"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "setRootViewController(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7024A11D-4A90-442F-AEA5-EC0551512FB7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "instantiateMainViewController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7024A11D-4A90-442F-AEA5-EC0551512FB7 - 7ed0a8a72b789606"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.SceneDelegate.instantiateMainViewController() -&gt; __C.UIViewController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "7024A11D-4A90-442F-AEA5-EC0551512FB7 - 7ed0a8a72b789667"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "otan_mektep.SceneDelegate.instantiateMainViewController() -&gt; __C.UIViewController"
+                  moduleName = "otan-mektep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magzhanzhumaly/Developer/otan-mektep/otan-mektep/App%20Files/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "556">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EB9D6BD-3DCE-4153-AD7D-4451FDFA37AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/App Files/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "instantiateLoginViewController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2E142A6-F87F-415D-821A-F49B2E848FB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "otan-mektep/Controllers/Pupil/Cabinet/PupilCabinetViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "logOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

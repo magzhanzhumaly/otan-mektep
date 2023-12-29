@@ -127,7 +127,7 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleCellButtonDe
         
         let topBar = AcadlyNavigation(style: nav, searchInfo: nil)
         
-        buttonContainer.addFilledSubview(OtanMektepButton(input: .init(isLarge: true, isFilled: true, text: "Перейти в корзину")))
+        buttonContainer.addFilledSubview(OtanMektepButton(input: .init(isLarge: true, isFilled: true, text: "Перейти в корзину", color: nil, closure: nil))) //(input: .init(isLarge: true, isFilled: true, text: "Перейти в корзину"), color: nil, closure: nil))
 //        topBarContainer.addFilledSubview(topBar)
         
 
