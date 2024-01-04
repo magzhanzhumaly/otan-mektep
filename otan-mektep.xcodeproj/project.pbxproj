@@ -29,12 +29,14 @@
 		56625AE92B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AE82B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard */; };
 		56625AEB2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AEA2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard */; };
 		56625AED2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AEC2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard */; };
+		56706A3A2B4525A700B94B39 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */; };
+		56706A3B2B4525A700B94B39 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */; };
+		56706A3C2B4525A700B94B39 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */; };
+		56706A422B456DE600B94B39 /* FlexibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56706A412B456DE600B94B39 /* FlexibleTableViewCell.swift */; };
+		56706A442B45757D00B94B39 /* FlexibleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56706A432B45757D00B94B39 /* FlexibleTableViewCell.xib */; };
 		567E4F612B3D3BF60024FAD1 /* FlexibleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E4F602B3D3BF60024FAD1 /* FlexibleHeader.swift */; };
 		567E4F642B3D3C5B0024FAD1 /* FlexibleFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E4F632B3D3C5B0024FAD1 /* FlexibleFooter.swift */; };
 		567E4F662B3D6C430024FAD1 /* ButtonFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E4F652B3D6C430024FAD1 /* ButtonFooter.swift */; };
-		569148362B3C4A24009623CC /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569148352B3C4A10009623CC /* Inter-Bold.ttf */; };
-		569148382B3C4A25009623CC /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569148352B3C4A10009623CC /* Inter-Bold.ttf */; };
-		569148392B3C4A26009623CC /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569148352B3C4A10009623CC /* Inter-Bold.ttf */; };
 		56A69A712B39393100C00428 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 56A69A702B39393100C00428 /* GoogleSignIn */; };
 		56A69A732B39393100C00428 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56A69A722B39393100C00428 /* GoogleSignInSwift */; };
 		56A69A792B395E7800C00428 /* ParentTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A69A782B395E7800C00428 /* ParentTabBar.storyboard */; };
@@ -166,10 +168,14 @@
 		56625AE82B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeDiningTabBar.storyboard; sourceTree = "<group>"; };
 		56625AEA2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeAttendanceTabBar.storyboard; sourceTree = "<group>"; };
 		56625AEC2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeCabinetTabBar.storyboard; sourceTree = "<group>"; };
+		56706A3D2B4525A700B94B39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		56706A3F2B4525A900B94B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		56706A402B4525AA00B94B39 /* kk */ = {isa = PBXFileReference; lastKnownFileType = file; name = kk; path = "kk.lproj/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		56706A412B456DE600B94B39 /* FlexibleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleTableViewCell.swift; sourceTree = "<group>"; };
+		56706A432B45757D00B94B39 /* FlexibleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlexibleTableViewCell.xib; sourceTree = "<group>"; };
 		567E4F602B3D3BF60024FAD1 /* FlexibleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleHeader.swift; sourceTree = "<group>"; };
 		567E4F632B3D3C5B0024FAD1 /* FlexibleFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleFooter.swift; sourceTree = "<group>"; };
 		567E4F652B3D6C430024FAD1 /* ButtonFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFooter.swift; sourceTree = "<group>"; };
-		569148352B3C4A10009623CC /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		56A69A782B395E7800C00428 /* ParentTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentTabBar.storyboard; sourceTree = "<group>"; };
 		56A69A7C2B395EE200C00428 /* SchoolEmployeeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchoolEmployeeTabBar.storyboard; sourceTree = "<group>"; };
 		56A69A7E2B395EEC00C00428 /* PupilTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilTabBar.storyboard; sourceTree = "<group>"; };
@@ -438,7 +444,7 @@
 			children = (
 				56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */,
 				56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */,
-				569148352B3C4A10009623CC /* Inter-Bold.ttf */,
+				56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -703,6 +709,8 @@
 			children = (
 				56E3E63F2B3BFF3500623184 /* FlexibleCell.swift */,
 				56E3E6402B3BFF3500623184 /* FlexibleCell.xib */,
+				56706A412B456DE600B94B39 /* FlexibleTableViewCell.swift */,
+				56706A432B45757D00B94B39 /* FlexibleTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -925,8 +933,9 @@
 				56625ACC2B39909100A0D804 /* Notes in Resources */,
 				56625AD52B39977200A0D804 /* PupilCabinetTabBar.storyboard in Resources */,
 				56FA62EF2B2B13A500644F75 /* Assets.xcassets in Resources */,
-				569148362B3C4A24009623CC /* Inter-Bold.ttf in Resources */,
+				56706A3A2B4525A700B94B39 /* Inter-Bold.ttf in Resources */,
 				56625AD32B39976800A0D804 /* PupilLibraryTabBar.storyboard in Resources */,
+				56706A442B45757D00B94B39 /* FlexibleTableViewCell.xib in Resources */,
 				56625AD92B39979200A0D804 /* ParentHistoryTabBar.storyboard in Resources */,
 				56B9CC0A2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 				56E3E63E2B3BF4AB00623184 /* demo.storyboard in Resources */,
@@ -943,7 +952,7 @@
 			files = (
 				56F4D1AC2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
 				56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
-				569148392B3C4A26009623CC /* Inter-Bold.ttf in Resources */,
+				56706A3B2B4525A700B94B39 /* Inter-Bold.ttf in Resources */,
 				56B9CC0B2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -954,7 +963,7 @@
 			files = (
 				56F4D1AD2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
 				56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
-				569148382B3C4A25009623CC /* Inter-Bold.ttf in Resources */,
+				56706A3C2B4525A700B94B39 /* Inter-Bold.ttf in Resources */,
 				56B9CC0C2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1081,6 +1090,7 @@
 				56DED2552B3AA9B300D757D6 /* CafeteriaEmployeeCabinetViewController.swift in Sources */,
 				56DED1F42B3A957900D757D6 /* PupilDiningAddToCartViewController.swift in Sources */,
 				567E4F662B3D6C430024FAD1 /* ButtonFooter.swift in Sources */,
+				56706A422B456DE600B94B39 /* FlexibleTableViewCell.swift in Sources */,
 				56B9CC222B354472007219BC /* OtanMektepSegmentedControl.swift in Sources */,
 				56DED21A2B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
@@ -1172,6 +1182,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56706A3D2B4525A700B94B39 /* ru */,
+				56706A3F2B4525A900B94B39 /* Base */,
+				56706A402B4525AA00B94B39 /* kk */,
+			);
+			name = "Inter-Bold.ttf";
+			sourceTree = "<group>";
+		};
 		56B9CBFC2B32E206007219BC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

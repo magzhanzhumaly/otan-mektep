@@ -21,6 +21,32 @@ class PupilDiningChooseOptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let topSeparator = UIView()
+        let bottomSeparator = UIView()
+        
+        topSeparator.translatesAutoresizingMaskIntoConstraints = false
+        bottomSeparator.translatesAutoresizingMaskIntoConstraints = false
+        
+        topSeparator.backgroundColor = .gray200
+        bottomSeparator.backgroundColor = .gray200
+        
+        view.addSubview(topSeparator)
+        view.addSubview(bottomSeparator)
+        
+        NSLayoutConstraint.activate([
+            topSeparator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            topSeparator.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topSeparator.heightAnchor.constraint(equalToConstant: 1),
+            
+            bottomSeparator.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomSeparator.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomSeparator.heightAnchor.constraint(equalToConstant: 1)
+        ])
+
+        topSeparator.isHidden = true
+        
         user = Auth.auth().currentUser
 //        navItem.title = "fjdksf"
         let name = user?.email ?? ""

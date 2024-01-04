@@ -271,19 +271,29 @@ class FlexibleCell: UIView {
                 stackView.addArrangedSubview(upperLabel)
                 stackView.addArrangedSubview(lowerLabel)
                 
-//                let deleteButton = UIButton()
-//                deleteButton.translatesAutoresizingMaskIntoConstraints = false
+
+//                let removeImgView = UIImageView()
+//                removeImgView.image = UIImage(named: "IOS Iconsminus-squareYes")?.withTintColor(.danger500)
+//                removeImgView.translatesAutoresizingMaskIntoConstraints = false
 //                
-//                deleteButton.backgroundColor = .danger500
-//                deleteButton.
-                let removeImgView = UIImageView()
-                removeImgView.image = UIImage(named: "IOS Iconsminus-squareYes")?.withTintColor(.danger500)
+//                self.addSubview(removeImgView)
+//                
+//                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeAction))
+//                removeImgView.addGestureRecognizer(tapGesture)
+                
+                
+                let removeImgView = UIButton()
+                removeImgView.setImage(UIImage(named: "IOS Iconsminus-squareYes")?.withTintColor(.danger500) ?? UIImage(), for: .normal)
+                
                 removeImgView.translatesAutoresizingMaskIntoConstraints = false
                 
                 self.addSubview(removeImgView)
                 
-                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeAction))
-                removeImgView.addGestureRecognizer(tapGesture)
+                removeImgView.addTarget(self, action: #selector(removeAction), for: .touchUpInside)
+//                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeAction))
+//                removeImgView.addGestureRecognizer(tapGesture)
+                
+                
                 
                 NSLayoutConstraint.activate([
                     removeImgView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
@@ -385,3 +395,115 @@ class FlexibleCell: UIView {
     }
     
 }
+
+extension FlexibleCell {
+    func configure(with input: Input) {
+        // Corners
+        if let corners = input.corners {
+            self.layer.borderColor = Colors.gray200.color.cgColor
+            self.layer.borderWidth = 1
+            
+            if corners.isRounded {
+                self.layer.cornerRadius = 10
+            }
+        }
+
+        // Left Stack View --> title and icon?
+        let leftStackView = UIStackView()
+        leftStackView.axis = .horizontal
+        leftStackView.spacing = 14
+        leftStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addSubview(leftStackView)
+
+        // Left Icon
+        if let icon = input.leftIcon {
+            let leftIcon = UIImageView()
+            leftIcon.translatesAutoresizingMaskIntoConstraints = false
+
+            if let color = input.leftIcon?.color {
+                leftIcon.image = icon.icon.image.withTintColor(color)
+            } else {
+                leftIcon.image = icon.icon.image
+            }
+
+            NSLayoutConstraint.activate([
+                leftIcon.heightAnchor.constraint(equalToConstant: 30),
+                leftIcon.widthAnchor.constraint(equalToConstant: 30),
+            ])
+
+            leftIcon.contentMode = .scaleAspectFit
+
+            leftStackView.addArrangedSubview(leftIcon)
+        }
+
+        // Title Label
+        let titleLabel = UILabel()
+        titleLabel.text = input.title.text
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.numberOfLines = 0
+        
+        if input.title.isLarge {
+            titleLabel.font = input.title.isBold ? Fonts.headline17.font : Fonts.body17.font
+        } else {
+            titleLabel.font = input.title.isBold ? Fonts.footnoteBold13.font : Fonts.footnoteRegular13.font
+        }
+        
+        leftStackView.addArrangedSubview(titleLabel)
+
+        let newlineCount = CGFloat(countNewlines(in: input.title.text)) + 1
+
+        if input.title.text.contains("\n") {
+            if input.title.isLarge {
+                leftStackView.heightAnchor.constraint(equalToConstant: newlineCount * 22).isActive = true
+            } else {
+                leftStackView.heightAnchor.constraint(equalToConstant: newlineCount * 18).isActive = true
+            }
+        } else {
+            leftStackView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        }
+
+        NSLayoutConstraint.activate([
+            leftStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
+            leftStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -14),
+            leftStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 14),
+        ])
+
+        // Components --> left, upper-right, lower-right labels or icon
+        if let comps = input.components?.input.result {
+            // only icon
+            if let image = comps.icon {
+                let icon = UIImageView()
+
+                if let color = input.components?.color {
+                    icon.image = image.image.withTintColor(color)
+                } else {
+                    icon.image = image.image
+                }
+
+                self.addSubview(icon)
+                icon.translatesAutoresizingMaskIntoConstraints = false
+
+                NSLayoutConstraint.activate([
+                    icon.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
+                    icon.heightAnchor.constraint(equalToConstant: 24),
+                    icon.widthAnchor.constraint(equalToConstant: 24),
+                    icon.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+                ])
+
+            // two vertical labels
+            } else if let lowerText = comps.lowerRightText, let upperText = comps.upperRightText {
+                //... (similar to your original code)
+
+            // two horizontal labels
+            } else if let leftText = comps.mainText, let rightText = comps.upperRightText {
+                //... (similar to your original code)
+
+            // one label
+            } else if let text = comps.mainText {
+                //... (similar to your original code)
+            }
+        }
+    }
+}
+

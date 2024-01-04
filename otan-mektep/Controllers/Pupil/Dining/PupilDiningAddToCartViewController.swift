@@ -7,16 +7,12 @@
 
 import UIKit
 
-class PupilDiningAddToCartViewController: UIViewController, FlexibleCellButtonDelegate {
+class PupilDiningAddToCartViewController: UIViewController  {
     
-    func buttonTapped() {
-        print("heyte")
-    }
-    
-    @IBOutlet weak var itogoLabel: UILabel!
-    @IBOutlet weak var detailsLabel: UILabel!
-    @IBOutlet weak var buttonContainer: UIView!
-    @IBOutlet weak var lowerView: UIView!
+    let totalCostLabel = UILabel()
+    let detailsLabel = UILabel()
+    let buttonContainer = UIView()
+    let lowerView = UIView()
     
     struct FoodObject {
         let foodTitle: String
@@ -98,8 +94,12 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleCellButtonDe
                                             price: 1000,
                                             type: .meal)]
     
-    var cart = [FoodObject]()
-    var totalCost = 0
+    var cart = Cart(addedItems: .init())
+    
+    var totalCost = 550
+    var onePurchaseLimit = 1000
+    var dailyLimit = 3000
+    var spentToday = 1800
 
     func onCancel() {
         AppUtility.onCancel(self, true)
@@ -109,42 +109,109 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleCellButtonDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        var cart = Cart(addedItems: .init())
         
+        tableView.register(UINib(nibName: FlexibleTableViewCell.id, bundle: nil), forCellReuseIdentifier: FlexibleTableViewCell.id)
+
+        let topSeparator = UIView()
+        let bottomSeparator = UIView()
+        
+        topSeparator.translatesAutoresizingMaskIntoConstraints = false
+        bottomSeparator.translatesAutoresizingMaskIntoConstraints = false
+        
+        topSeparator.backgroundColor = .gray200
+        bottomSeparator.backgroundColor = .gray200
+        
+        view.addSubview(topSeparator)
+        view.addSubview(bottomSeparator)
+        
+        NSLayoutConstraint.activate([
+            topSeparator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            topSeparator.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topSeparator.heightAnchor.constraint(equalToConstant: 1),
+            
+            bottomSeparator.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomSeparator.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomSeparator.heightAnchor.constraint(equalToConstant: 1)
+        ])
+        
+        let totalCostLabel = UILabel()
+        let detailsLabel = UILabel()
+        let goToCartButton = UIButton()
+        let lowerView = UIView()
+        
+        lowerView.translatesAutoresizingMaskIntoConstraints = false
+        goToCartButton.translatesAutoresizingMaskIntoConstraints = false
+        totalCostLabel.translatesAutoresizingMaskIntoConstraints = false
+        detailsLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(lowerView)
+        lowerView.addSubview(goToCartButton)
+        lowerView.addSubview(totalCostLabel)
+        lowerView.addSubview(detailsLabel)
+        
+        totalCostLabel.text = "Итого: \(totalCost) ₸"
+
+        detailsLabel.text = "Лимит разовой покупки: \(onePurchaseLimit) ₸\nЛимит на день: \(dailyLimit) ₸\nОсталось на день: \(dailyLimit - spentToday) ₸"
+
+        totalCostLabel.font = Fonts.title3Bold20.font
+        detailsLabel.font = Fonts.caption1Regular12.font
+        
+        detailsLabel.numberOfLines = 0
+        totalCostLabel.numberOfLines = 0
+        
+        detailsLabel.textAlignment = .right
+        
+        goToCartButton.backgroundColor = .accent
+        goToCartButton.setTitle("Перейти в корзину", for: .normal)
+        goToCartButton.setTitleColor(.white, for: .normal)
+        goToCartButton.titleLabel?.font = Fonts.body17.font
+        goToCartButton.layer.cornerRadius = 10
+        
+        goToCartButton.addTarget(self, action: #selector(goToCart), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            lowerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            lowerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            lowerView.bottomAnchor.constraint(equalTo: bottomSeparator.topAnchor),
+            lowerView.heightAnchor.constraint(equalToConstant: 140),
+                    
+            
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: lowerView.topAnchor),
+            
+            
+            totalCostLabel.topAnchor.constraint(equalTo: lowerView.topAnchor, constant: 26),
+            totalCostLabel.leadingAnchor.constraint(equalTo: lowerView.leadingAnchor, constant: 20),
+            
+            detailsLabel.centerYAnchor.constraint(equalTo: totalCostLabel.centerYAnchor),
+            detailsLabel.trailingAnchor.constraint(equalTo: lowerView.trailingAnchor, constant: -20),
+            
+            goToCartButton.leadingAnchor.constraint(equalTo: lowerView.leadingAnchor, constant: 20),
+            goToCartButton.trailingAnchor.constraint(equalTo: lowerView.trailingAnchor, constant: -20),
+            goToCartButton.bottomAnchor.constraint(equalTo: lowerView.bottomAnchor, constant: -20),
+            goToCartButton.heightAnchor.constraint(equalToConstant: 44),
+        ])
+                
         tableView.separatorStyle = .none
         
         lowerView.backgroundColor = .accentColorLight
-          tableView.delegate = self
+        
+        tableView.delegate = self
         tableView.dataSource = self
-        
-//        tableView.backgroundColor = .yellow
-        let nav = Navigation.title("Выбор еды",
-                                   large: false,
-                                   leftAction: [.init(nil, UIImage(named: "arrow-left-large"), false, { [weak self] in })],
-                                   rightAction: [.init(nil, nil, false, nil)])
-    
-        
-        let topBar = AcadlyNavigation(style: nav, searchInfo: nil)
-        
-        buttonContainer.addFilledSubview(OtanMektepButton(input: .init(isLarge: true, isFilled: true, text: "Перейти в корзину", color: nil, closure: nil))) //(input: .init(isLarge: true, isFilled: true, text: "Перейти в корзину"), color: nil, closure: nil))
-//        topBarContainer.addFilledSubview(topBar)
-        
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    @objc func goToCart() {
+        performSegue(withIdentifier: "pupilDiningCartVCSegue", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//
     }
-    */
-
 }
 
 extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -180,17 +247,17 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
         } else if foodTypeObjects[section] == .beverage {
             
             view = FlexibleHeader.init(input: .init(firstComponent: "Напитки", secondComponent: nil, thirdComponent: nil, isSmall: false))
-
+            
         } else if foodTypeObjects[section] == .soup {
             
             view = FlexibleHeader.init(input: .init(firstComponent: "Суп", secondComponent: nil, thirdComponent: nil, isSmall: false))
-
+            
         } else if foodTypeObjects[section] == .meal {
             
             view = FlexibleHeader.init(input: .init(firstComponent: "Второе", secondComponent: nil, thirdComponent: nil, isSmall: false))
-
+            
         }
-
+        
         containerView.addSubview(view!)
         view!.translatesAutoresizingMaskIntoConstraints = false
         
@@ -212,7 +279,7 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
             foodTypeObjects.append(.dough)
             count += 1
         }
-    
+        
         if beverageObjects.count > 0 {
             foodTypeObjects.append(.beverage)
             count += 1
@@ -232,41 +299,71 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: FlexibleTableViewCell.id, for: indexPath) as! FlexibleTableViewCell
+            
+            var input: FlexibleCell.Input?
+            
+            if foodTypeObjects[indexPath.section] == .dough {
+                input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+            } else if foodTypeObjects[indexPath.section] == .beverage {
+                input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+            } else if foodTypeObjects[indexPath.section] == .soup {
+                input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+            } else if foodTypeObjects[indexPath.section] == .meal {
+                input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+            }
+
+            cell.configure(with: input!) // Use the existing cell and configure it
+
+            cell.selectionStyle = .none
+
+            return cell
+
         
-        var view: FlexibleCell?
+    }/*
+        
+        var input: FlexibleCell.Input?
+        
         if foodTypeObjects[indexPath.section] == .dough {
             
-            view = FlexibleCell(input: .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}))
+            input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
             
         } else if foodTypeObjects[indexPath.section] == .beverage {
             
-            view = FlexibleCell(input: .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}))
-
+            input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+            
         } else if foodTypeObjects[indexPath.section] == .soup {
             
-            view = FlexibleCell(input: .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}))
-
+            input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+            
         } else if foodTypeObjects[indexPath.section] == .meal {
             
-            view = FlexibleCell(input: .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}))
+            input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
             
         }
         
-        view?.delegate = self
-    
-        cell.addSubview(view!)
-        view?.translatesAutoresizingMaskIntoConstraints = false
+        let view = FlexibleCell(input: input!)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: FlexibleTableViewCell.id, for: indexPath) as! FlexibleTableViewCell
+        
+        cell.contentView.addSubview(view)
+        
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            view!.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 20),
-            view!.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -20),
-            view!.topAnchor.constraint(equalTo: cell.topAnchor, constant: 0),
-            view!.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: 0),
+            view.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 20),
+            view.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -20),
+            view.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: 0),
+            view.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: 0),
         ])
+        
+        cell.selectionStyle = .none
+        
         return cell
+        
     }
-    
+    */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -289,7 +386,11 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
         }
         tableView.reloadRows(at: [indexPath], with: .automatic)
         
-        
     }
-    
+}
+
+extension PupilDiningAddToCartViewController: FlexibleCellButtonDelegate {
+    func buttonTapped() {
+        print("heyte")
+    }
 }
