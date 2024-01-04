@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FlexibleCellButtonDelegate: AnyObject {
-    func buttonTapped(indexPath: IndexPath)
+    func buttonTapped(for cell: FlexibleCell)
 }
 
 class FlexibleCell: UIView {
@@ -403,7 +403,7 @@ class FlexibleCell: UIView {
     }
     
     @objc func removeAction() {
-        delegate?.buttonTapped(indexPath: input?.indexPath ?? IndexPath(row: 0, section: 0))
+        delegate?.buttonTapped(for: self)
     }
     
     func countNewlines(in inputString: String) -> Int {
