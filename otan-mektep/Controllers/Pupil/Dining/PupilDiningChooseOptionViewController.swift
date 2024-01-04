@@ -20,7 +20,7 @@ class PupilDiningChooseOptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let topSeparator = UIView()
         let bottomSeparator = UIView()
         
@@ -44,13 +44,13 @@ class PupilDiningChooseOptionViewController: UIViewController {
             bottomSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bottomSeparator.heightAnchor.constraint(equalToConstant: 1)
         ])
-
+        
         topSeparator.isHidden = true
         
         user = Auth.auth().currentUser
-//        navItem.title = "fjdksf"
+        //        navItem.title = "fjdksf"
         let name = user?.email ?? ""
-//        welcomeLabel.text = "Добро пожаловать,\n\(name)!"
+        //        welcomeLabel.text = "Добро пожаловать,\n\(name)!"
         
         let texxt = "Добро пожаловать,\n\(name)!"
         let label = UILabel()
@@ -67,12 +67,21 @@ class PupilDiningChooseOptionViewController: UIViewController {
         ])
         
         navItem.titleView?.addSubview(label)
-        foodChoiceCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "food-active-icon") ?? UIImage()), color: nil), title: .init(text: "Выбор еды", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {[weak self] in
-            self?.performSegue(withIdentifier: "pupilDiningAddToCartVCSegue", sender: self)})))
+        foodChoiceCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "food-active-icon") ?? UIImage()), color: nil), title: .init(text: "Выбор еды", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {}, indexPath: IndexPath(row: 0, section: 0))))
+        //        {[weak self] in
+        //            self?.performSegue(withIdentifier: "pupilDiningAddToCartVCSegue", sender: self)})))
         
-        limitsCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "limit-active-icon") ?? UIImage()), color: nil), title: .init(text: "Лимиты", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {})))
+        limitsCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "limit-active-icon") ?? UIImage()), color: nil), title: .init(text: "Лимиты", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {}, indexPath: IndexPath(row: 0, section: 0))))
+        
+        historyCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "history-active-icon") ?? UIImage()), color: nil), title: .init(text: "История", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {}, indexPath: IndexPath(row: 0, section: 0))))
+            
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        foodChoiceCellView.addGestureRecognizer(tapGesture)
 
-        historyCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "history-active-icon") ?? UIImage()), color: nil), title: .init(text: "История", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {})))
+    }
+    
+    @objc func tapAction() {
+        performSegue(withIdentifier: "pupilDiningAddToCartVCSegue", sender: self)
     }
     
 

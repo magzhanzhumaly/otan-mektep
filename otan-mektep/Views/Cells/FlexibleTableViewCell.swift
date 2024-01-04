@@ -7,10 +7,18 @@
 
 import UIKit
 
+extension FlexibleTableViewCell: FlexibleCellButtonDelegate {
+    func buttonTapped(indexPath: IndexPath) {
+        delegate?.buttonTapped(indexPath: indexPath)
+    }
+}
+
 class FlexibleTableViewCell: UITableViewCell {
     
     static let id = "FlexibleTableViewCell"
     private var flexibleCell: FlexibleCell?
+    
+    var delegate: FlexibleCellButtonDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,6 +31,11 @@ class FlexibleTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
+        self.isUserInteractionEnabled = true
+        self.selectionStyle = .default
+        
+        flexibleCell?.delegate = self
+
         contentView.addSubview(flexibleCell!)
         flexibleCell!.translatesAutoresizingMaskIntoConstraints = false
         
@@ -33,13 +46,6 @@ class FlexibleTableViewCell: UITableViewCell {
             flexibleCell!.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
         ])
     }
-    
-//    func configure(with input: FlexibleCell.Input) {
-//        flexibleCell = FlexibleCell(input: input)
-//        setupUI()
-//
-////        flexibleCell(input)
-//    }
     
     func configure(with input: FlexibleCell.Input) {
          // Check if the cell is already created

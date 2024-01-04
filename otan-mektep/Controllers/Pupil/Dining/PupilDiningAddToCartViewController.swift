@@ -14,7 +14,7 @@ class PupilDiningAddToCartViewController: UIViewController  {
     let buttonContainer = UIView()
     let lowerView = UIView()
     
-    struct FoodObject {
+    class FoodObject {
         let foodTitle: String
         let price: Int
         var count: Int
@@ -202,6 +202,7 @@ class PupilDiningAddToCartViewController: UIViewController  {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.reloadData()
     }
     
 
@@ -300,49 +301,100 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FlexibleTableViewCell.id, for: indexPath) as! FlexibleTableViewCell
-            
-            var input: FlexibleCell.Input?
-            
-            if foodTypeObjects[indexPath.section] == .dough {
-                input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            } else if foodTypeObjects[indexPath.section] == .beverage {
-                input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            } else if foodTypeObjects[indexPath.section] == .soup {
-                input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            } else if foodTypeObjects[indexPath.section] == .meal {
-                input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            }
-
-            cell.configure(with: input!) // Use the existing cell and configure it
-
-            cell.selectionStyle = .none
-
-            return cell
-
-        
-    }/*
         
         var input: FlexibleCell.Input?
         
         if foodTypeObjects[indexPath.section] == .dough {
-            
-            input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            
+            input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: { [weak self] in
+                
+                print("indexpath = \(indexPath)")
+//                if self?.doughObjects[indexPath.row].count == 0 {
+//                    self?.cart.addedItems.append(self?.doughObjects[indexPath.row] ?? .init(foodTitle: "", price: 0, type: .dough))
+//                }
+//                
+//                self?.doughObjects[indexPath.row].count += 1
+//                print("\tcart = ")
+////                print("\tcart = \(String(describing: self?.cart.addedItems))")
+//                for food in self!.cart.addedItems {
+//                    print("\(food.foodTitle) \(food.count) штук")
+//                }
+//
+//                tableView.reloadRows(at: [indexPath], with: .automatic)
+
+            }, indexPath: indexPath)
         } else if foodTypeObjects[indexPath.section] == .beverage {
-            
-            input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            
+            input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: { [weak self] in
+                
+                print("indexpath = \(indexPath)")
+
+//                if self?.beverageObjects[indexPath.row].count == 0 {
+//                    self?.cart.addedItems.append(self?.beverageObjects[indexPath.row] ?? .init(foodTitle: "", price: 0, type: .dough))
+//                }
+//                self?.beverageObjects[indexPath.row].count += 1
+//                print("cart = \(String(describing: self?.cart))")
+//                tableView.reloadRows(at: [indexPath], with: .automatic)
+
+            }, indexPath: indexPath)
         } else if foodTypeObjects[indexPath.section] == .soup {
-            
-            input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            
+            input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: { [weak self] in
+                
+                print("indexpath = \(indexPath)")
+
+//                if self?.soupObjects[indexPath.row].count == 0 {
+//                    self?.cart.addedItems.append(self?.soupObjects[indexPath.row] ?? .init(foodTitle: "", price: 0, type: .dough))
+//                }
+//                
+//                self?.soupObjects[indexPath.row].count += 1
+//                print("cart = \(String(describing: self?.cart))")
+//                tableView.reloadRows(at: [indexPath], with: .automatic)
+
+            }, indexPath: indexPath)
         } else if foodTypeObjects[indexPath.section] == .meal {
-            
-            input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
-            
+            input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: { [weak self] in
+                
+                print("indexpath = \(indexPath)")
+
+//                if self?.mealObjects[indexPath.row].count == 0 {
+//                    self?.cart.addedItems.append(self?.mealObjects[indexPath.row] ?? .init(foodTitle: "", price: 0, type: .dough))
+//                }
+//                self?.mealObjects[indexPath.row].count += 1
+//                print("cart = \(String(describing: self?.cart))")
+//                tableView.reloadRows(at: [indexPath], with: .automatic)
+
+            }, indexPath: indexPath)
         }
         
-        let view = FlexibleCell(input: input!)
+        cell.delegate = self
+        cell.configure(with: input!) // Use the existing cell and configure it
+        
+//        cell.selectionStyle = .none
+        
+        return cell
+        
+        
+    }/*
+      
+      var input: FlexibleCell.Input?
+      
+      if foodTypeObjects[indexPath.section] == .dough {
+      
+      input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+      
+      } else if foodTypeObjects[indexPath.section] == .beverage {
+      
+      input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+      
+      } else if foodTypeObjects[indexPath.section] == .soup {
+      
+      input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+      
+      } else if foodTypeObjects[indexPath.section] == .meal {
+      
+      input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {})
+      
+      }
+      
+      let view = FlexibleCell(input: input!)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: FlexibleTableViewCell.id, for: indexPath) as! FlexibleTableViewCell
         
@@ -367,6 +419,8 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        print(indexPath)
+        
         if foodTypeObjects[indexPath.section] == .dough {
             
             doughObjects[indexPath.row].count += 1
@@ -390,7 +444,33 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
 }
 
 extension PupilDiningAddToCartViewController: FlexibleCellButtonDelegate {
-    func buttonTapped() {
-        print("heyte")
+    
+    func buttonTapped(indexPath: IndexPath) {
+        if foodTypeObjects[indexPath.section] == .dough {
+            
+            if doughObjects[indexPath.row].count > 0 {
+                doughObjects[indexPath.row].count -= 1
+            }
+            
+        } else if foodTypeObjects[indexPath.section] == .beverage {
+            
+            if beverageObjects[indexPath.row].count > 0 {
+                beverageObjects[indexPath.row].count += 1
+            }
+        } else if foodTypeObjects[indexPath.section] == .soup {
+            
+            if soupObjects[indexPath.row].count > 0 {
+                soupObjects[indexPath.row].count += 1
+            }
+            
+        } else if foodTypeObjects[indexPath.section] == .meal {
+            
+            if mealObjects[indexPath.row].count > 0 {
+                mealObjects[indexPath.row].count += 1
+            }
+            
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
+    
 }
