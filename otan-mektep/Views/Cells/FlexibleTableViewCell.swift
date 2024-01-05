@@ -85,8 +85,9 @@ protocol FlexibleTableViewCellButtonDelegate: AnyObject {
 }
 
 class FlexibleTableViewCell: UITableViewCell {
-    
 
+    var removeClosure: (() -> ())?
+    
     struct Input {
         let leftIcon: leftIconInput?
         let title: TextInput
@@ -141,8 +142,6 @@ class FlexibleTableViewCell: UITableViewCell {
     }
     
     
-    
-    
     // MARK: Components
     
     struct Components {
@@ -191,6 +190,8 @@ class FlexibleTableViewCell: UITableViewCell {
 //        actionClosure?()
 //    }
     
+    private var flexibleTableViewCell = UIView()
+ 
     var titleLabel = UILabel()
     var leftIcon: UIImageView?
     var rightIcon: UIImageView?
@@ -201,10 +202,10 @@ class FlexibleTableViewCell: UITableViewCell {
     var input: Input?
     
     
-    static let id = "FlexibleTableViewCell"
-    private var flexibleCell: FlexibleCell?
+    static let reuseIdentifier = "FlexibleTableViewCell"
     
-    var delegate: FlexibleCellButtonDelegate?
+    
+    var delegate: FlexibleTableViewCellButtonDelegate?
     
     
     required init?(coder: NSCoder) {
@@ -212,43 +213,50 @@ class FlexibleTableViewCell: UITableViewCell {
 //        setupUI()
     }
     
-//    private func setupUI() {
-//        self.isUserInteractionEnabled = true
-//        self.selectionStyle = .default
-//        
-//        flexibleCell?.delegate = self
-//        
-//        contentView.addSubview(flexibleCell!)
-//        flexibleCell!.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        NSLayoutConstraint.activate([
-//            flexibleCell!.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-//            flexibleCell!.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-//            flexibleCell!.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
-//            flexibleCell!.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
-//        ])
-//    }
-    
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 //        setupUI()
     }
     
-    
-    init(input: Input) {
-//        super.init(frame: .zero)
-        super.init(style: .default, reuseIdentifier: "FlexibleTableViewCell")
-                
-        self.input = input
-// Corners
         
+    
+    func setup(input: Input) {
+        
+        
+        if flexibleTableViewCell.superview != nil {
+            // Update the existing cell's content
+            self.configure(with: input)
+        } else {
+            // Cell is not yet created, create and configure it
+            initialize(input: input)
+        }
+        
+    }
+    
+    func initialize(input: Input) {
+        
+        self.input = input
+        // Corners
+        
+        self.isUserInteractionEnabled = true
+        self.selectionStyle = .default
+                
+        contentView.addSubview(flexibleTableViewCell)
+        flexibleTableViewCell.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            flexibleTableViewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            flexibleTableViewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            flexibleTableViewCell.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            flexibleTableViewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+        ])
+
         if let corners = input.corners {
-            self.layer.borderColor = Colors.gray200.color.cgColor
-            self.layer.borderWidth = 1
+            flexibleTableViewCell.layer.borderColor = Colors.gray200.color.cgColor
+            flexibleTableViewCell.layer.borderWidth = 1
             
             if corners.isRounded {
-                self.layer.cornerRadius = 10
+                flexibleTableViewCell.layer.cornerRadius = 10
             }
         }
 
@@ -259,7 +267,7 @@ class FlexibleTableViewCell: UITableViewCell {
         leftStackView.spacing = 14
         leftStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.addSubview(leftStackView)
+        flexibleTableViewCell.addSubview(leftStackView)
 // leftIcon
                 
         if let icon = input.leftIcon {
@@ -322,9 +330,9 @@ class FlexibleTableViewCell: UITableViewCell {
         }
         
         NSLayoutConstraint.activate([
-            leftStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
-            leftStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -14),
-            leftStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 14),
+            leftStackView.leadingAnchor.constraint(equalTo: flexibleTableViewCell.leadingAnchor, constant: 14),
+            leftStackView.bottomAnchor.constraint(equalTo: flexibleTableViewCell.bottomAnchor, constant: -14),
+            leftStackView.topAnchor.constraint(equalTo: flexibleTableViewCell.topAnchor, constant: 14),
         ])
         
     
@@ -344,14 +352,14 @@ class FlexibleTableViewCell: UITableViewCell {
                     rightIcon.image = image.image
                 }
                 
-                self.addSubview(rightIcon)
+                flexibleTableViewCell.addSubview(rightIcon)
                 rightIcon.translatesAutoresizingMaskIntoConstraints = false
                 
                 NSLayoutConstraint.activate([
-                    rightIcon.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
+                    rightIcon.trailingAnchor.constraint(equalTo: flexibleTableViewCell.trailingAnchor, constant: -14),
                     rightIcon.heightAnchor.constraint(equalToConstant: 24),
                     rightIcon.widthAnchor.constraint(equalToConstant: 24),
-                    rightIcon.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+                    rightIcon.centerYAnchor.constraint(equalTo: flexibleTableViewCell.centerYAnchor)
                 ])
                 
                 self.rightIcon = rightIcon
@@ -391,7 +399,7 @@ class FlexibleTableViewCell: UITableViewCell {
                 
                 removeButton.translatesAutoresizingMaskIntoConstraints = false
                 
-                self.addSubview(removeButton)
+                flexibleTableViewCell.addSubview(removeButton)
                 
                 removeButton.addTarget(self, action: #selector(removeAction), for: .touchUpInside)
 //                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeAction))
@@ -412,7 +420,7 @@ class FlexibleTableViewCell: UITableViewCell {
                 commonStackView.axis = .horizontal
                 commonStackView.spacing = 14
                 
-                self.addSubview(commonStackView)
+                flexibleTableViewCell.addSubview(commonStackView)
                 commonStackView.translatesAutoresizingMaskIntoConstraints = false
                 
                 commonStackView.addArrangedSubview(stackView)
@@ -420,8 +428,8 @@ class FlexibleTableViewCell: UITableViewCell {
                 
                 NSLayoutConstraint.activate([
                     
-                    commonStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
-                    commonStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                    commonStackView.trailingAnchor.constraint(equalTo: flexibleTableViewCell.trailingAnchor, constant: -14),
+                    commonStackView.centerYAnchor.constraint(equalTo: flexibleTableViewCell.centerYAnchor),
 //                    commonStackView.heightAnchor.constraint(equalToConstant: 40),
 //                    commonStackView.widthAnchor.constraint(equalToConstant: 40),
 
@@ -457,16 +465,16 @@ class FlexibleTableViewCell: UITableViewCell {
                 stackView.spacing = 0
                 stackView.distribution = .fillEqually
                 
-                self.addSubview(stackView)
+                flexibleTableViewCell.addSubview(stackView)
                 stackView.translatesAutoresizingMaskIntoConstraints = false
                 
                 stackView.addArrangedSubview(leftLabel)
                 stackView.addArrangedSubview(rightLabel)
                 
                 NSLayoutConstraint.activate([
-                    stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 120),
-                    stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-                    stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14)
+                    stackView.leadingAnchor.constraint(equalTo: flexibleTableViewCell.leadingAnchor, constant: 120),
+                    stackView.centerYAnchor.constraint(equalTo: flexibleTableViewCell.centerYAnchor),
+                    stackView.trailingAnchor.constraint(equalTo: flexibleTableViewCell.trailingAnchor, constant: -14)
                 ])
         
                 firstComponentLabel = leftLabel
@@ -495,37 +503,29 @@ class FlexibleTableViewCell: UITableViewCell {
                 singleLabel.text = text.text
                 singleLabel.translatesAutoresizingMaskIntoConstraints = false
                 
-                self.addSubview(singleLabel)
+                flexibleTableViewCell.addSubview(singleLabel)
          
                 NSLayoutConstraint.activate([
-                    singleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
-                    singleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+                    singleLabel.trailingAnchor.constraint(equalTo: flexibleTableViewCell.trailingAnchor, constant: -14),
+                    singleLabel.centerYAnchor.constraint(equalTo: flexibleTableViewCell.centerYAnchor)
                 ])
 
                 firstComponentLabel = singleLabel
                 
             }
             
-//            self.heightAnchor.constraint(equalToConstant: 200).isActive = true
         }
 
     }
     
     @objc func removeAction() {
-        delegate?.buttonTapped(for: self)
+//        delegate?.buttonTapped(for: self)
+        removeClosure?()
     }
     
     func countNewlines(in inputString: String) -> Int {
         let newlineArray = inputString.components(separatedBy: "\n")
         return newlineArray.count - 1 // Subtract 1 to get the newline count
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func buttonTapped() {
-        print("buttontapped")
     }
     
 }
@@ -581,6 +581,15 @@ extension FlexibleTableViewCell {
                 
             }
         }
+    }
+    
+    func changeChosenCount(newNum: Int) {
+        secondComponentLabel?.text = "Выбрано: \(newNum)"
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.delegate = nil
     }
 }
 

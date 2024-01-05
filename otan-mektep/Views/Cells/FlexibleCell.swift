@@ -422,6 +422,7 @@ class FlexibleCell: UIView {
 }
 
 extension FlexibleCell {
+    
     func configure(with input: Input) {
         titleLabel.text = input.title.text
         

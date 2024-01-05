@@ -7,7 +7,55 @@
 
 import UIKit
 
-class PupilDiningAddToCartViewController: UIViewController  {
+class PupilDiningAddToCartViewController: UIViewController, FlexibleTableViewCellButtonDelegate  {
+    func buttonTapped(for cell: FlexibleTableViewCell) {
+        
+        if let indexPath = cell.input?.indexPath {
+            print("Tapped cell at indexPath: \(indexPath)")
+            // Your existing delegate implementation
+        }
+
+        let foodTitleToDecrement = cell.input?.title.text
+
+        print("----- CART ----- tapped \(String(describing: foodTitleToDecrement))")
+        for food in cart.addedItems {
+            
+            if food.foodTitle != foodTitleToDecrement {
+                print("\(food.count) \(food.foodTitle), \(food.price) тг")
+            } else {
+                print("\(food.count - 1) \(food.foodTitle), \(food.price) тг")
+
+                food.count -= 1
+                cell.changeChosenCount(newNum: food.count)
+
+                if food.count == 0 {
+                    cell.removeButton?.isHidden = true
+                    
+                    cart.addedItems = cart.addedItems.filter{$0.foodTitle != food.foodTitle}
+                }
+                
+//                break
+            }
+            
+        }
+        /*
+        let foodTitleToDecrement = cell.input?.title.text
+        let theFoodArray = cart.addedItems.filter { $0.foodTitle == foodTitleToDecrement }
+        if theFoodArray.count > 0 {
+            let theFood = theFoodArray[0]
+            theFood.count -= 1
+            
+            cell.changeChosenCount(newNum: theFood.count)
+            if theFood.count == 0 {
+                cell.removeButton?.isHidden = true
+                
+                cart.addedItems = cart.addedItems.filter{ $0.foodTitle != foodTitleToDecrement }
+            }
+            
+        }
+         */
+    }
+    
     
     let totalCostLabel = UILabel()
     let detailsLabel = UILabel()
@@ -43,12 +91,12 @@ class PupilDiningAddToCartViewController: UIViewController  {
         case meal
     }
     
-    struct Cart {
-        var addedItems: [FoodObject]
+    class Cart {
+        var addedItems: [FoodObject] = []
     }
     
-    var cart = Cart(addedItems: .init())
-
+    var cart = Cart()
+    
     var foodTypeObjects = [FoodTypes]()
     
     var doughObjects: [FoodObject] = [.init(foodTitle: "Сосика в тесте",
@@ -112,8 +160,11 @@ class PupilDiningAddToCartViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: FlexibleTableViewCell.id, bundle: nil), forCellReuseIdentifier: FlexibleTableViewCell.id)
+//        tableView.register(UINib(nibName: FlexibleTableViewCell.id, bundle: nil), forCellReuseIdentifier: FlexibleTableViewCell.id)
 
+        tableView.register(FlexibleTableViewCell.self, forCellReuseIdentifier: FlexibleTableViewCell.reuseIdentifier)
+
+        
         let topSeparator = UIView()
         let bottomSeparator = UIView()
         
@@ -301,23 +352,67 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: FlexibleTableViewCell.id, for: indexPath) as! FlexibleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: FlexibleTableViewCell.reuseIdentifier, for: indexPath) as! FlexibleTableViewCell
         
-        var input: FlexibleCell.Input?
+        var input: FlexibleTableViewCell.Input?
         
         if foodTypeObjects[indexPath.section] == .dough {
+            
             input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            
         } else if foodTypeObjects[indexPath.section] == .beverage {
+            
             input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            
         } else if foodTypeObjects[indexPath.section] == .soup {
+            
             input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            
         } else if foodTypeObjects[indexPath.section] == .meal {
+            
             input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            
         }
         
+        cell.setup(input: input!)
         cell.delegate = self
-        cell.configure(with: input!) // Use the existing cell and configure it
+        
+        cell.removeClosure = { [weak self] in
+            
+            guard let strongSelf = self else { return }
+
+            print("Tapped cell at indexPath: \(indexPath)")
+
+            let foodTitleToDecrement = input?.title.text
+
+            print("----- CART ----- tapped \(String(describing: foodTitleToDecrement))")
+            for food in strongSelf.cart.addedItems {
                 
+                if food.foodTitle != foodTitleToDecrement {
+                    print("\(food.count) \(food.foodTitle), \(food.price) тг")
+                } else {
+                    print("\(food.count - 1) \(food.foodTitle), \(food.price) тг")
+
+                    food.count -= 1
+                    strongSelf.totalCost -= food.price
+                    
+                    cell.changeChosenCount(newNum: food.count)
+
+                    if food.count == 0 {
+                        cell.removeButton?.isHidden = true
+                        
+                        strongSelf.cart.addedItems = strongSelf.cart.addedItems.filter{$0.foodTitle != food.foodTitle}
+                    }
+                    
+    //                break
+                }
+                
+            }
+            
+            strongSelf.totalCostLabel.text = "Итого: \(strongSelf.totalCost) ₸"
+
+        }
+        
         return cell
         
     }
@@ -364,7 +459,7 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
         }
         
         tableView.reloadRows(at: [indexPath], with: .automatic)
-        totalCostLabel.text = "Итого: \(totalCost)₸"
+        totalCostLabel.text = "Итого: \(totalCost) ₸"
         detailsLabel.text = "Лимит разовой покупки: \(onePurchaseLimit) ₸\nЛимит на день: \(dailyLimit) ₸\nОсталось на день: \(dailyLimit - spentToday) ₸"
         
         if totalCost > onePurchaseLimit {
@@ -377,67 +472,18 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
         }
 
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 58
+    }
 }
 
 extension PupilDiningAddToCartViewController: FlexibleCellButtonDelegate {
     func buttonTapped(for cell: FlexibleCell) {
         print("cell = \(cell.titleLabel.text) \(cell.secondComponentLabel?.text)")
-//        print("indexpath = \(cell.input?.indexPath)")
-
     }
-    
-    
+
     func buttonTapped(indexPath: IndexPath) {
         print("indexpath = \(indexPath)")
-        
-        /*
-        if foodTypeObjects[indexPath.section] == .dough {
-            
-            if doughObjects[indexPath.row].count > 0 {
-                doughObjects[indexPath.row].count -= 1
-                
-                if doughObjects[indexPath.row].count == 0 {
-                    let foodTitleToRemove = doughObjects[indexPath.row].foodTitle
-                    cart.addedItems = cart.addedItems.filter { $0.foodTitle != foodTitleToRemove }
-                }
-            }
-            
-        } else if foodTypeObjects[indexPath.section] == .beverage {
-            
-            if beverageObjects[indexPath.row].count > 0 {
-                beverageObjects[indexPath.row].count += 1
-                
-                if beverageObjects[indexPath.row].count == 0 {
-                    let foodTitleToRemove = beverageObjects[indexPath.row].foodTitle
-                    cart.addedItems = cart.addedItems.filter { $0.foodTitle != foodTitleToRemove }
-                }
-            }
-            
-        } else if foodTypeObjects[indexPath.section] == .soup {
-            
-            if soupObjects[indexPath.row].count > 0 {
-                soupObjects[indexPath.row].count += 1
-                
-                if soupObjects[indexPath.row].count == 0 {
-                    let foodTitleToRemove = soupObjects[indexPath.row].foodTitle
-                    cart.addedItems = cart.addedItems.filter { $0.foodTitle != foodTitleToRemove }
-                }
-            }
-            
-        } else if foodTypeObjects[indexPath.section] == .meal {
-            
-            if mealObjects[indexPath.row].count > 0 {
-                mealObjects[indexPath.row].count += 1
-                
-                if mealObjects[indexPath.row].count == 0 {
-                    let foodTitleToRemove = mealObjects[indexPath.row].foodTitle
-                    cart.addedItems = cart.addedItems.filter { $0.foodTitle != foodTitleToRemove }
-                }
-            }
-            
-        }
-        tableView.reloadRows(at: [indexPath], with: .automatic)
-         */
     }
-    
 }
