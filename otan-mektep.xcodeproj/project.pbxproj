@@ -29,6 +29,16 @@
 		56625AE92B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AE82B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard */; };
 		56625AEB2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AEA2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard */; };
 		56625AED2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56625AEC2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard */; };
+		5669F1A42B4BB50B00FE7CA2 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669F1A32B4BB50B00FE7CA2 /* Cart.swift */; };
+		5669F1AA2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1AE2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf */; };
+		5669F1AB2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1AE2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf */; };
+		5669F1AC2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1AE2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf */; };
+		5669F1B12B4BE66C00FE7CA2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1B52B4BE66C00FE7CA2 /* Inter-SemiBold.ttf */; };
+		5669F1B22B4BE66C00FE7CA2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1B52B4BE66C00FE7CA2 /* Inter-SemiBold.ttf */; };
+		5669F1B32B4BE66C00FE7CA2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1B52B4BE66C00FE7CA2 /* Inter-SemiBold.ttf */; };
+		5669F1B82B4BE67400FE7CA2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1BC2B4BE67400FE7CA2 /* Inter-Regular.ttf */; };
+		5669F1B92B4BE67400FE7CA2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1BC2B4BE67400FE7CA2 /* Inter-Regular.ttf */; };
+		5669F1BA2B4BE67400FE7CA2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5669F1BC2B4BE67400FE7CA2 /* Inter-Regular.ttf */; };
 		56706A3A2B4525A700B94B39 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */; };
 		56706A3B2B4525A700B94B39 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */; };
 		56706A3C2B4525A700B94B39 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */; };
@@ -106,12 +116,6 @@
 		56E3E63E2B3BF4AB00623184 /* demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E3E63D2B3BF4AB00623184 /* demo.storyboard */; };
 		56E3E6412B3BFF3500623184 /* FlexibleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3E63F2B3BFF3500623184 /* FlexibleCell.swift */; };
 		56E3E6422B3BFF3500623184 /* FlexibleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E3E6402B3BFF3500623184 /* FlexibleCell.xib */; };
-		56F4D1A82B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
-		56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
-		56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */; };
-		56F4D1AB2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */; };
-		56F4D1AC2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */; };
-		56F4D1AD2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */; };
 		56FA62E62B2B13A400644F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E52B2B13A400644F75 /* AppDelegate.swift */; };
 		56FA62E82B2B13A400644F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E72B2B13A400644F75 /* SceneDelegate.swift */; };
 		56FA62EA2B2B13A400644F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA62E92B2B13A400644F75 /* ViewController.swift */; };
@@ -168,6 +172,16 @@
 		56625AE82B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeDiningTabBar.storyboard; sourceTree = "<group>"; };
 		56625AEA2B39982A00A0D804 /* CafeteriaEmployeeAttendanceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeAttendanceTabBar.storyboard; sourceTree = "<group>"; };
 		56625AEC2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeteriaEmployeeCabinetTabBar.storyboard; sourceTree = "<group>"; };
+		5669F1A32B4BB50B00FE7CA2 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		5669F1AD2B4BE66300FE7CA2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5669F1AF2B4BE66500FE7CA2 /* kk */ = {isa = PBXFileReference; lastKnownFileType = file; name = kk; path = "kk.lproj/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5669F1B02B4BE66600FE7CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5669F1B42B4BE66C00FE7CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		5669F1B62B4BE66E00FE7CA2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		5669F1B72B4BE66E00FE7CA2 /* kk */ = {isa = PBXFileReference; lastKnownFileType = file; name = kk; path = "kk.lproj/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		5669F1BB2B4BE67400FE7CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		5669F1BD2B4BE67400FE7CA2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		5669F1BE2B4BE67500FE7CA2 /* kk */ = {isa = PBXFileReference; lastKnownFileType = file; name = kk; path = "kk.lproj/Inter-Regular.ttf"; sourceTree = "<group>"; };
 		56706A3D2B4525A700B94B39 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/Inter-Bold.ttf"; sourceTree = "<group>"; };
 		56706A3F2B4525A900B94B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Inter-Bold.ttf"; sourceTree = "<group>"; };
 		56706A402B4525AA00B94B39 /* kk */ = {isa = PBXFileReference; lastKnownFileType = file; name = kk; path = "kk.lproj/Inter-Bold.ttf"; sourceTree = "<group>"; };
@@ -236,8 +250,6 @@
 		56E3E63D2B3BF4AB00623184 /* demo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = demo.storyboard; sourceTree = "<group>"; };
 		56E3E63F2B3BFF3500623184 /* FlexibleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleCell.swift; sourceTree = "<group>"; };
 		56E3E6402B3BFF3500623184 /* FlexibleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlexibleCell.xib; sourceTree = "<group>"; };
-		56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		56FA62E22B2B13A400644F75 /* otan-mektep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "otan-mektep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FA62E52B2B13A400644F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56FA62E72B2B13A400644F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +311,13 @@
 				56DED2052B3A96E700D757D6 /* PupilAttendance */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5669F1A52B4BD01E00FE7CA2 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xibs;
 			sourceTree = "<group>";
 		};
 		567E4F5F2B3D3BE10024FAD1 /* Headers */ = {
@@ -385,6 +404,7 @@
 				56B16A702B2B1AC800D3F4F7 /* TeacherModel.swift */,
 				56B16A722B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift */,
 				56B16A742B2B1AFF00D3F4F7 /* ParentModel.swift */,
+				5669F1A32B4BB50B00FE7CA2 /* Cart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +412,7 @@
 		56B16A6A2B2B1A2800D3F4F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5669F1A52B4BD01E00FE7CA2 /* xibs */,
 				567E4F5F2B3D3BE10024FAD1 /* Headers */,
 				56E3E63C2B3BF31900623184 /* Cells */,
 				567E4F622B3D3C3E0024FAD1 /* Footers */,
@@ -442,8 +463,9 @@
 		56B627702B2C2D9100B30E07 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				56F4D1A72B2C2E2300C185A2 /* Inter-Regular.ttf */,
-				56F4D1A62B2C2E2300C185A2 /* Inter-SemiBold.ttf */,
+				5669F1BC2B4BE67400FE7CA2 /* Inter-Regular.ttf */,
+				5669F1B52B4BE66C00FE7CA2 /* Inter-SemiBold.ttf */,
+				5669F1AE2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf */,
 				56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */,
 			);
 			path = Fonts;
@@ -911,11 +933,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56F4D1A82B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
+				5669F1B12B4BE66C00FE7CA2 /* Inter-SemiBold.ttf in Resources */,
 				56625ADF2B3997C200A0D804 /* ParentLibraryTabBar.storyboard in Resources */,
 				56625AED2B39983B00A0D804 /* CafeteriaEmployeeCabinetTabBar.storyboard in Resources */,
 				56625AE92B39981C00A0D804 /* CafeteriaEmployeeDiningTabBar.storyboard in Resources */,
-				56F4D1AB2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
+				5669F1B82B4BE67400FE7CA2 /* Inter-Regular.ttf in Resources */,
 				56625ACF2B39974F00A0D804 /* PupilDiningTabBar.storyboard in Resources */,
 				56E3E6422B3BFF3500623184 /* FlexibleCell.xib in Resources */,
 				56FA62F22B2B13A500644F75 /* LaunchScreen.storyboard in Resources */,
@@ -934,6 +956,7 @@
 				56625AD52B39977200A0D804 /* PupilCabinetTabBar.storyboard in Resources */,
 				56FA62EF2B2B13A500644F75 /* Assets.xcassets in Resources */,
 				56706A3A2B4525A700B94B39 /* Inter-Bold.ttf in Resources */,
+				5669F1AA2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf in Resources */,
 				56625AD32B39976800A0D804 /* PupilLibraryTabBar.storyboard in Resources */,
 				56706A442B45757D00B94B39 /* FlexibleTableViewCell.xib in Resources */,
 				56625AD92B39979200A0D804 /* ParentHistoryTabBar.storyboard in Resources */,
@@ -950,8 +973,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56F4D1AC2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
-				56F4D1A92B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
+				5669F1AB2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf in Resources */,
+				5669F1B92B4BE67400FE7CA2 /* Inter-Regular.ttf in Resources */,
+				5669F1B22B4BE66C00FE7CA2 /* Inter-SemiBold.ttf in Resources */,
 				56706A3B2B4525A700B94B39 /* Inter-Bold.ttf in Resources */,
 				56B9CC0B2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 			);
@@ -961,8 +985,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56F4D1AD2B2C2E2300C185A2 /* Inter-Regular.ttf in Resources */,
-				56F4D1AA2B2C2E2300C185A2 /* Inter-SemiBold.ttf in Resources */,
+				5669F1AC2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf in Resources */,
+				5669F1BA2B4BE67400FE7CA2 /* Inter-Regular.ttf in Resources */,
+				5669F1B32B4BE66C00FE7CA2 /* Inter-SemiBold.ttf in Resources */,
 				56706A3C2B4525A700B94B39 /* Inter-Bold.ttf in Resources */,
 				56B9CC0C2B33E810007219BC /* GoogleService-Info.plist in Resources */,
 			);
@@ -1095,6 +1120,7 @@
 				56DED21A2B3A977E00D757D6 /* ParentHistoryChooseChildViewController.swift in Sources */,
 				56B16A732B2B1AF400D3F4F7 /* CafeteriaWorkerModel.swift in Sources */,
 				56DED2532B3AA9A900D757D6 /* SchoolEmployeeCabinetViewController.swift in Sources */,
+				5669F1A42B4BB50B00FE7CA2 /* Cart.swift in Sources */,
 				56DED2242B3A97F500D757D6 /* ParentFinancesRemoveCardViewController.swift in Sources */,
 				56DED22A2B3A983100D757D6 /* SchoolEmployeeDiningChooseOptionViewController.swift in Sources */,
 				5622F4142B2C5DF3006836BB /* MyButton.swift in Sources */,
@@ -1182,6 +1208,36 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5669F1AE2B4BE66300FE7CA2 /* Inter-ExtraBold.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5669F1AD2B4BE66300FE7CA2 /* ru */,
+				5669F1AF2B4BE66500FE7CA2 /* kk */,
+				5669F1B02B4BE66600FE7CA2 /* Base */,
+			);
+			name = "Inter-ExtraBold.ttf";
+			sourceTree = "<group>";
+		};
+		5669F1B52B4BE66C00FE7CA2 /* Inter-SemiBold.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5669F1B42B4BE66C00FE7CA2 /* Base */,
+				5669F1B62B4BE66E00FE7CA2 /* ru */,
+				5669F1B72B4BE66E00FE7CA2 /* kk */,
+			);
+			name = "Inter-SemiBold.ttf";
+			sourceTree = "<group>";
+		};
+		5669F1BC2B4BE67400FE7CA2 /* Inter-Regular.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5669F1BB2B4BE67400FE7CA2 /* Base */,
+				5669F1BD2B4BE67400FE7CA2 /* ru */,
+				5669F1BE2B4BE67500FE7CA2 /* kk */,
+			);
+			name = "Inter-Regular.ttf";
+			sourceTree = "<group>";
+		};
 		56706A3E2B4525A700B94B39 /* Inter-Bold.ttf */ = {
 			isa = PBXVariantGroup;
 			children = (

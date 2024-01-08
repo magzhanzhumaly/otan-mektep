@@ -51,8 +51,8 @@
                         <outlet property="historyCellView" destination="ygH-RL-vnS" id="780-p1-Sus"/>
                         <outlet property="limitsCellView" destination="Azj-aC-62W" id="zTG-Mf-084"/>
                         <outlet property="navItem" destination="uzb-4R-Jix" id="FDi-S5-HyG"/>
-                        <segue destination="4ZG-kD-3sP" kind="presentation" identifier="pupilDiningLimitsVCSegue" modalPresentationStyle="fullScreen" id="DmT-68-zpc"/>
                         <segue destination="i9t-pP-mVB" kind="show" identifier="pupilDiningAddToCartVCSegue" id="hEd-kg-Zr6"/>
+                        <segue destination="4ZG-kD-3sP" kind="show" identifier="pupilDiningLimitsVCSegue" id="iZ2-Lb-sPF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -95,14 +95,14 @@
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="tableView" destination="kpi-hX-HJE" id="6ng-dv-2gJ"/>
-                        <segue destination="RMD-Ta-kyw" kind="presentation" identifier="pupilDiningCartVCSegue" modalPresentationStyle="fullScreen" id="JoJ-2g-8zo"/>
+                        <segue destination="RMD-Ta-kyw" kind="show" identifier="pupilDiningCartVCSegue" id="Ika-yE-mMN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBZ-Vb-A30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2032.824427480916" y="-758.45070422535218"/>
         </scene>
-        <!--Pupil Dining Cart View Controller-->
+        <!--Коризна-->
         <scene sceneID="6Jj-Wk-QJ5">
             <objects>
                 <viewController id="RMD-Ta-kyw" customClass="PupilDiningCartViewController" customModule="otan_mektep" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,29 +110,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agi-JU-ugH">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wXI-8i-tQe">
+                                <rect key="frame" x="0.0" y="103" width="393" height="480"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Za8-NH-Dyr"/>
-                                </constraints>
-                            </view>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DGT-cK-JFJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Agi-JU-ugH" firstAttribute="top" secondItem="DGT-cK-JFJ" secondAttribute="top" id="3YT-h4-hwX"/>
-                            <constraint firstItem="DGT-cK-JFJ" firstAttribute="trailing" secondItem="Agi-JU-ugH" secondAttribute="trailing" id="ejo-kl-TwK"/>
-                            <constraint firstItem="Agi-JU-ugH" firstAttribute="leading" secondItem="DGT-cK-JFJ" secondAttribute="leading" id="oRh-9U-cRd"/>
+                            <constraint firstItem="DGT-cK-JFJ" firstAttribute="trailing" secondItem="wXI-8i-tQe" secondAttribute="trailing" id="GAC-wT-AEX"/>
+                            <constraint firstItem="wXI-8i-tQe" firstAttribute="leading" secondItem="DGT-cK-JFJ" secondAttribute="leading" id="Kj2-Cd-zHc"/>
+                            <constraint firstItem="wXI-8i-tQe" firstAttribute="top" secondItem="DGT-cK-JFJ" secondAttribute="top" id="cRg-Qf-wLW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Коризна" id="vCW-03-cHp"/>
                     <connections>
-                        <outlet property="topBarContainer" destination="Agi-JU-ugH" id="0b6-sQ-FzK"/>
+                        <outlet property="tableView" destination="wXI-8i-tQe" id="30I-pZ-sec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuc-sw-1hQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3010" y="-758"/>
+            <point key="canvasLocation" x="3009.9236641221373" y="-758.45070422535218"/>
         </scene>
         <!--Pupil Dining Limits View Controller-->
         <scene sceneID="UmT-lj-seo">
@@ -141,14 +139,27 @@
                     <view key="view" contentMode="scaleToFill" id="lNb-28-3CZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-ge-9HB">
+                                <rect key="frame" x="0.0" y="169" width="393" height="403"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YHQ-Sa-oqE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YHQ-Sa-oqE" firstAttribute="trailing" secondItem="dQu-ge-9HB" secondAttribute="trailing" id="Irb-0n-L5R"/>
+                            <constraint firstItem="dQu-ge-9HB" firstAttribute="leading" secondItem="YHQ-Sa-oqE" secondAttribute="leading" id="fAX-cE-T9j"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cXy-QT-eIG"/>
+                    <connections>
+                        <outlet property="tableView" destination="dQu-ge-9HB" id="osX-8j-J2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tz-x6-Iux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2959.5419847328244" y="-23.239436619718312"/>
+            <point key="canvasLocation" x="2029.7709923664122" y="-23.239436619718312"/>
         </scene>
         <!--Питание-->
         <scene sceneID="5aK-xx-GNo">

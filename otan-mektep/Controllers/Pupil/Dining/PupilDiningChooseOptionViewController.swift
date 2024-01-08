@@ -75,15 +75,31 @@ class PupilDiningChooseOptionViewController: UIViewController {
         
         historyCellView.addFilledSubview(FlexibleCell(input: .init(leftIcon: .init(icon: .other(image: UIImage(named: "history-active-icon") ?? UIImage()), color: nil), title: .init(text: "История", isBold: false, isLarge: true), components: .init(input: .icon(icon: .next), color: .inactive), corners: .init(isRounded: false), closure: {}, indexPath: IndexPath(row: 0, section: 0))))
             
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction))
-        foodChoiceCellView.addGestureRecognizer(tapGesture)
-
+        let foodTapGesture = UITapGestureRecognizer(target: self, action: #selector(foodChosen))
+        foodChoiceCellView.addGestureRecognizer(foodTapGesture)
+        
+        let limitsTapGesture = UITapGestureRecognizer(target: self, action: #selector(limitsChosen))
+        limitsCellView.addGestureRecognizer(limitsTapGesture)
+        
+        let historyTapGesture = UITapGestureRecognizer(target: self, action: #selector(historyChosen))
+        historyCellView.addGestureRecognizer(historyTapGesture)
     }
     
-    @objc func tapAction() {
+    @objc func foodChosen() {
         performSegue(withIdentifier: "pupilDiningAddToCartVCSegue", sender: self)
     }
     
+    
+    @objc func limitsChosen() {
+        performSegue(withIdentifier: "pupilDiningLimitsVCSegue", sender: self)
+    }
+    
+    @objc func historyChosen() {
+        let vc = PupilDiningHistoryViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+        
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

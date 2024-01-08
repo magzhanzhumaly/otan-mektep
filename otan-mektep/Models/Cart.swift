@@ -1,0 +1,122 @@
+//
+//  Cart.swift
+//  otan-mektep
+//
+//  Created by Magzhan Zhumaly on 08.01.2024.
+//
+
+import Foundation
+class FoodObject {
+    let foodTitle: String
+    let price: Int
+    var count: Int
+    let type: FoodTypes
+    
+    init(foodTitle: String, price: Int, count: Int, type: FoodTypes) {
+        self.foodTitle = foodTitle
+        self.price = price
+        self.count = count
+        self.type = type
+    }
+    
+    init(foodTitle: String, price: Int, type: FoodTypes) {
+        self.foodTitle = foodTitle
+        self.price = price
+        self.count = 0
+        self.type = type
+    }
+}
+
+enum FoodTypes {
+    case dough
+    case beverage
+    case soup
+    case meal
+}
+
+class Cart {
+    var addedItems: [FoodObject] = []
+}
+
+
+class LimitedFoods {
+    var limitedItems: [FoodObject] = [.init(foodTitle: "Fuse чай",
+                                            price: 150,
+                                            type: .beverage),
+                                      .init(foodTitle: "Maxi чай",
+                                            price: 250,
+                                            type: .dough)]}
+
+var limitedFoods = LimitedFoods()
+
+var cart = Cart()
+
+var foodTypeObjects = [FoodTypes]()
+
+
+var doughObjects: [FoodObject] = [.init(foodTitle: "Сосика в тесте",
+                                       price: 150,
+                                       type: .dough),
+                                 .init(foodTitle: "Пицца",
+                                       price: 250,
+                                       type: .dough),
+                                  .init(foodTitle: "Булочка",
+                                        price: 150,
+                                        type: .dough),
+                                  .init(foodTitle: "Учпучмак",
+                                        price: 200,
+                                        type: .dough),
+                                  .init(foodTitle: "Самса с сыром",
+                                        price: 260,
+                                        type: .dough)]
+
+var beverageObjects: [FoodObject] = [.init(foodTitle: "Fuse чай",
+                                           price: 150,
+                                           type: .beverage),
+                                     .init(foodTitle: "Maxi чай",
+                                           price: 250,
+                                           type: .dough),
+                                     .init(foodTitle: "Вода",
+                                           price: 100,
+                                           type: .dough)]
+
+var soupObjects: [FoodObject] = [.init(foodTitle: "Щи",
+                                       price: 1000,
+                                       type: .beverage),
+                                 .init(foodTitle: "Борщ",
+                                       price: 1100,
+                                       type: .beverage),
+                                  .init(foodTitle: "Суп с курицей",
+                                        price: 900,
+                                        type: .beverage)]
+
+var mealObjects: [FoodObject] = [.init(foodTitle: "Плов",
+                                       price: 1200,
+                                       type: .meal),
+                                 .init(foodTitle: "Лагман",
+                                       price: 1300,
+                                       type: .meal),
+                                  .init(foodTitle: "Котлеты с гречкой",
+                                        price: 1000,
+                                        type: .meal)]
+
+
+
+//var allowedDoughObjects = doughObjects.filter({$0.foodTitle != self.limitedItems})
+
+
+let allowedDoughObjects = doughObjects.filter { doughObject in
+    !limitedFoods.limitedItems.contains { $0.foodTitle == doughObject.foodTitle }
+}
+
+let allowedBeverageObjects = beverageObjects.filter { beverageObject in
+    !limitedFoods.limitedItems.contains { $0.foodTitle == beverageObject.foodTitle }
+}
+
+let allowedSoupObjects = soupObjects.filter { soupObject in
+    !limitedFoods.limitedItems.contains { $0.foodTitle == soupObject.foodTitle }
+}
+
+let allowedMealObjects = mealObjects.filter { mealObject in
+    !limitedFoods.limitedItems.contains { $0.foodTitle == mealObject.foodTitle }
+}

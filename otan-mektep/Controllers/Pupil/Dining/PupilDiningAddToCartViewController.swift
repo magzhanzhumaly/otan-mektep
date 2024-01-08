@@ -7,55 +7,7 @@
 
 import UIKit
 
-class PupilDiningAddToCartViewController: UIViewController, FlexibleTableViewCellButtonDelegate  {
-    func buttonTapped(for cell: FlexibleTableViewCell) {
-        
-        if let indexPath = cell.input?.indexPath {
-            print("Tapped cell at indexPath: \(indexPath)")
-            // Your existing delegate implementation
-        }
-
-        let foodTitleToDecrement = cell.input?.title.text
-
-        print("----- CART ----- tapped \(String(describing: foodTitleToDecrement))")
-        for food in cart.addedItems {
-            
-            if food.foodTitle != foodTitleToDecrement {
-                print("\(food.count) \(food.foodTitle), \(food.price) тг")
-            } else {
-                print("\(food.count - 1) \(food.foodTitle), \(food.price) тг")
-
-                food.count -= 1
-                cell.changeChosenCount(newNum: food.count)
-
-                if food.count == 0 {
-                    cell.removeButton?.isHidden = true
-                    
-                    cart.addedItems = cart.addedItems.filter{$0.foodTitle != food.foodTitle}
-                }
-                
-//                break
-            }
-            
-        }
-        /*
-        let foodTitleToDecrement = cell.input?.title.text
-        let theFoodArray = cart.addedItems.filter { $0.foodTitle == foodTitleToDecrement }
-        if theFoodArray.count > 0 {
-            let theFood = theFoodArray[0]
-            theFood.count -= 1
-            
-            cell.changeChosenCount(newNum: theFood.count)
-            if theFood.count == 0 {
-                cell.removeButton?.isHidden = true
-                
-                cart.addedItems = cart.addedItems.filter{ $0.foodTitle != foodTitleToDecrement }
-            }
-            
-        }
-         */
-    }
-    
+class PupilDiningAddToCartViewController: UIViewController  {
     
     let totalCostLabel = UILabel()
     let detailsLabel = UILabel()
@@ -63,87 +15,41 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleTableViewCel
     let lowerView = UIView()
     let goToCartButton = UIButton()
 
-    class FoodObject {
-        let foodTitle: String
-        let price: Int
-        var count: Int
-        let type: FoodTypes
-        
-        init(foodTitle: String, price: Int, count: Int, type: FoodTypes) {
-            self.foodTitle = foodTitle
-            self.price = price
-            self.count = count
-            self.type = type
-        }
-        
-        init(foodTitle: String, price: Int, type: FoodTypes) {
-            self.foodTitle = foodTitle
-            self.price = price
-            self.count = 0
-            self.type = type
-        }
-    }
-    
-    enum FoodTypes {
-        case dough
-        case beverage
-        case soup
-        case meal
-    }
-    
-    class Cart {
-        var addedItems: [FoodObject] = []
-    }
-    
+//    class FoodObject {
+//        let foodTitle: String
+//        let price: Int
+//        var count: Int
+//        let type: FoodTypes
+//        
+//        init(foodTitle: String, price: Int, count: Int, type: FoodTypes) {
+//            self.foodTitle = foodTitle
+//            self.price = price
+//            self.count = count
+//            self.type = type
+//        }
+//        
+//        init(foodTitle: String, price: Int, type: FoodTypes) {
+//            self.foodTitle = foodTitle
+//            self.price = price
+//            self.count = 0
+//            self.type = type
+//        }
+//    }
+//    
+//    enum FoodTypes {
+//        case dough
+//        case beverage
+//        case soup
+//        case meal
+//    }
+//    
+//    class Cart {
+//        var addedItems: [FoodObject] = []
+//    }
+//    
     var cart = Cart()
-    
+//    
     var foodTypeObjects = [FoodTypes]()
-    
-    var doughObjects: [FoodObject] = [.init(foodTitle: "Сосика в тесте",
-                                           price: 150,
-                                           type: .dough),
-                                     .init(foodTitle: "Пицца",
-                                           price: 250,
-                                           type: .dough),
-                                      .init(foodTitle: "Булочка",
-                                            price: 150,
-                                            type: .dough),
-                                      .init(foodTitle: "Учпучмак",
-                                            price: 200,
-                                            type: .dough),
-                                      .init(foodTitle: "Самса с сыром",
-                                            price: 260,
-                                            type: .dough)]
-    
-    var beverageObjects: [FoodObject] = [.init(foodTitle: "Fuse чай",
-                                               price: 150,
-                                               type: .beverage),
-                                         .init(foodTitle: "Maxi чай",
-                                               price: 250,
-                                               type: .dough),
-                                         .init(foodTitle: "Вода",
-                                               price: 100,
-                                               type: .dough)]
- 
-    var soupObjects: [FoodObject] = [.init(foodTitle: "Щи",
-                                           price: 1000,
-                                           type: .beverage),
-                                     .init(foodTitle: "Борщ",
-                                           price: 1100,
-                                           type: .beverage),
-                                      .init(foodTitle: "Суп с курицей",
-                                            price: 900,
-                                            type: .beverage)]
-    
-    var mealObjects: [FoodObject] = [.init(foodTitle: "Плов",
-                                           price: 1200,
-                                           type: .meal),
-                                     .init(foodTitle: "Лагман",
-                                           price: 1300,
-                                           type: .meal),
-                                      .init(foodTitle: "Котлеты с гречкой",
-                                            price: 1000,
-                                            type: .meal)]
     
     
     var totalCost = 0
@@ -160,8 +66,39 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleTableViewCel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.register(UINib(nibName: FlexibleTableViewCell.id, bundle: nil), forCellReuseIdentifier: FlexibleTableViewCell.id)
+        
+        print("allowedDoughObjects:")
+        
+        for obj in allowedDoughObjects {
+            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
+        }
+        
+        print("\n")
+        
+        print("allowedBeverageObjects:")
+        
+        for obj in allowedBeverageObjects {
+            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
+        }
+        
+        print("\n")
 
+        print("allowedSoupObjects:")
+        
+        for obj in allowedSoupObjects {
+            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
+        }
+        
+        print("\n")
+
+        print("allowedMealObjects:")
+        
+        for obj in allowedMealObjects {
+            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
+        }
+
+        
+        
         tableView.register(FlexibleTableViewCell.self, forCellReuseIdentifier: FlexibleTableViewCell.reuseIdentifier)
 
         
@@ -253,9 +190,30 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleTableViewCel
         tableView.reloadData()
     }
     
-
+    private func recolorButton(text: String, bgColor: UIColor, textColor: UIColor, lowerViewBgColor: UIColor, lowerViewTextColor: UIColor) {
+        goToCartButton.backgroundColor = bgColor
+        goToCartButton.setTitleColor(textColor, for: .normal)
+        goToCartButton.setTitle(text, for: .normal)
+        
+        lowerView.backgroundColor = lowerViewBgColor
+        detailsLabel.textColor = lowerViewTextColor
+        totalCostLabel.textColor = lowerViewTextColor
+    }
+    
     @objc func goToCart() {
-        if totalCost < onePurchaseLimit {
+        
+        if totalCost <= 0 {
+            recolorButton(text: "Вы ничего не выбрали", bgColor: .danger500, textColor: .white, lowerViewBgColor: .danger50, lowerViewTextColor: .danger500)
+                        
+            let timeInSeconds = 4.0
+            
+            DispatchQueue.main.asyncAfter (deadline: .now () + timeInSeconds) { [weak self] in
+                
+                self?.recolorButton(text: "Перейти в корзину", bgColor: .accent, textColor: .white, lowerViewBgColor: .accentColorLight, lowerViewTextColor: .black)
+                
+            }
+
+        } else if totalCost < onePurchaseLimit {
             performSegue(withIdentifier: "pupilDiningCartVCSegue", sender: self)
         } else {
             Vibration.error.vibrate()
@@ -263,7 +221,15 @@ class PupilDiningAddToCartViewController: UIViewController, FlexibleTableViewCel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
+        if segue.identifier == "pupilDiningCartVCSegue" {
+            if let viewControllerB = segue.destination as? PupilDiningCartViewController {
+                viewControllerB.cart = cart
+                viewControllerB.totalCost = totalCost
+                viewControllerB.onePurchaseLimit = onePurchaseLimit
+                viewControllerB.dailyLimit = dailyLimit
+                viewControllerB.spentToday = spentToday
+            }
+        }
     }
 }
 
@@ -272,17 +238,16 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if foodTypeObjects[section] == .dough {
-            return doughObjects.count
+            return allowedDoughObjects.count
             
         } else if foodTypeObjects[section] == .beverage {
-            return beverageObjects.count
+            return allowedBeverageObjects.count
             
         } else if foodTypeObjects[section] == .soup {
-            return soupObjects.count
+            return allowedSoupObjects.count
             
         } else if foodTypeObjects[section] == .meal {
-            return mealObjects.count
-            
+            return allowedMealObjects.count
         }
         
         return 0
@@ -328,22 +293,22 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
     func numberOfSections(in tableView: UITableView) -> Int {
         var count = 0
         
-        if doughObjects.count > 0 {
+        if allowedDoughObjects.count > 0 {
             foodTypeObjects.append(.dough)
             count += 1
         }
         
-        if beverageObjects.count > 0 {
+        if allowedBeverageObjects.count > 0 {
             foodTypeObjects.append(.beverage)
             count += 1
         }
         
-        if soupObjects.count > 0 {
+        if allowedSoupObjects.count > 0 {
             foodTypeObjects.append(.soup)
             count += 1
         }
         
-        if mealObjects.count > 0 {
+        if allowedMealObjects.count > 0 {
             foodTypeObjects.append(.meal)
             count += 1
         }
@@ -358,24 +323,23 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
         
         if foodTypeObjects[indexPath.section] == .dough {
             
-            input = .init(leftIcon: nil, title: .init(text: doughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(doughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(doughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            input = .init(leftIcon: nil, title: .init(text: allowedDoughObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(allowedDoughObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(allowedDoughObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
             
         } else if foodTypeObjects[indexPath.section] == .beverage {
             
-            input = .init(leftIcon: nil, title: .init(text: beverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(beverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(beverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            input = .init(leftIcon: nil, title: .init(text: allowedBeverageObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(allowedBeverageObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(allowedBeverageObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
             
         } else if foodTypeObjects[indexPath.section] == .soup {
             
-            input = .init(leftIcon: nil, title: .init(text: soupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(soupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(soupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            input = .init(leftIcon: nil, title: .init(text: allowedSoupObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(allowedSoupObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(allowedSoupObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
             
         } else if foodTypeObjects[indexPath.section] == .meal {
             
-            input = .init(leftIcon: nil, title: .init(text: mealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(mealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(mealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
+            input = .init(leftIcon: nil, title: .init(text: allowedMealObjects[indexPath.row].foodTitle, isBold: false, isLarge: true), components: .init(input: .twoVerticalLabels(upperText: "Цена: \(allowedMealObjects[indexPath.row].price) ₸", lowerText: "Выбрано: \(allowedMealObjects[indexPath.row].count)"), color: nil), corners: .init(isRounded: false), closure: {}, indexPath: indexPath)
             
         }
         
         cell.setup(input: input!)
-        cell.delegate = self
         
         cell.removeClosure = { [weak self] in
             
@@ -404,6 +368,9 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
                         strongSelf.cart.addedItems = strongSelf.cart.addedItems.filter{$0.foodTitle != food.foodTitle}
                     }
                     
+                    if strongSelf.totalCost < strongSelf.onePurchaseLimit {
+                        strongSelf.recolorButton(text: "Перейти в корзину", bgColor: .accent, textColor: .white, lowerViewBgColor: .accentColorLight, lowerViewTextColor: .black)
+                    }
     //                break
                 }
                 
@@ -422,39 +389,39 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
             
         if foodTypeObjects[indexPath.section] == .dough {
             
-            if doughObjects[indexPath.row].count == 0 {
-                cart.addedItems.append(doughObjects[indexPath.row])
+            if allowedDoughObjects[indexPath.row].count == 0 {
+                cart.addedItems.append(allowedDoughObjects[indexPath.row])
             }
             doughObjects[indexPath.row].count += 1
             
-            totalCost += doughObjects[indexPath.row].price
+            totalCost += allowedDoughObjects[indexPath.row].price
             
         } else if foodTypeObjects[indexPath.section] == .beverage {
             
-            if beverageObjects[indexPath.row].count == 0 {
-                cart.addedItems.append(beverageObjects[indexPath.row])
+            if allowedBeverageObjects[indexPath.row].count == 0 {
+                cart.addedItems.append(allowedBeverageObjects[indexPath.row])
             }
-            beverageObjects[indexPath.row].count += 1
+            allowedBeverageObjects[indexPath.row].count += 1
 
-            totalCost += beverageObjects[indexPath.row].price
+            totalCost += allowedBeverageObjects[indexPath.row].price
 
         } else if foodTypeObjects[indexPath.section] == .soup {
             
-            if soupObjects[indexPath.row].count == 0 {
-                cart.addedItems.append(soupObjects[indexPath.row])
+            if allowedSoupObjects[indexPath.row].count == 0 {
+                cart.addedItems.append(allowedSoupObjects[indexPath.row])
             }
-            soupObjects[indexPath.row].count += 1
+            allowedSoupObjects[indexPath.row].count += 1
 
-            totalCost += soupObjects[indexPath.row].price
+            totalCost += allowedSoupObjects[indexPath.row].price
 
         } else if foodTypeObjects[indexPath.section] == .meal {
             
-            if mealObjects[indexPath.row].count == 0 {
-                cart.addedItems.append(mealObjects[indexPath.row])
+            if allowedMealObjects[indexPath.row].count == 0 {
+                cart.addedItems.append(allowedMealObjects[indexPath.row])
             }
-            mealObjects[indexPath.row].count += 1
+            allowedMealObjects[indexPath.row].count += 1
 
-            totalCost += mealObjects[indexPath.row].price
+            totalCost += allowedMealObjects[indexPath.row].price
 
         }
         
@@ -473,9 +440,9 @@ extension PupilDiningAddToCartViewController: UITableViewDelegate, UITableViewDa
 
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 58
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 58
+//    }
 }
 
 extension PupilDiningAddToCartViewController: FlexibleCellButtonDelegate {
