@@ -22,6 +22,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2yU-qT-O0B"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>

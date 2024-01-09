@@ -102,6 +102,33 @@ var mealObjects: [FoodObject] = [.init(foodTitle: "Плов",
 
 
 
+
+func calculatePrice(objects: [FoodObject]?) -> Int {
+    var price = 0
+    
+    if let objects = objects {
+        for object in objects {
+            price += object.price * object.count
+        }
+    }
+    
+    return price
+}
+
+func calculatePrices(objects: [[FoodObject]]?) -> Int {
+    var price = 0
+    
+    if let objects = objects {
+        for object in objects {
+            for obj in object {
+                price += obj.price * obj.count
+            }
+        }
+    }
+    
+    return price
+}
+
 //var allowedDoughObjects = doughObjects.filter({$0.foodTitle != self.limitedItems})
 
 
@@ -150,16 +177,3 @@ func functione() -> Int {
     return 28
 
 }
-
-let januaryDayCount = 31
-let februaryDayCount = functione()
-let marchDayCount = 31
-let aprilDayCount = 30
-let mayDayCount = 31
-let juneDayCount = 30
-let julyDayCount = 31
-let augustDayCount = 31
-let septemberDayCount = 30
-let octoberDayCount = 31
-let novemberDayCount = 30
-let decemberDayCount = 31

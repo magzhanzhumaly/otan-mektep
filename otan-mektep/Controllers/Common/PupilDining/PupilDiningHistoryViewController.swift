@@ -13,15 +13,19 @@ class PupilDiningHistoryViewController: UIViewController {
     @IBOutlet weak var tableViewNavigatorContainer: UIView!
     
     
+    var sortedAttendance: [(Date, [PupilHistory])] = []
+
+
     var currentPage = 1
     let navigator = TableViewNavigator.init(currentPage: 1, totalPageCount: 3)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        groupAttendanceByMonth()
+        
         tableView.register(FlexibleTableViewCell.self, forCellReuseIdentifier: FlexibleTableViewCell.reuseIdentifier)
-
-//        tableView.backgroundColor = .gray50
+        
         
         let topSeparator = UIView()
         let bottomSeparator = UIView()
@@ -45,15 +49,14 @@ class PupilDiningHistoryViewController: UIViewController {
             bottomSeparator.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bottomSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bottomSeparator.heightAnchor.constraint(equalToConstant: 1),
-
+            
             tableViewNavigatorContainer.bottomAnchor.constraint(equalTo: bottomSeparator.topAnchor),
             
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
-                
+        
         tableView.separatorStyle = .none
         
         tableView.delegate = self
@@ -63,11 +66,8 @@ class PupilDiningHistoryViewController: UIViewController {
         navigator.delegate = self
         
         tableViewNavigatorContainer.addFilledSubview(navigator)
-
+        
     }
-    
-    var sortedAttendance: [(Date, [PupilHistory])] = []
-
 
 }
 
@@ -99,99 +99,7 @@ extension PupilDiningHistoryViewController: TableViewNavigatorDelegate {
 extension PupilDiningHistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     // Function to group attendance data by month
-    private func groupAttendanceByMonth() -> [(Date, [PupilHistory])] {
-//        var groupedAttendance: [Date: [PupilHistory]] = [:]
-//        
-//        for attendance in pupilHistory {
-//            let monthStart = Calendar.current.startOfDay(for: attendance.date)
-//            groupedAttendance[monthStart, default: []].append(attendance)
-//        }
-//        
-//        return groupedAttendance
-        /*
-        var groupedAttendance: [Date: [PupilHistory]] = [:]
-        
-        for attendance in pupilHistory {
-            let monthStart = Calendar.current.startOfDay(for: attendance.date)
-            groupedAttendance[monthStart, default: []].append(attendance)
-        }
-        
-        // Sort the groupedAttendance dictionary by keys (dates) in descending order
-        let sortedGroups = groupedAttendance.sorted { $0.key > $1.key }
-        
-        // Create a new dictionary with the sorted groups
-        var sortedAttendance: [Date: [PupilHistory]] = [:]
-        for (date, history) in sortedGroups {
-            sortedAttendance[date] = history
-        }
-        
-        return sortedAttendance*/
-        
-        /*
-        var groupedAttendance: [Date: [PupilHistory]] = [:]
-            
-            for attendance in pupilHistory {
-                let components = Calendar.current.dateComponents([.year, .month], from: attendance.date)
-                let monthStart = Calendar.current.date(from: components)!
-                groupedAttendance[monthStart, default: []].append(attendance)
-            }
-            
-            // Sort the groupedAttendance dictionary by keys (dates) in descending order
-            let sortedGroups = groupedAttendance.sorted { $0.key > $1.key }
-            
-            // Create a new dictionary with the sorted groups
-            var sortedAttendance: [Date: [PupilHistory]] = [:]
-            for (date, history) in sortedGroups {
-                sortedAttendance[date] = history
-            }
-            
-            return sortedAttendance
-
-         */
-//        var groupedAttendance: [Date: [PupilHistory]] = [:]
-//        
-//        for attendance in pupilHistory {
-//            let components = Calendar.current.dateComponents([.year, .month], from: attendance.date)
-//            let monthStart = Calendar.current.date(from: components)!
-//            groupedAttendance[monthStart, default: []].append(attendance)
-//        }
-//        
-//        // Sort the groupedAttendance dictionary by keys (dates) in descending order
-//        let sortedGroups = groupedAttendance.sorted { $0.key > $1.key }
-//        
-//        // Create a new dictionary with the sorted groups
-//        var sortedAttendance: [Date: [PupilHistory]] = [:]
-//        for (date, history) in sortedGroups {
-//            sortedAttendance[date] = history
-//        }
-//        print("at")
-//
-//        for at in sortedAttendance {
-//            print("\(at.key)  \(at.value)")
-//        }
-//        print("at")
-//
-//        return sortedAttendance
-        
-//        var groupedAttendance: [Date: [PupilHistory]] = [:]
-//        
-//        for attendance in pupilHistory {
-//            let components = Calendar.current.dateComponents([.year, .month], from: attendance.date)
-//            let monthStart = Calendar.current.date(from: components)!
-//            groupedAttendance[monthStart, default: []].append(attendance)
-//        }
-//        
-//        // Sort the groupedAttendance dictionary by keys (dates) in descending order
-//        let sortedGroups = groupedAttendance.sorted { $0.key > $1.key }
-//        
-//        // Convert the sortedGroups dictionary to an array of tuples
-//        let sortedAttendance: [(Date, [PupilHistory])] = sortedGroups.map { (date, history) in
-//            return (date, history)
-//        }
-//        self.sortedAttendance = sortedAttendance
-//        
-//        return sortedAttendance
-
+    private func groupAttendanceByMonth() {
         
         var groupedAttendance: [Date: [PupilHistory]] = [:]
         
@@ -213,20 +121,14 @@ extension PupilDiningHistoryViewController: UITableViewDelegate, UITableViewData
         let sortedAttendance: [(Date, [PupilHistory])] = groupedAttendance.sorted { $0.key > $1.key }
 
         self.sortedAttendance = sortedAttendance
-        return sortedAttendance
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return groupAttendanceByMonth().count
+        return sortedAttendance.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sortedAttendance[section].1.count ?? 0
-
-//        let groupedAttendance = groupAttendanceByMonth()
-//        let monthKey = Array(groupedAttendance.keys.sorted())[section]
-//        return groupedAttendance[monthKey]?.count ?? 0
+        return sortedAttendance[section].1.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -235,30 +137,24 @@ extension PupilDiningHistoryViewController: UITableViewDelegate, UITableViewData
         var input: FlexibleTableViewCell.Input?
         
         
-        let groupedAttendance = groupAttendanceByMonth()
-//        let monthKey = Array(groupedAttendance.keys.sorted())[indexPath.section]
-//        if let attendance = groupedAttendance[monthKey]?[indexPath.row] {
-            let attendance = sortedAttendance[indexPath.section].1[indexPath.row]
+        let attendance = sortedAttendance[indexPath.section].1[indexPath.row]
+        
+        input = .init(leftIcon: nil,
+                      title: .init(text: formatDate(attendance.date),
+                                   isBold: false,
+                                   isLarge: true),
+                      components: .init(input:
+                            .title(text: .init(text: "\(calculatePrice(objects: attendance.itemsPurchased)) ₸",
+                                               isBold: false,
+                                               isLarge: false)),
+                                        color: nil),
+                      corners: .init(isRounded: false),
+                      closure: {},
+                      indexPath: indexPath)
+        
+        
+        cell.setup(input: input!)
 
-            input = .init(leftIcon: nil,
-                          title: .init(text: formatDate(attendance.date),
-                                       isBold: false,
-                                       isLarge: true),
-                          components: .init(input:
-                                .title(text: .init(text: formatTime(attendance.cameAt).0,
-                                                   isBold: false,
-                                                   isLarge: false)),
-                                            color: formatTime(attendance.cameAt).1),
-                          corners: .init(isRounded: false),
-                          closure: {},
-                          indexPath: indexPath)
-            
-            
-            cell.setup(input: input!)
-        
-        
-        
-        cell.backgroundColor = .gray50
         return cell
     }
     
@@ -299,42 +195,42 @@ extension PupilDiningHistoryViewController: UITableViewDelegate, UITableViewData
         dateFormatter.dateFormat = "LLLL yyyy"
         return dateFormatter.string(from: date).capitalized
     }
-
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let groupedAttendance = groupAttendanceByMonth()
-//        let sortedDates = Array(groupedAttendance.keys.sorted { $0 > $1 })
-//        
-//        guard section < sortedDates.count else { return nil }
-//        
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "LLLL yyyy"
-//        
-//        return dateFormatter.string(from: sortedDates[section])
-//    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let containerView = UIView()
         var view: FlexibleHeader?
         
-        
-        let groupedAttendance = groupAttendanceByMonth()
-//        let monthKey = Array(groupedAttendance.keys.sorted())[section]
-//        headerLabel.text =
-
-        view = FlexibleHeader.init(input: .init(firstComponent: formatDateHeader(sortedAttendance[section].0), secondComponent: nil, thirdComponent: nil, isSmall: false))
+        var prices: [[FoodObject]] = []
+        for row in sortedAttendance[section].1 {
+            prices.append(row.itemsPurchased ?? [])
+        }
+                
+        view = FlexibleHeader.init(input: .init(firstComponent: formatDateHeader(sortedAttendance[section].0), secondComponent: "\(calculatePrices(objects: prices)) ₸", thirdComponent: nil, isSmall: false))
 
         containerView.addSubview(view!)
         view!.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             view!.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
-            view!.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 20),
+            view!.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
             view!.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
             view!.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0),
         ])
         
         return containerView
-        
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 
+        let vc = PupilDiningHistoryDetailsViewController()
+        vc.title = "История за день"
+        vc.pupilHistory = sortedAttendance[indexPath.section].1[indexPath.row]
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Вся история"
+        navigationItem.backBarButtonItem = backItem
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

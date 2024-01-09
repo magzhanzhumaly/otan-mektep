@@ -222,7 +222,7 @@ extension PupilDiningLimitsViewController: UITableViewDelegate, UITableViewDataS
         
         NSLayoutConstraint.activate([
             view!.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
-            view!.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 20),
+            view!.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
             view!.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
             view!.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0),
         ])

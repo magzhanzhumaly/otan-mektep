@@ -7,6 +7,9 @@
 
 
 import Foundation
+import FirebaseAuth
+
+var user = Auth.auth().currentUser
 
 class PupilHistory {
     let date: Date
@@ -61,17 +64,77 @@ func returnTime(date: Date, hour: Int?, minute: Int?) -> Date {
     return composedTime ?? Date()
 }
 
+
+func formatDate(_ date: Date?) -> String {
+    if let date = date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.dateFormat = "d MMMM yyyy"
+        return dateFormatter.string(from: date)
+    } else {
+        return "Нет информации"
+    }
+}
+
+func formatTime(_ date: Date?) -> (String, UIColor) {
+    if let date = date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // Using a neutral locale for consistent formatting
+        dateFormatter.dateFormat = "H:mm"
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute], from: date)
+        
+        if let hour = components.hour, let minute = components.minute {
+            if hour == 9 && minute > 30 {
+                return (dateFormatter.string(from: date), .warning500)
+            } else {
+                return (dateFormatter.string(from: date), .success500)
+            }
+        }
+    }
+    return ("Нет информации", .primary500)
+}
+
+func formatDateHeader(_ date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "ru_RU")
+    dateFormatter.dateFormat = "LLLL yyyy"
+    return dateFormatter.string(from: date).capitalized
+}
+
+
+
+//var mealObjects: [FoodObject] = [.init(foodTitle: "Плов",
+//                                       price: 1200,
+//                                       type: .meal),
+//                                 .init(foodTitle: "Лагман",
+//                                       price: 1300,
+//                                       type: .meal),
+//                                  .init(foodTitle: "Котлеты с гречкой",
+//                                        price: 1000,
+//                                        type: .meal)]
+
 var pupilHistory: [PupilHistory] = [.init(date: returnDay(daysBefore: 0),
                                           cameAt: returnTime(date: returnDay(daysBefore: 0), hour: 9, minute: 31),
                                           leftAt: returnTime(date: returnDay(daysBefore: 0), hour: 12, minute: 31),
-                                          itemsPurchased: nil,
+                                          itemsPurchased: [.init(foodTitle: "Плов",
+                                                                 price: 1200,
+                                                                 count: 6, 
+                                                                 type: .meal),
+                                                           .init(foodTitle: "Лагман",
+                                                                 price: 1300,
+                                                                 count: 2,
+                                                                 type: .meal),
+                                                            .init(foodTitle: "Котлеты с гречкой",
+                                                                  price: 1000,
+                                                                  count: 3,
+                                                                  type: .meal)],
                                           moneySpent: nil),
 
-                                    .init(date: returnDay(daysBefore: 3),
-                                          cameAt: returnTime(date: returnDay(daysBefore: 0), hour: nil, minute: nil),
-                                          leftAt: returnTime(date: returnDay(daysBefore: 0), hour: 12, minute: 31),
-                                          itemsPurchased: nil,
-                                          moneySpent: nil),
+    .init(date: returnDay(daysBefore: 3), cameAt: nil, leftAt: nil, itemsPurchased: nil, moneySpent: nil),
+                                    
+                                    
                                     .init(date: returnDay(daysBefore: 4),
                                           cameAt: returnTime(date: returnDay(daysBefore: 0), hour: 12, minute: 31),
                                           leftAt: returnTime(date: returnDay(daysBefore: 0), hour: 12, minute: 31),

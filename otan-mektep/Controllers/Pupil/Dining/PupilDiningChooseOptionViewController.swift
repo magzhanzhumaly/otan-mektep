@@ -9,10 +9,10 @@ import UIKit
 import FirebaseAuth
 class PupilDiningChooseOptionViewController: UIViewController {
 
-    var user: User?
+//    var user: User?
     @IBOutlet weak var navItem: UINavigationItem!
     
-    @IBOutlet weak var welcomeLabel: UILabel!
+//    @IBOutlet weak var welcomeLabel: UILabel!
     
     @IBOutlet weak var foodChoiceCellView: UIView!
     @IBOutlet weak var limitsCellView: UIView!
@@ -47,7 +47,7 @@ class PupilDiningChooseOptionViewController: UIViewController {
         
         topSeparator.isHidden = true
         
-        user = Auth.auth().currentUser
+//        user = Auth.auth().currentUser
         //        navItem.title = "fjdksf"
         let name = user?.email ?? ""
         //        welcomeLabel.text = "Добро пожаловать,\n\(name)!"
@@ -96,6 +96,8 @@ class PupilDiningChooseOptionViewController: UIViewController {
     
     @objc func historyChosen() {
         let vc = PupilDiningHistoryViewController()
+        vc.title = "Вся история"
+        
         navigationController?.pushViewController(vc, animated: true)
     }
 

@@ -17,18 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pupil attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-j6-KhE">
-                                <rect key="frame" x="136" y="374" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A14-OW-EBg">
+                                <rect key="frame" x="0.0" y="701" width="393" height="68"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="QIA-iT-aQE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A14-OW-EBg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Onu-CT-XPW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="A14-OW-EBg" secondAttribute="bottom" id="Q4m-Ts-pJ7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A14-OW-EBg" secondAttribute="trailing" id="a3b-4l-G0m"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="87a-hn-wlN"/>
+                    <connections>
+                        <outlet property="tableViewNavigatorContainer" destination="A14-OW-EBg" id="xgU-mD-eyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
