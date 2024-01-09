@@ -215,7 +215,7 @@ extension PupilDiningLimitsViewController: UITableViewDelegate, UITableViewDataS
         var view: FlexibleHeader?
         
             
-        view = FlexibleHeader.init(input: .init(firstComponent: "Вы выбрали", secondComponent: nil, thirdComponent: nil, isSmall: false))
+        view = FlexibleHeader.init(input: .init(firstComponent: "Вам нельзя приобрести", secondComponent: nil, thirdComponent: nil, isSmall: false))
             
         containerView.addSubview(view!)
         view!.translatesAutoresizingMaskIntoConstraints = false

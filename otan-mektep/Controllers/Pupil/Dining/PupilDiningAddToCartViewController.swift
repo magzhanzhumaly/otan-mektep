@@ -66,39 +66,6 @@ class PupilDiningAddToCartViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        print("allowedDoughObjects:")
-        
-        for obj in allowedDoughObjects {
-            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
-        }
-        
-        print("\n")
-        
-        print("allowedBeverageObjects:")
-        
-        for obj in allowedBeverageObjects {
-            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
-        }
-        
-        print("\n")
-
-        print("allowedSoupObjects:")
-        
-        for obj in allowedSoupObjects {
-            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
-        }
-        
-        print("\n")
-
-        print("allowedMealObjects:")
-        
-        for obj in allowedMealObjects {
-            print("\(obj.foodTitle), \(obj.count), \(obj.price) тг")
-        }
-
-        
-        
         tableView.register(FlexibleTableViewCell.self, forCellReuseIdentifier: FlexibleTableViewCell.reuseIdentifier)
 
         

@@ -120,3 +120,46 @@ let allowedSoupObjects = soupObjects.filter { soupObject in
 let allowedMealObjects = mealObjects.filter { mealObject in
     !limitedFoods.limitedItems.contains { $0.foodTitle == mealObject.foodTitle }
 }
+
+func functione() -> Int {
+    // Create a Calendar instance
+    let calendar = Calendar.current
+
+    // Get the current date
+    let currentDate = Date()
+
+    // Extract the month and year components
+    let components = calendar.dateComponents([.year, .month], from: currentDate)
+
+    // Set the date to the first day of March (next month)
+    if let firstDayOfNextMonth = calendar.date(from: DateComponents(year: components.year, month: components.month! + 1, day: 1)) {
+        // Subtract one day to get the last day of February
+        if let lastDayOfFebruary = calendar.date(byAdding: .day, value: -1, to: firstDayOfNextMonth) {
+            // Compare if the last day of February is the 28th or 29th
+            if calendar.component(.day, from: lastDayOfFebruary) == 29 {
+                print("February has 29 days (leap year)")
+                return 29
+            } else {
+                print("February has 28 days")
+                return 28
+            }
+        }
+    } else {
+        print("Error calculating the number of days in February")
+    }
+    return 28
+
+}
+
+let januaryDayCount = 31
+let februaryDayCount = functione()
+let marchDayCount = 31
+let aprilDayCount = 30
+let mayDayCount = 31
+let juneDayCount = 30
+let julyDayCount = 31
+let augustDayCount = 31
+let septemberDayCount = 30
+let octoberDayCount = 31
+let novemberDayCount = 30
+let decemberDayCount = 31

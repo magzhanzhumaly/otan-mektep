@@ -430,17 +430,6 @@ class FlexibleTableViewCell: UITableViewCell {
                     
                     commonStackView.trailingAnchor.constraint(equalTo: flexibleTableViewCell.trailingAnchor, constant: -14),
                     commonStackView.centerYAnchor.constraint(equalTo: flexibleTableViewCell.centerYAnchor),
-//                    commonStackView.heightAnchor.constraint(equalToConstant: 40),
-//                    commonStackView.widthAnchor.constraint(equalToConstant: 40),
-
-                    
-//                    removeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
-//                    removeButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-//                    removeButton.heightAnchor.constraint(equalToConstant: 40),
-//                    removeButton.widthAnchor.constraint(equalToConstant: 40),
-//
-//                    stackView.trailingAnchor.constraint(equalTo: removeButton.leadingAnchor, constant: -14),
-//                    stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
                 ])
                 
                 
@@ -502,6 +491,8 @@ class FlexibleTableViewCell: UITableViewCell {
 
                 singleLabel.text = text.text
                 singleLabel.translatesAutoresizingMaskIntoConstraints = false
+                
+                singleLabel.textColor = input.components?.color
                 
                 flexibleTableViewCell.addSubview(singleLabel)
          
